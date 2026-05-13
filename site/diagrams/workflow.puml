@@ -1,0 +1,62 @@
+@startuml workflow
+title Séquence de traitement
+
+hide footbox
+
+autonumber
+
+skinparam shadowing false
+skinparam roundcorner 10
+skinparam boxPadding 12
+
+skinparam sequence {
+    LifeLineBackgroundColor #F8FAFC
+    ParticipantBackgroundColor #E5E7EB
+    GroupBorderColor #94A3B8
+    GroupBackgroundColor #F8FAFC
+    GroupHeaderFontColor #111827
+}
+
+actor User
+
+box "Présentation" #DBEAFE
+    boundary "Interface utilisateur \n Frontend" as UI
+end box
+
+box "Application" #DCFCE7
+    control "API \n Backend" as API
+    control "Service Métier \n Backend" as BusinessService
+end box
+
+box "Infrastructure" #FEF3C7
+    control "Accès aux données \n Backend" as DataRepository
+    database "Base de données" as DB
+end box
+
+group Requête soumise
+    User -> UI : action de la part de l'utilisateur
+    UI -> API : envoi d'une requête
+    API -> API : contrôle d'accès \n (si nécessaire)
+end
+
+group Validation des données
+    API -> API  : valide la structure des données
+    API -> BusinessService : transmet la demande métier
+    BusinessService -> BusinessService : applique les règles métier
+end
+
+group Accès aux données
+    BusinessService -> DataRepository : transmet la demande \n écriture/lecture
+    DataRepository -> DB : requete écriture/lecture
+    DB --> DataRepository : réponse
+    DataRepository --> BusinessService : réponse
+    BusinessService --> API : réponse
+end
+
+group Resitution des données
+    API --> UI : réponse HTTP
+    UI --> User : données affichées
+end
+
+
+@enduml

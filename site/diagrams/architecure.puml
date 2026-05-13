@@ -1,0 +1,30 @@
+@startuml architecture
+title Architecture
+
+top to bottom direction
+hide footbox
+
+actor "Utilisateur" as User
+
+package "Frontend" #DBEAFE {
+    [Interface utilisateur] as UI
+}
+
+package "Backend" #DCFCE7{
+    [API] as API
+    [Services métier] as BusinessService
+    [Accès aux données] as DataRepository
+}
+
+package "DataBase" #FEF3C7{
+    [Base de données] as DB
+}
+
+User --> UI
+UI --> API 
+API --> BusinessService 
+BusinessService --> DataRepository 
+DataRepository --> DB 
+
+
+@enduml
