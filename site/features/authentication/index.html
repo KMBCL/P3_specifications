@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Compte Utilisateur - Specifications</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../css/brands.min.css" rel="stylesheet">
-        <link href="../css/solid.min.css" rel="stylesheet">
-        <link href="../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">Specifications</a>
+                <a class="navbar-brand" href="../..">Specifications</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,25 +35,34 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href=".." class="nav-link">Accueil</a>
+                                <a href="../.." class="nav-link">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../actors/" class="nav-link">Acteurs</a>
+                                <a href="../../actors/" class="nav-link">Acteurs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spécifications fonctionnelles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Compte Utilisateur</a>
+</li>
+                                    
+<li>
+    <a href="../communication/" class="dropdown-item">Communication</a>
+</li>
+                                    
+<li>
+    <a href="../appointment/" class="dropdown-item">Rendez-vous</a>
+</li>
+                                    
+<li>
+    <a href="../tasks/" class="dropdown-item">Tâches</a>
+</li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Compte Utilisateur</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../communication/" class="nav-link">Communication</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../appointment/" class="nav-link">Rendez-vous</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../tasks/" class="nav-link">Tâches</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../project_specifications/" class="nav-link">Spécifications techniques</a>
+                                <a href="../../project_specifications/" class="nav-link">Spécifications techniques</a>
                             </li>
                         </ul>
 
@@ -64,7 +73,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../actors/" class="nav-link">
+                                <a rel="prev" href="../../actors/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -130,9 +139,9 @@
 
 <h1 id="domaine-compte-utilisateur">Domaine : Compte utilisateur</h1>
 <h2 id="gestion-de-lauthentification">Gestion de l'authentification</h2>
-<p><img alt="Authentification" src="../diagrams/authentication/authentication.svg" /></p>
+<p><img alt="Authentification" src="../../diagrams/authentication/authentication.svg" /></p>
 <h2 id="gestion-des-donnees-personnelles">Gestion des données personnelles</h2>
-<p><img alt="Gestion des données personnelles" src="../diagrams/authentication/data_management.svg" /></p>
+<p><img alt="Gestion des données personnelles" src="../../diagrams/authentication/data_management.svg" /></p>
 <h2 id="fonctionnalite-inscription-dun-nouvel-utilisateur">Fonctionnalité: Inscription d'un nouvel utilisateur</h2>
 <pre><code class="language-gherkin">
     En tant que visiteur
@@ -334,13 +343,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js"></script>
-        <script src="../search/main.js"></script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
