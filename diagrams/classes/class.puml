@@ -1,0 +1,53 @@
+@startuml class_diagram
+title Class Diagram
+
+class User {
+    pk : uuid
+    tutor_pk : uuid | None
+    role : enum
+    username : str
+    first_name : str
+    last_name : str
+    password_hash : str
+    email : str
+    
+}
+
+class Appointment {
+    pk : uuid
+    tutor_pk : uuid
+    student_pk : uuid
+    datetime : datetime
+    title : str
+}
+
+class Message {
+    pk : uuid
+    from_user_pk : uuid
+    to_user_pk : uuid
+    read : bool
+    content : str
+    pinned : bool
+}
+
+class MessageNotification {
+    pk : uuid
+    message_pk : uuid
+    read : bool
+}
+
+class Task {
+    pk : uuid
+    user_pk : uuid
+    appointment_pk : uuid | None
+    title : str
+    content : str
+    completed : bool
+}
+
+class Session {
+    pk : uuid
+    user_pk : uuid
+}
+
+@enduml

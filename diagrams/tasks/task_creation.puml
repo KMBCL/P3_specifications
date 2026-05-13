@@ -1,0 +1,18 @@
+@startuml task_creation
+title Création de tâches
+
+!include /specifications/docs/diagrams/actors/actors.puml
+
+student --|> user
+tutor --|> user
+
+usecase "Créer tâche pour élève" as create_task_for_student
+usecase "Créer tâche personnelle" as create_personal_task
+
+
+tutor -- create_task_for_student
+user -- create_personal_task
+
+
+@enduml
+

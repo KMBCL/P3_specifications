@@ -1,0 +1,15 @@
+@startuml appointment
+title Rendez-vous
+
+!include /specifications/docs/diagrams/actors/actors.puml
+
+usecase "Planifier rendez-vous" as plan_appointment
+usecase "Voir rendez-vous" as see_appointment
+
+tutor -- plan_appointment
+tutor -- see_appointment
+
+student -- see_appointment
+
+
+@enduml

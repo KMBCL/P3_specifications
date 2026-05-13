@@ -1,0 +1,15 @@
+@startuml data_management
+title Gestion données personnelles
+
+!include /specifications/docs/diagrams/actors/actors.puml
+
+student --|> user
+tutor --|> user
+
+usecase "Modifier mot de passe" as password_managing
+usecase "Modifier données personnelles" as personal_data_managing
+
+user -- password_managing
+user -- personal_data_managing
+
+@endumld

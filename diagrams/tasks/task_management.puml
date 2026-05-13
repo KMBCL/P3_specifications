@@ -1,0 +1,19 @@
+@startuml task_management
+title Gestion des Tâches
+
+!include /specifications/docs/diagrams/actors/actors.puml
+
+student --|> user
+tutor --|> user
+
+usecase "Consulter ses propres tâches" as see_owned_tasks
+usecase "Consulter taches assignées à l'élève" as see_student_assigned_tasks
+usecase "Compléter ses propres tâches" as complete_task
+
+user -- see_owned_tasks
+user -- complete_task
+
+tutor -- see_student_assigned_tasks
+
+@enduml
+
