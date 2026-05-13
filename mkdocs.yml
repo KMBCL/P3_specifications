@@ -3,8 +3,9 @@ site_name: Specifications
 nav:
   - Accueil: index.md
   - Acteurs: actors.md
-  - Compte Utilisateur: authentication.md
-  - Communication: communication.md
-  - Rendez-vous: appointment.md
-  - Tâches: tasks.md
+  - Spécifications fonctionnelles:
+      - Compte Utilisateur: features/authentication.md
+      - Communication: features/communication.md
+      - Rendez-vous: features/appointment.md
+      - Tâches: features/tasks.md
   - Spécifications techniques: project_specifications.md

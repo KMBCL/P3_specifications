@@ -2,11 +2,11 @@
 
 ## Gestion de l'authentification
 
-![Authentification](diagrams/authentication/authentication.svg)
+![Authentification](../diagrams/authentication/authentication.svg)
 
 ## Gestion des données personnelles
 
-![Gestion des données personnelles](diagrams/authentication/data_management.svg)
+![Gestion des données personnelles](../diagrams/authentication/data_management.svg)
 
 ## Fonctionnalité: Inscription d'un nouvel utilisateur
 

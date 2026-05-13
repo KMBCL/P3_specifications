@@ -1,7 +1,7 @@
 @startuml appointment
 title Rendez-vous
 
-!include /specifications/docs/diagrams/actors/actors.puml
+!include /specifications/docs/diagrams/actors/common.puml
 
 usecase "Planifier rendez-vous" as plan_appointment
 usecase "Voir rendez-vous" as see_appointment

@@ -1,7 +1,7 @@
 @startuml task_creation
 title Création de tâches
 
-!include /specifications/docs/diagrams/actors/actors.puml
+!include /specifications/docs/diagrams/actors/common.puml
 
 student --|> user
 tutor --|> user

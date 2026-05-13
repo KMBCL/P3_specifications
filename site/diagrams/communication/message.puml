@@ -3,7 +3,7 @@
 @startuml message
 title Message
 
-!include /specifications/docs/diagrams/actors/actors.puml
+!include /specifications/docs/diagrams/actors/common.puml
 
 usecase "Envoyer message" as send_message
 usecase "Lire message" as read_message

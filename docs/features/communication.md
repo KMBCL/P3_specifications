@@ -2,11 +2,11 @@
 
 ## Envoi / Lecture de messages
 
-![Envoi / Lecture](diagrams/communication/message.svg)
+![Envoi / Lecture](../diagrams/communication/message.svg)
 
 ## Epingler et rechercher des messages
 
-![Epingler et rechercher](diagrams/communication/pined_message.svg)
+![Epingler et rechercher](../diagrams/communication/pined_message.svg)
 
 ## Fonctionnalité: Envoi d'un message à un autre utilisateur
 

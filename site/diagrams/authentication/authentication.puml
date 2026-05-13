@@ -1,7 +1,7 @@
 @startuml authentication
 title Authentification
 
-!include /specifications/docs/diagrams/actors/actors.puml
+!include /specifications/docs/diagrams/actors/common.puml
 
 student --|> user
 tutor --|> user

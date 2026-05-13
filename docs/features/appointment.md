@@ -2,7 +2,7 @@
 
 ## Gestion des rendez-vous
 
-![Gestion des rendez-vous](diagrams/appointment/appointment.svg)
+![Gestion des rendez-vous](../diagrams/appointment/appointment.svg)
 
 ## Fonctionnalité: Planification d'un rendez-vous
 
