@@ -1,0 +1,5 @@
+site_name: Specifications
+
+nav:
+  - Accueil: index.md
+  - Authentification: authentication.md
