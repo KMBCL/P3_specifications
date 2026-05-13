@@ -1,0 +1,4 @@
+@startuml common
+actor "Elève" as student
+actor "Tuteur" as tutor
+@enduml
