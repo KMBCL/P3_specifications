@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Spécifications techniques - Specifications</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Specifications</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../actors/" class="nav-link">Acteurs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../authentication/" class="nav-link">Compte Utilisateur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../communication/" class="nav-link">Communication</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../appointment/" class="nav-link">Rendez-vous</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../tasks/" class="nav-link">Tâches</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Spécifications techniques</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../tasks/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#specifications-techniques" class="nav-link">Spécifications techniques</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#frontend" class="nav-link">Frontend</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#backend" class="nav-link">Backend</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#base-de-donnees" class="nav-link">Base de données</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#solutions-retenues" class="nav-link">Solutions retenues</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#architecture-generale" class="nav-link">Architecture générale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sequence-generique-de-traitement" class="nav-link">Séquence générique de traitement</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="specifications-techniques">Spécifications techniques</h1>
+<p>Pour rappel l'équipe de développement:</p>
+<ul>
+<li>2 développeurs Frontend</li>
+<li>2 développeurs Backend</li>
+</ul>
+<p>Formés aux technologies actuelles.</p>
+<p>Le projet va être découpé en plusieurs couches:</p>
+<h2 id="frontend"><strong>Frontend</strong></h2>
+<h3 id="ui">UI:</h3>
+<ul>
+<li>Affiche l'interface utilisateur</li>
+<li>Permet de consulter, saisir et modifier les données autorisées</li>
+<li>Valide les données au niveau UI pour améliorer l'expérience utilisateur</li>
+<li>Soumet les requêtes HTTP à l'API</li>
+<li>Affiche les réponses de l'API</li>
+</ul>
+<h3 id="solutions-existantes">Solutions existantes:</h3>
+<ul>
+<li>React :<ul>
+<li>Bibliothèque UI.</li>
+<li>Impose de choisir d'autres composants et bibliothèques</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe</li>
+<li>Ecosystème large</li>
+</ul>
+</li>
+<li>Vue :<ul>
+<li>Conventions et structure définies par le framework</li>
+<li>Ecosystème plus réduit que React</li>
+<li>Adapté aux petites et moyennes équipes</li>
+</ul>
+</li>
+<li>Angular :<ul>
+<li>Framework complet, avec cadre et structure strict</li>
+<li>Adapté a des projets d'entreprises</li>
+<li>Adapté aux moyennes équipes</li>
+</ul>
+</li>
+<li>...</li>
+</ul>
+<h2 id="backend"><strong>Backend</strong></h2>
+<h3 id="api">API:</h3>
+<ul>
+<li>Point d'entrée et de sortie du backend</li>
+<li>Reçoit les requêtes http de l'UI</li>
+<li>Vérifie l'authentification de l'utilisateur</li>
+<li>Traduit les requêtes HTTP en données métiers pour les services</li>
+<li>Transforme et valide la structure des données</li>
+<li>Dialogue avec les services métiers</li>
+<li>Traduit les réponses des services en réponses HTTP</li>
+<li>Renvoie les réponses http à l'UI</li>
+</ul>
+<h3 id="services-metier">Services Métier:</h3>
+<ul>
+<li>Reçoit les données de l'API</li>
+<li>Validation des données selon logique métier</li>
+<li>Applique la logique métier</li>
+<li>Dialogue avec les services d'accès aux données</li>
+<li>Renvoie les réponses métier</li>
+</ul>
+<h3 id="service-dacces-aux-donnees">Service d'accès aux données:</h3>
+<ul>
+<li>Reçoit les demandes métiers</li>
+<li>Dialogue avec la base de données</li>
+<li>Reçoit les données brutes</li>
+<li>Transforme les données brutes en données métier</li>
+<li>Renvoie les données aux services métiers</li>
+</ul>
+<h3 id="solutions-existantes_1">Solutions existantes :</h3>
+<ul>
+<li>FastAPI :<ul>
+<li>Orienté API</li>
+<li>Nécessite d'autres outils et bibliothèques, authentification, ORM, etc. </li>
+<li>Rapide</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe </li>
+</ul>
+</li>
+<li>Flask :<ul>
+<li>Framework minimaliste</li>
+<li>Nécessite d'autres outils et bibliothèques, authentification, ORM, etc.</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe </li>
+</ul>
+</li>
+<li>Django :<ul>
+<li>Framework complet avec authentification, ORM, etc.</li>
+<li>Interface admin</li>
+<li>Conventions et structure imposées</li>
+<li>Peut être configuré en API</li>
+</ul>
+</li>
+</ul>
+<h2 id="base-de-donnees"><strong>Base de données</strong></h2>
+<ul>
+<li>Reçoit les demandes des services d'accès aux données</li>
+<li>Persiste les données</li>
+<li>Fournit les données</li>
+<li>Renvoie les données brutes</li>
+</ul>
+<h3 id="solutions-existantes_2">Solutions existantes:</h3>
+<ul>
+<li>Oracle :</li>
+<li>SQLServeur :</li>
+<li>PostgreSQL :</li>
+<li>MySQL :</li>
+<li>MarioDB :</li>
+<li>...</li>
+</ul>
+<h2 id="solutions-retenues">Solutions retenues</h2>
+<h3 id="frontend-vue">Frontend : Vue:</h3>
+<ul>
+<li>Le projet est bien délimité, bien qu'évolutif, il n'a pas vocation à devenir un projet d'entreprise multisites. </li>
+</ul>
+<p>L'équipe de développement étant de 2 personnes, pour limiter la dispersion dans les outils et bibliotèques, un ecosystème moins vaste facilite la structure du projet. </p>
+<p>De plus le framework Vue encourage une logique de décomposition script/template/CSS, qui permet naturellement de bien séparer les responsabilités.</p>
+<h3 id="backend-django-en-api">Backend : Django en API:</h3>
+<ul>
+<li>Le projet peut démarrer rapidement et avec fiabilité avec la structure et les composants django. </li>
+</ul>
+<p>Les points d'entrées sont exposés par l'API et le système d'authentification et l'ORM intégré permettent de se focaliser sur les besoins métier, plutôt que l'architecture globale.</p>
+<p>L'interface administrateur intégrée permet également rapidement à un utilisateur admin du projet de modifier des données afin de répondre aux besoins utilisateurs.</p>
+<h2 id="architecture-generale">Architecture générale</h2>
+<p><img alt="Architecture générale" src="../diagrams/architecture.svg" /></p>
+<h2 id="sequence-generique-de-traitement">Séquence générique de traitement</h2>
+<p><img alt="Séquence générique" src="../diagrams/workflow.svg" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

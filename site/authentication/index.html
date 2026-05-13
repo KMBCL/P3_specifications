@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Authentification - Specifications</title>
+        <title>Compte Utilisateur - Specifications</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -38,7 +38,22 @@
                                 <a href=".." class="nav-link">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Authentification</a>
+                                <a href="../actors/" class="nav-link">Acteurs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Compte Utilisateur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../communication/" class="nav-link">Communication</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../appointment/" class="nav-link">Rendez-vous</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../tasks/" class="nav-link">Tâches</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../project_specifications/" class="nav-link">Spécifications techniques</a>
                             </li>
                         </ul>
 
@@ -49,12 +64,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../actors/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../communication/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -75,12 +90,243 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#domaine-compte-utilisateur" class="nav-link">Domaine : Compte utilisateur</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#gestion-de-lauthentification" class="nav-link">Gestion de l'authentification</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gestion-des-donnees-personnelles" class="nav-link">Gestion des données personnelles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-inscription-dun-nouvel-utilisateur" class="nav-link">Fonctionnalité: Inscription d'un nouvel utilisateur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-connexion-a-mon-espace-client" class="nav-link">Fonctionnalité: Connexion à mon espace client</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-deconnexion-dun-espace-client" class="nav-link">Fonctionnalité: Déconnexion d'un espace client</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-mise-a-jour-du-mot-de-passe" class="nav-link">Fonctionnalité: Mise à jour du mot de passe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-modification-des-donnees-personnelles" class="nav-link">Fonctionnalité: Modification des données personnelles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="domaine-compte-utilisateur">Domaine : Compte utilisateur</h1>
+<h2 id="gestion-de-lauthentification">Gestion de l'authentification</h2>
+<p><img alt="Authentification" src="../diagrams/authentication/authentication.svg" /></p>
+<h2 id="gestion-des-donnees-personnelles">Gestion des données personnelles</h2>
+<p><img alt="Gestion des données personnelles" src="../diagrams/authentication/data_management.svg" /></p>
+<h2 id="fonctionnalite-inscription-dun-nouvel-utilisateur">Fonctionnalité: Inscription d'un nouvel utilisateur</h2>
+<pre><code class="language-gherkin">
+    En tant que visiteur
+    Je veux créer un nouveau compte
+    Afin d'accéder aux fonctionnalités du site
+
+    Scénario: Inscription avec des données valides
+
+        Etant donné que je suis sur le formulaire d'inscription
+        Et que j'ai renseigné tous les champs obligatoires avec des données valides
+        Et que les données sont valides
+
+        Lorsque je valide le formulaire
+
+        Alors l'inscription est validée
+        Et mon compte est créé
+        Et je suis invité à me connecter
+
+    Scénario: Inscription avec des données obligatoires manquantes
+        Etant donné que je suis sur le formulaire d'inscription
+        Et que j'ai partiellement renseigné les champs obligatoires avec des données valides
+
+        Lorsque je valide le formulaire
+        Et que des données obligatoires sont manquantes
+
+        Alors l'inscription est refusée
+        Et les données manquantes sont mises en valeur
+        Et je suis averti que ces données sont obligatoires
+
+    Scénario: Inscription avec des données au mauvais format
+        Etant donné que je suis sur le formulaire d'inscription
+
+        Lorsque je saisis des données dans un format invalide
+
+        Alors le formulaire met en valeur le champ
+        Et le format attendu m'est spécifié
+
+    Scénario: Inscription avec une adresse email déjà existante
+        Etant donné que je suis sur le formulaire d'inscription
+
+        Lorsque je valide le formulaire complété
+        Et qu'un compte avec la même adresse email existe déjà
+
+        Alors l'inscription est refusée
+        Et je suis informé que l'adresse email est déjà utilisée
+        Et je suis invité à me connecter au lieu de créer un nouveau compte
+</code></pre>
+<h2 id="fonctionnalite-connexion-a-mon-espace-client">Fonctionnalité: Connexion à mon espace client</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur déconnecté
+    Je veux me connecter à mon compte
+    Afin d'accéder à mon espace client
+
+    Scénario: Connexion avec identifiants valides
+        Etant donné que je suis sur la page de connexion
+
+        Lorsque je valide le formulaire de connexion
+        Et que mon identifiant et mot de passe sont valides
+
+        Alors la connexion est autorisée
+        Et j'accède à mon espace personnel
+
+    Scénario: Connexion avec des identifiants invalides
+        Etant donné que je suis sur la page de connexion
+
+        Lorsque je valide le formulaire de connexion
+        Et que mon identifiant ou mot de passe est invalide
+
+        Alors la connexion est refusée
+        Et je suis informé que l'identifiant et mot de passe ne sont pas valides
+        Et je suis invité à réessayer
+
+    Scénario: Connexion avec des identifiants incomplets
+        Etant donné que je suis sur la page de connexion
+
+        Lorsque je valide le formulaire de connexion
+        Et que mon identifiant ou mot de passe est manquant
+
+        Alors la connexion est refusée
+        Et je suis informé que le champ manquant est obligatoire
+</code></pre>
+<h2 id="fonctionnalite-deconnexion-dun-espace-client">Fonctionnalité: Déconnexion d'un espace client</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté
+    Je veux me déconnecter
+    Afin de mettre fin à ma session
+
+    Scénario: Déconnexion
+        Etant donné que je suis connecté
+
+        Lorsque je clique sur &quot;déconnecter&quot;
+
+        Alors je suis déconnecté
+        Et un message confirme la déconnexion
+        Et je n'ai plus accès à mon espace personnel
+</code></pre>
+<h2 id="fonctionnalite-mise-a-jour-du-mot-de-passe">Fonctionnalité: Mise à jour du mot de passe</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté
+    Je veux mettre à jour mon mot de passe
+    Afin de le renouveler par sécurité
+
+    Scénario: Modification de mot de passe
+        Etant donné que je suis connecté
+        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi le nouveau mot de passe
+        Et que j'ai confirmé le nouveau mot de passe
+        Et que j'ai saisi mon mot de passe actuel
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe est mis à jour
+        Et un message m'avertit que le mot de passe est mis à jour
+        Et je suis déconnecté
+        Et je suis invité à me reconnecter
+
+    Scénario: Refus lorsque le mot de passe actuel est faux
+        Etant donné que je suis connecté
+        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi le nouveau mot de passe 
+        Et que j'ai confirmé le nouveau mot de passe 
+        Mais que j'ai saisi un mot de passe actuel incorrect
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe n'est pas mis à jour
+        Et je suis averti que le mot de passe actuel est faux
+
+    Scénario: Refus lorsque le mot de passe actuel est manquant
+        Etant donné que je suis connecté
+        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi le nouveau mot de passe 
+        Et que j'ai confirmé le nouveau mot de passe
+        Mais que je n'ai pas saisi le mot de passe actuel dans le champ requis
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe n'est pas mis à jour
+        Et je suis averti que ce champ est obligatoire
+
+    Scénario: Refus lorsque le nouveau mot de passe ne correspond pas avec la confirmation
+        Etant donné que je suis connecté
+        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi mon mot de passe actuel
+        Et que j'ai saisi le nouveau mot de passe &quot;test_mdp&quot;
+        Mais que j'ai confirmé le nouveau mot de passe &quot;test_mdpppp&quot;
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe n'est pas mis à jour
+        Et je suis averti que le nouveau mot de passe ne concorde pas avec la confirmation
+
+    Scénario: Refus lorsque la confirmation de mot de passe est manquante
+        Etant donné que je suis connecté
+        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi mon mot de passe actuel
+        Et que j'ai saisi le nouveau mot de passe
+        Mais que je n'ai pas confirmé le nouveau mot de passe
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe n'est pas mis à jour
+        Et je suis averti qu'il faut confirmer le nouveau mot de passe
+</code></pre>
+<h2 id="fonctionnalite-modification-des-donnees-personnelles">Fonctionnalité: Modification des données personnelles</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté
+    Je veux modifier mes informations personnelles
+    Afin de refléter les changements de mes coordonnées
+
+    Scénario: Modification des données personnelles avec données valides
+        Etant donné que je suis connecté
+        Et que je suis sur le formulaire de mes données personnelles
+        Et que j'ai saisi des données à modifier
+
+
+        Lorsque je valide le formulaire
+        Et que les données sont valides
+
+        Alors les données sont modifiées
+        Et j'ai un message de confirmation
+        Et je suis redirigé vers mes données personnelles
+
+    Scénario: Refus lorsque l'adresse email est invalide
+        Etant donné que  je suis connecté
+        Et que je suis sur le formulaire de mes données personnelles
+        Et que j'ai saisi une nouvelle adresse email
+
+        Lorsque je valide le formulaire
+        Mais que le format de l'adresse est invalide
+
+        Alors les données ne sont pas modifiées
+        Et je suis averti que le format de l'adresse n'est pas valide
+</code></pre></div>
             </div>
         </div>
 
