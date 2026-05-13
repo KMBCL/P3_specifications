@@ -40,17 +40,26 @@
                             <li class="nav-item">
                                 <a href="./" class="nav-link active" aria-current="page">Acteurs</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../authentication/" class="nav-link">Compte Utilisateur</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../communication/" class="nav-link">Communication</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../appointment/" class="nav-link">Rendez-vous</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../tasks/" class="nav-link">Tâches</a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spécifications fonctionnelles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../features/authentication/" class="dropdown-item">Compte Utilisateur</a>
+</li>
+                                    
+<li>
+    <a href="../features/communication/" class="dropdown-item">Communication</a>
+</li>
+                                    
+<li>
+    <a href="../features/appointment/" class="dropdown-item">Rendez-vous</a>
+</li>
+                                    
+<li>
+    <a href="../features/tasks/" class="dropdown-item">Tâches</a>
+</li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a href="../project_specifications/" class="nav-link">Spécifications techniques</a>
@@ -69,7 +78,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../authentication/" class="nav-link">
+                                <a rel="next" href="../features/authentication/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -91,8 +100,20 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#acteurs-identifies" class="nav-link">Acteurs identifiés :</a>
+            <li class="nav-item" data-bs-level="1"><a href="#acteurs-identifies" class="nav-link">Acteurs identifiés :</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#tuteur" class="nav-link">Tuteur :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#eleve" class="nav-link">Elève :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#utilisateur" class="nav-link">Utilisateur :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -100,22 +121,23 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="acteurs-identifies">Acteurs identifiés :</h2>
-<p>Tuteur :
-bénévole inscrit pour fournir un soutien scolaire aux élèves</p>
+<h1 id="acteurs-identifies">Acteurs identifiés :</h1>
+<h2 id="tuteur">Tuteur :</h2>
+<p>bénévole inscrit pour fournir un soutien scolaire aux élèves</p>
 <ul>
 <li>suit un ou plusieurs élèves.</li>
 <li>planifie les rendez-vous avec les élèves</li>
 <li>assigne une ou plusieurs tâches à l'élève entre chaque rendez-vous</li>
 </ul>
-<p>Elève :
-élève inscrit pour obtenir un soutien scolaire</p>
+<h2 id="eleve">Elève :</h2>
+<p>élève inscrit pour obtenir un soutien scolaire</p>
 <ul>
 <li>possède un seul tuteur</li>
 <li>doit réaliser les tâches assignées</li>
 </ul>
-<p>Utilisateur :
-utilisateur au sens large, élève ou tuteur</p></div>
+<h2 id="utilisateur">Utilisateur :</h2>
+<p>utilisateur au sens large, élève ou tuteur</p>
+<p><img alt="Acteurs" src="../diagrams/actors/actors.svg" /></p></div>
             </div>
         </div>
 

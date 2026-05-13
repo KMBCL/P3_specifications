@@ -1,7 +1,7 @@
 @startuml task_management
 title Gestion des Tâches
 
-!include /specifications/docs/diagrams/actors/actors.puml
+!include /specifications/docs/diagrams/actors/common.puml
 
 student --|> user
 tutor --|> user

@@ -1,7 +1,7 @@
 @startuml data_management
 title Gestion données personnelles
 
-!include /specifications/docs/diagrams/actors/actors.puml
+!include /specifications/docs/diagrams/actors/common.puml
 
 student --|> user
 tutor --|> user

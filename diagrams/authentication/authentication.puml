@@ -1,7 +1,8 @@
 @startuml authentication
 title Authentification
 
-!include /specifications/docs/diagrams/actors/actors.puml
+actor "Visiteur" as visitor
+!include /specifications/docs/diagrams/actors/common.puml
 
 student --|> user
 tutor --|> user
@@ -10,7 +11,7 @@ usecase "S'inscrire" as register
 usecase "Se connecter" as login
 usecase "Se déconnecter" as logout
 
-user -- register
+visitor -- register
 user -- login
 user -- logout
 

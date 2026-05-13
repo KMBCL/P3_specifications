@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Tâches - Specifications</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Specifications</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../actors/" class="nav-link">Acteurs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spécifications fonctionnelles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../authentication/" class="dropdown-item">Compte Utilisateur</a>
+</li>
+                                    
+<li>
+    <a href="../communication/" class="dropdown-item">Communication</a>
+</li>
+                                    
+<li>
+    <a href="../appointment/" class="dropdown-item">Rendez-vous</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Tâches</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../project_specifications/" class="nav-link">Spécifications techniques</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../appointment/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../project_specifications/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#domaine-taches" class="nav-link">Domaine : tâches</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#creation-des-taches" class="nav-link">Création des tâches</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gestion-des-taches" class="nav-link">Gestion des tâches</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-creation-dune-tache-personnelle" class="nav-link">Fonctionnalité: Création d'une tâche personnelle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-creation-dune-tache-assignee-a-un-eleve" class="nav-link">Fonctionnalité: Création d'une tâche assignée à un élève</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-consultation-de-mes-taches" class="nav-link">Fonctionnalité: Consultation de mes tâches</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-completion-dune-tache" class="nav-link">Fonctionnalité: Complétion d'une tâche</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="domaine-taches">Domaine : tâches</h1>
+<h2 id="creation-des-taches">Création des tâches</h2>
+<p><img alt="Création des tâches" src="../../diagrams/tasks/task_creation.svg" /></p>
+<h2 id="gestion-des-taches">Gestion des tâches</h2>
+<p><img alt="Gestion des tâches" src="../../diagrams/tasks/task_management.svg" /></p>
+<h2 id="fonctionnalite-creation-dune-tache-personnelle">Fonctionnalité: Création d'une tâche personnelle</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté
+    Je veux créer une tâche personnelle
+    Afin de m'organiser
+    Ou découper une tâche assignée trop grosse en sous-tâches
+
+    Scénario: Création d'une tâche personnelle avec des données valides
+        Etant donné que je suis sur le formulaire de création de tâches
+        Et que j'ai complété les champs obligatoires
+        Lorsque je valide le formulaire
+        Alors la tâche est créée pour moi
+        Et la tâche est visible dans mon calendrier
+
+    Scénario: Refus de création d'une tâche personnelle avec des données invalides
+        Etant donné que je suis sur le formulaire de création de tâches
+        Mais que je n'ai pas complété les champs obligatoires
+        Lorsque je valide le formulaire
+        Alors la tâche n'est pas créée
+        Et les champs obligatoires sont mis en valeur
+        Et je suis invité à compléter 
+
+</code></pre>
+<h2 id="fonctionnalite-creation-dune-tache-assignee-a-un-eleve">Fonctionnalité: Création d'une tâche assignée à un élève</h2>
+<pre><code class="language-gherkin">
+    En tant que tuteur connecté
+    Je veux créer une nouvelle tâche à réaliser pour un élève que j'accompagne
+    Afin qu'il ait des objectifs à acomplir pour le prochain rendez-vous
+
+    Scénario: Création d'une tâche assignée à un élève avec des données valides
+        Etant donné que je suis sur le formulaire de création de tâches
+        Et que je suis un tuteur
+        Et que j'ai choisi un étudiant
+        Et que j'ai complété les champs obligatoires
+        Lorsque je valide le formulaire
+        Alors la tâche est créée pour l'élève
+        Et la tâche est visible dans mon calendrier
+        Et la tâche est visible dans le calendrier de l'élève
+
+    Scénario: Refus de création d'une tâche assignée à un élève avec données obligatoires manquantes
+        Etant donné que je suis sur le formulaire de création de tâches
+        Et que j'ai choisi un étudiant
+        Mais que je n'ai pas complété les données obligatoires
+        Lorsque je valide le formulaire
+        Alors la tâche n'est pas créée
+        Et les champs obligatoires sont mis en valeur
+        Et je suis invité à compléter 
+
+</code></pre>
+<h2 id="fonctionnalite-consultation-de-mes-taches">Fonctionnalité: Consultation de mes tâches</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur
+    Je veux voir toutes mes tâches
+    Afin de ne pas oublier d'en compléter
+
+    Scénario: Consultation de mes tâches
+        Etant donné que je suis connecté à mon espace personnel
+        Et que j'ai 3 tâches assignées par mon tuteur non réalisées
+        Et que j'ai 4 tâches personnelles non réalisées
+        Et que j'ai 2 tâches personnelles déjà réalisées
+        Lorsque je clique sur &quot;consulter mes tâches&quot;
+        Alors je suis redirigé vers la page qui liste mes tâches
+        Et mes 3 tâches assignées par mon tuteur, non réalisées, sont affichées
+        Et sont mises en valeur
+        Et mes 4 tâches personnelles, non réalisées, sont affichées
+        Et sont mises en valeur différement
+        Et mes 2 tâches réalisées sont affichées
+
+
+    Scénario: Consultation de mes tâches avec absence de tâches
+        Etant donné que je n'ai aucune tâche
+        Lorsque je clique sur &quot;consulter les tâches&quot;
+        Alors je suis redirigé vers la page qui liste mes tâches
+        Et aucune tâche n'est affichée
+        Et un message me prévient que j'ai aucune tâche
+
+</code></pre>
+<h2 id="fonctionnalite-completion-dune-tache">Fonctionnalité: Complétion d'une tâche</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté
+    Je veux marquer &quot;complétée&quot; une tâche
+    Afin de m'organiser
+    Et ne voir que les tâches restants à faire
+
+    Scénario: Complétion d'une tâche
+        Etant donné que je suis sur la tâche sélectionnée
+        Lorsque que je clique sur &quot;complétée&quot;
+        Alors la tâche est marquée comme complétée
+        Et la tâche n'est plus visible dans le calendrier
+
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

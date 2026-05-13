@@ -1,4 +1,12 @@
-@startuml common
-actor "Elève" as student
-actor "Tuteur" as tutor
+@startuml actors
+title Acteurs
+
+!include /specifications/docs/diagrams/actors/common.puml
+
+actor "Utilisateur" as user
+actor "Visiteur" as visitor
+
+student --|> user
+tutor --|> user
+
 @enduml
