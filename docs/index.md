@@ -67,3 +67,11 @@ Le projet va être découpé en plusieurs couches:
 - MySQL
 - MarioDB
 - ...
+
+## Architecture générale
+
+![Architecture générale](diagrams/architecture.svg)
+
+## Séquence générique de traitement
+
+![Séquence générique](diagrams/workflow.svg)
