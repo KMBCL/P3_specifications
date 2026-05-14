@@ -7,10 +7,10 @@ actor "Visiteur" as visitor
 student --|> user
 tutor --|> user
 
-usecase "S'inscrire" as register
-usecase "Se connecter" as login
-usecase "Se déconnecter" as logout
-usecase "Réinitialiser mot de passe" as reset_password
+usecase "M'inscrire" as register
+usecase "Me connecter \n à mon espace personnel " as login
+usecase "Me déconnecter \n de mon espace personnel" as logout
+usecase "Réinitialiser \n mon mot de passe" as reset_password
 
 visitor -- register
 user -- login

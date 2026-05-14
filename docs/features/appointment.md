@@ -4,7 +4,7 @@
 
 ![Gestion des rendez-vous](../diagrams/appointment/appointment.svg)
 
-## Fonctionnalité: Planification d'un rendez-vous
+## Fonctionnalité: Planifier un rendez-vous
 
 ```gherkin
 
@@ -51,7 +51,9 @@
 
 ```
 
-## Fonctionnalité: Consultation de mes rendez-vous dans le calendrier
+## Fonctionnalité: Modifier un rendez-vous
+
+## Fonctionnalité: Consulter ses rendez-vous
 
 ```gherkin
 
@@ -77,3 +79,5 @@
         Et un message me prévient que je n'ai aucun rendez-vous planifié
 
 ```
+
+## Fonctionnalité: Consulter le détail d'un rendez-vous

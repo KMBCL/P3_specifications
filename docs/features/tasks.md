@@ -8,7 +8,7 @@
 
 ![Gestion des tâches](../diagrams/tasks/task_management.svg)
 
-## Fonctionnalité: Création d'une tâche personnelle
+## Fonctionnalité: Créer une tâche personnelle
 
 ```gherkin
 
@@ -38,7 +38,7 @@
 
 ```
 
-## Fonctionnalité: Création d'une tâche assignée à un élève
+## Fonctionnalité: Créer une tâche assignée à un élève
 
 ```gherkin
 
@@ -72,7 +72,7 @@
 
 ```
 
-## Fonctionnalité: Consultation de mes tâches
+## Fonctionnalité: Consulter mes tâches
 
 ```gherkin
 
@@ -106,8 +106,9 @@
         Et un message me prévient que j'ai aucune tâche
 
 ```
+## Fonctionnalité: Modifier ma tâche
 
-## Fonctionnalité: Complétion d'une tâche
+## Fonctionnalité: Compléter ma tâche
 
 ```gherkin
 
@@ -125,3 +126,7 @@
         Et la tâche n'est plus visible dans le calendrier
 
 ```
+
+## Fonctionnalité: Consulter les tâches assignées
+
+## Fonctionnalité: Modifier une tâche assignée

@@ -8,17 +8,16 @@
 
 ![Epingler et rechercher](../diagrams/communication/pined_message.svg)
 
-## Fonctionnalité: Envoi d'un message à un autre utilisateur
+## Fonctionnalité: Envoyer un message
 
 ```gherkin
 
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux envoyer un message à un autre utilisateur
-    Afin de communiquer avec un autre utilisateur
+    Afin de communiquer avec cet autre utilisateur
 
-    Scénario: Envoi d'un message à un autre utilisateur
-        Etant donné que je suis connecté
-        Et que j'ai cliqué sur nouveau message
+    Scénario: Envoyer un message à un autre utilisateur
+        Etant donné que j'ai cliqué sur "Nouveau message"
         Et que j'ai écrit un message
         Et que j'ai renseigné un destinataire existant
 
@@ -28,48 +27,67 @@
         Et le message est marqué non lu pour le destinataire
         Et un email de notification est envoyé au destinataire
 
-    Scénario: Refus d'envoi d'un message à un autre utilisateur inexistant
-        Etant donné que je suis connecté
-        Et que j'ai cliqué sur nouveau message
+    Scénario: Refus lorsque le destinataire n'existe pas
+        Etant donné que j'ai cliqué sur "Nouveau message"
         Et que j'ai écrit un message
         Et que j'ai renseigné un destinataire inexistant
 
         Lorsque je clique sur envoyer
 
         Alors le message n'est pas envoyé au destinataire
-        Et un message m'avertit que le destinataire n'existe pas
+        Et un message m'informe que le destinataire n'existe pas
 
-    Scénario: Refus d'envoi d'un message vide à un autre utilisateur
-        Etant donné que je suis connecté
-        Et que j'ai cliqué sur nouveau message
-        Et que j'ai renseigné un destinataire inexistant
+    Scénario: Refus lorsque le message est vide
+        Etant donné que j'ai cliqué sur "Nouveau message"
+        Et que j'ai renseigné un destinataire existant
         Mais que je n'ai pas écrit de message
 
         Lorsque je clique sur envoyer
 
         Alors le message n'est pas envoyé au destinataire
-        Et un message m'avertit que le message est vide
+        Et un message m'informe que le message est vide
 
 ```
-## Fonctionnalité: Lecture d'un message reçu
+## Fonctionnalité: Consulter mes messages
 
 ```gherkin
 
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux accéder à mes messages
-    Afin d'en lire le contenu
+    Afin de consulter les messages reçus
+
+    Scénario: Consulter mes messages
+        Etant donné que j'ai reçu au moins un message
+
+        Lorsque je clique sur "consulter mes messages"
+
+        Alors je vois la liste des messages reçus
+        Et les messages non lus sont mis en valeur
+
+    Scénario: Consulter mes messages, si aucun reçu
+        Etant donné que je n'ai reçu aucun message
+
+        Lorsque je clique sur "consulter mes messages"
+
+        Alors je suis informé que je n'ai aucun message reçu
+
+```
+## Fonctionnalité: Lire un message
+
+```gherkin
+
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux lire un message
+    Afin de prendre connaissance du contenu
 
     Scénario: Lecture d'un message reçu
-        Etant donné que je suis connecté
-        Et que j'ai reçu au moins un message
+        Etant donné que j'ai reçu au moins un message
         Et que j'ai cliqué sur consulter mes messages
 
         Lorsque je clique sur un message reçu
 
-        Alors je peux lire le contenu du message
-        Et je peux voir l'expéditeur
-        Et je peux voir l'horodatage de réception
-        Et le message est marqué lu
+        Alors je peux prendre connaissance du contenu du message
+        Et le message est marqué "lu"
 
 ```
 
@@ -77,21 +95,18 @@
 
 ```gherkin
 
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux épingler un message
-    Afin de le retrouver plus facilement plus tard.
+    Afin de le retrouver plus facilement plus tard
 
     Scénario: Epingler un message
         Etant donné que j'ai au moins un message
         Et que je consulte ce message
 
-        Lorsque je clique sur "épingler message"
+        Lorsque je clique sur "Epingler le message"
 
         Alors le message est marqué comme épinglé
-        Et visuellement je vois qu'il est épinglé
-
-        Lorsque je clique sur "messages épinglés"
-        Alors je vois que le message que je viens d'épingler est dans la liste
+        Et le message apparaît épinglé
 
 ```
 
@@ -99,7 +114,7 @@
 
 ```gherkin
 
-    En tant qu'utilisateur
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux désépingler un message que je ne trouve plus utile
     Afin d'avoir une liste pertinente et à jour de messages importants
 
@@ -107,47 +122,41 @@
         Etant donné que j'ai au moins un message épinglé
         Et que j'ai cliqué sur "messages épinglés"
         Et que je vois un message épinglé
-        Et que je consulte de message
+        Et que je consulte ce message
 
         Lorsque je clique sur "Désépingler message"
 
         Alors le message n'est plus épinglé
-        Et visuellement je vois qu'il n'est plus épinglé
-
-        Lorsque que je clique sur "Messages épinglés"
-
-        Alors je vois que le message n'est plus dans la liste
+        Et le message n'apparaît plus épinglé
 
 ```
 
-## Fonctionnalité: Recherche de messages reçus épinglés
+## Fonctionnalité: Consulter mes messages épinglés
 
 ```gherkin
 
-    En tant qu'utilisateur
-    Je veux retrouver facilement mes messages reçus épinglés
-    Afin de relire des informations jugées importantes
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux consulter mes messages épinglés
+    Afin de retrouver facilement un message
 
-    Scénario: Recherche des messages épinglés existants
+    Scénario: Consulter mes messages épinglés
+        Etant donné que j'ai au moins un message épinglé
+
+        Lorsque je clique sur "Messages épinglés"
+
+        Alors je vois uniquement les messages épinglés
+
+    Scénario: Consulter sans messages épinglés
         Etant donné que je consulte mes messages reçus
-        Et que j'ai 3 messages reçus épinglés
+        Et que je n'ai épinglé aucun message
 
-        Lorsque je clique sur "chercher dans épinglés"
-
-        Alors mes 3 messages reçus épinglés sont affichées
-
-    Scénario: Recherche de messages épinglés inexistants
-        Etant donné que je consulte mes messages reçus
-        Et que je n'ai épinglé aucun message reçu précédemment
-
-        Lorsque que je clique sur "chercher dans épinglés"
+        Lorsque je clique sur "Messages épinglés"
         
-        Alors aucun message reçu ne s'affichée
-        Et un message m'averit que je n'ai aucun message reçu épinglé
+        Alors je suis informé que je n'ai aucun message épinglé
 
 ```
 
-# Hors pérmiètre initial
+# Hors périmètre initial
 
 ## Gestion des contacts
 Afin de faciliter la communication entre plusieurs élèves et tuteurs, former des groupes d'entre aide, etc. Une gestion des contacts et de groupes peut être envisagée.

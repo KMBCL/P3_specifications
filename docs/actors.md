@@ -12,22 +12,22 @@ Peut s'inscrire ou se connecter.
 ## Tuteur :
 Utilisateur inscrit et authentifié pour fournir un soutien scolaire aux élèves.
 
-- Suivre un ou plusieurs élèves.
-- Planifier les rendez-vous avec les élèves
-- Assigner une ou plusieurs tâches à l'élève entre chaque rendez-vous
+- Suit un ou plusieurs élèves.
+- Planifie les rendez-vous avec les élèves
+- Assigne une ou plusieurs tâches à l'élève entre chaque rendez-vous
 
 ## Elève :
 Utilisateur inscrit et authentifié pour obtenir un soutien scolaire.
 
 - Est assigné à un tuteur
-- Doit assister aux rendez-vous planifiés
-- Doit réaliser les tâches assignées
+- Assiste aux rendez-vous planifiés
+- Réalise les tâches assignées par le tuteur
 
 ## Utilisateur :
 Utilisateur authentifié au sens large, élève ou tuteur.
 
-- Peut envoyer / recevoir des messages
-- Peut planifier des tâches personnelles
+- Envoi / reçoit des messages
+- Gère ses tâches personnelles
 
 # Hors périmètre initial
 
@@ -36,5 +36,5 @@ Cet utilisateur est identifié comme pontentiel besoin, mais ne fait pas partie 
 
 Utilisateur système ayant des droits étendus.
 
-- Gestion des demanques / problématiques utilisateurs
-- Validation des rôles tuteurs / élèves lors de l'inscription
+- Gère des demanques / problématiques utilisateurs
+- Valide les rôles tuteurs / élèves lors de l'inscription

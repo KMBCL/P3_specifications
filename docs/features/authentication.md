@@ -8,7 +8,7 @@
 
 ![Gestion des données personnelles](../diagrams/authentication/data_management.svg)
 
-## Fonctionnalité: Inscription d'un nouvel utilisateur
+## Fonctionnalité: M'inscrire
 
 ```gherkin
 
@@ -27,7 +27,7 @@
         Et mon compte est créé
         Et je suis invité à me connecter
 
-    Scénario: Refus avec donées obligatoires manquantes
+    Scénario: Refus avec des données obligatoires manquantes
         Etant donné que je suis sur le formulaire d'inscription
         Mais que j'ai partiellement renseigné les champs obligatoires avec des données valides
      
@@ -35,14 +35,14 @@
         
         Alors l'inscription est refusée
         Et les données manquantes sont mises en valeur
-        Et je suis averti que ces données sont obligatoires
+        Et je suis informé que ces données sont obligatoires
 
     Scénario: Refus avec des données au mauvais format
         Etant donné que je suis sur le formulaire d'inscription
         
         Lorsque je saisis des données dans un format invalide
         
-        Alors le formulaire met en valeur le champ
+        Alors le formulaire met la donnée en valeur
         Et le format attendu m'est spécifié
 
     Scénario: Refus avec une adresse email déjà existante
@@ -57,33 +57,34 @@
         Et je suis invité à me connecter au lieu de créer un nouveau compte
 ```
 
-## Fonctionnalité: Connexion à mon espace personnel
+## Fonctionnalité: Me connecter à mon espace personnel
 
 ```gherkin
 
     En tant qu'utilisateur déconnecté
-    Je veux me connecter à mon compte
-    Afin d'accéder à mon espace client
+    Je veux me connecter à mon espace personnel
+    Afin d'accéder à mon espace personnel
+    Et aux fonctionnalités du site
 
-    Scénario: Connexion avec identifiants valides
+    Scénario: Connexion avec des identifiants valides
         Etant donné que je suis sur la page de connexion
         Et que j'ai complété le formulaire de connexion
-        Et que mon identifiant et mot de passe sont valides
+        Et que mon adresse email et mot de passe sont valides
 
         Lorsque je valide le formulaire de connexion
 
         Alors la connexion est autorisée
         Et j'accède à mon espace personnel
 
-    Scénario: Refus avec des identifiants invalides
+    Scénario: Refus avec identifiants invalides
         Etant donné que je suis sur la page de connexion
         Et que j'ai complété le formulaire de connexion
-        Mais que mon identifiant ou mot de passe est invalide
+        Mais que mon adresse email ou mot de passe est invalide
 
         Lorsque je valide le formulaire de connexion
         
         Alors la connexion est refusée
-        Et je suis informé que l'identifiant et mot de passe ne sont pas valides
+        Et je suis informé que mes identifiants sont invalides
         Et je suis invité à réessayer
 
     Scénario: Refus avec des identifiants incomplets
@@ -96,16 +97,16 @@
         Et je suis informé que le champ manquant est obligatoire
 ```
 
-## Fonctionnalité: Déconnexion de mon espace personnel
+## Fonctionnalité: Me déconnecter de mon espace personnel
 
 ```gherkin
 
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux me déconnecter
     Afin de mettre fin à ma session
 
     Scénario: Déconnexion
-        Etant donné que je suis connecté
+        Etant donné que je suis connecté à mon espace personnel
 
         Lorsque je clique sur "déconnecter"
         
@@ -114,16 +115,16 @@
         Et je n'ai plus accès à mon espace personnel
 ```
 
-## Fonctionnalité: Mise à jour du mot de passe
+## Fonctionnalité: Mettre à jour mon mot de passe
 
 ```gherkin
 
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux mettre à jour mon mot de passe
     Afin de le renouveler par sécurité
 
     Scénario: Modification de mot de passe
-        Etant donné que je suis connecté
+        Etant donné que je suis connecté à mon espace personnel
         Et que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi le nouveau mot de passe
         Et que j'ai confirmé le nouveau mot de passe
@@ -132,12 +133,12 @@
         Lorsque je valide le formulaire
 
         Alors le mot de passe est mis à jour
-        Et un message m'avertit que le mot de passe est mis à jour
+        Et un message m'informét que le mot de passe est mis à jour
         Et je suis déconnecté
         Et je suis invité à me reconnecter
 
-    Scénario: Refus lorsque le mot de passe actuel est faux
-        Etant donné que je suis connecté
+    Scénario: Refus lorsque le mot de passe actuel est incorrect
+        Etant donné que je suis connecté à mon espace personnel
         Et que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi le nouveau mot de passe 
         Et que j'ai confirmé le nouveau mot de passe 
@@ -146,10 +147,10 @@
         Lorsque je valide le formulaire
 
         Alors le mot de passe n'est pas mis à jour
-        Et je suis averti que le mot de passe actuel est faux
+        Et je suis informé que le mot de passe actuel est incorrect
 
     Scénario: Refus lorsque le mot de passe actuel est manquant
-        Etant donné que je suis connecté
+        Etant donné que je suis connecté à mon espace personnel
         Et que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi le nouveau mot de passe 
         Et que j'ai confirmé le nouveau mot de passe
@@ -158,10 +159,10 @@
         Lorsque je valide le formulaire
 
         Alors le mot de passe n'est pas mis à jour
-        Et je suis averti que ce champ est obligatoire
+        Et je suis informé que ce champ est obligatoire
 
     Scénario: Refus lorsque le nouveau mot de passe ne correspond pas avec la confirmation
-        Etant donné que je suis connecté
+        Etant donné que je suis connecté à mon espace personnel
         Et que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi mon mot de passe actuel
         Et que j'ai saisi le nouveau mot de passe "test_mdp"
@@ -170,10 +171,10 @@
         Lorsque je valide le formulaire
 
         Alors le mot de passe n'est pas mis à jour
-        Et je suis averti que le nouveau mot de passe ne concorde pas avec la confirmation
+        Et je suis informé que le nouveau mot de passe ne correspond pas avec la confirmation
 
     Scénario: Refus lorsque la confirmation de mot de passe est manquante
-        Etant donné que je suis connecté
+        Etant donné que je suis connecté à mon espace personnel
         Et que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi mon mot de passe actuel
         Et que j'ai saisi le nouveau mot de passe
@@ -182,18 +183,18 @@
         Lorsque je valide le formulaire
 
         Alors le mot de passe n'est pas mis à jour
-        Et je suis averti qu'il faut confirmer le nouveau mot de passe
+        Et je suis informé qu'il faut confirmer le nouveau mot de passe
 ```
 
-## Fonctionnalité: Modification des données personnelles
+## Fonctionnalité: Mettre à jour mes données personnelles
 
 ```gherkin
 
-    En tant qu'utilisateur connecté
-    Je veux modifier mes informations personnelles
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux modifier mes données personnelles
     Afin de refléter les changements de mes coordonnées
 
-    Scénario: Modification des données personnelles avec données valides
+    Scénario: Mettre à jour mes données personnelles avec des données valides
         Etant donné que je suis connecté
         Et que je suis sur le formulaire de mes données personnelles
         Et que j'ai saisi des données à modifier avec des données sont valides
@@ -213,7 +214,37 @@
         Lorsque je valide le formulaire
         
         Alors les données ne sont pas modifiées
-        Et je suis averti que le format de l'adresse n'est pas valide
+        Et je suis informé que le format de l'adresse n'est pas valide
 ```
 
 ## Fonctionnalité: Réinitialiser mon mot de passe
+
+```gherkin
+
+    En tant qu'utilisateur déconnecté de mon espace personnel
+    Je veux réinitialiser le mot de passe que j'ai oublié
+    Afin de pouvoir en définir un nouveau, pour me connecter à mon espace personnel
+
+    Scénario: Réinitialiser mon mot de passe avec une adresse valide
+        Etant donné que je suis déconnecté
+        Et que j'ai oublié mon mot de passe
+        Et que je rempli le formulaire de réinitialisation
+        Et que j'ai saisi mon adresse email, valide
+
+        Lorsque je suis valide le formulaire
+
+        Alors je reçois un email avec un nouveau mot de passe
+        Et je suis invité à me reconnecter avec
+
+    Scénario: Refus de réinitialiser mon mot de passe une avec adresse invalide
+        Etant donné que je suis déconnecté de mon espace personnel
+        Et que j'ai oublié mon mot de passe
+        Et que j'ai rempli le formulaire de réinitialisation
+        Mais que j'ai saisi une adresse email invalide
+
+        Lorsque je valide le formulaire
+
+        Alors le formulaire met en valeur l'adresse email invalide
+        Et le format attendu m'est spécifié
+
+```
