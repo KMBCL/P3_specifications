@@ -64,6 +64,9 @@
                             <li class="nav-item">
                                 <a href="../project_specifications/" class="nav-link">Spécifications techniques</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="../class_diagrams/" class="nav-link">Diagrammes de classes</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
@@ -102,6 +105,10 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#acteurs-identifies" class="nav-link">Acteurs identifiés :</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#visiteur" class="nav-link">Visiteur :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#tuteur" class="nav-link">Tuteur :</a>
               <ul class="nav flex-column">
               </ul>
@@ -116,28 +123,54 @@
             </li>
               </ul>
             </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#hors-perimetre" class="nav-link">Hors périmètre</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#administrateur" class="nav-link">Administrateur :</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
 <h1 id="acteurs-identifies">Acteurs identifiés :</h1>
+<p><img alt="Acteurs" src="../diagrams/actors/actors.svg" /></p>
+<h2 id="visiteur">Visiteur :</h2>
+<p>Utilisateur anonyme non authentifié et / ou n'ayant pas de compte.</p>
+<p>N'a accès à <strong>aucune</strong> page sécurisée.</p>
+<p>Peut s'inscrire ou se connecter.</p>
 <h2 id="tuteur">Tuteur :</h2>
-<p>bénévole inscrit pour fournir un soutien scolaire aux élèves</p>
+<p>Utilisateur inscrit et authentifié pour fournir un soutien scolaire aux élèves.</p>
 <ul>
-<li>suit un ou plusieurs élèves.</li>
-<li>planifie les rendez-vous avec les élèves</li>
-<li>assigne une ou plusieurs tâches à l'élève entre chaque rendez-vous</li>
+<li>Suivre un ou plusieurs élèves.</li>
+<li>Planifier les rendez-vous avec les élèves</li>
+<li>Assigner une ou plusieurs tâches à l'élève entre chaque rendez-vous</li>
 </ul>
 <h2 id="eleve">Elève :</h2>
-<p>élève inscrit pour obtenir un soutien scolaire</p>
+<p>Utilisateur inscrit et authentifié pour obtenir un soutien scolaire.</p>
 <ul>
-<li>possède un seul tuteur</li>
-<li>doit réaliser les tâches assignées</li>
+<li>Est assigné à un tuteur</li>
+<li>Doit assister aux rendez-vous planifiés</li>
+<li>Doit réaliser les tâches assignées</li>
 </ul>
 <h2 id="utilisateur">Utilisateur :</h2>
-<p>utilisateur au sens large, élève ou tuteur</p>
-<p><img alt="Acteurs" src="../diagrams/actors/actors.svg" /></p></div>
+<p>Utilisateur authentifié au sens large, élève ou tuteur.</p>
+<ul>
+<li>Peut envoyer / recevoir des messages</li>
+<li>Peut planifier des tâches personnelles</li>
+</ul>
+<h1 id="hors-perimetre">Hors périmètre</h1>
+<h2 id="administrateur">Administrateur :</h2>
+<p>Cet utilisateur est identifié comme pontentiel besoin, mais ne fait pas partie des demandes initiales. Peut être ajouté dans de futures mises à jour avec ses fonctionnalités propres.</p>
+<p>Utilisateur système ayant des droits étendus.</p>
+<ul>
+<li>Gestion des demanques / problématiques utilisateurs</li>
+<li>Validation des rôles tuteurs / élèves lors de l'inscription</li>
+</ul></div>
             </div>
         </div>
 

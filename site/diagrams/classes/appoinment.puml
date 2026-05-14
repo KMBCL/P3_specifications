@@ -1,0 +1,18 @@
+@startuml appointment
+title Appointment Class Diagram
+
+left to right direction
+
+class Appointment {
+    pk : uuid
+    tutor_pk : uuid
+    student_pk : uuid
+    title : str
+    start_at : datetime
+    end_at : datetime
+}
+
+Tutor "1" -- "0..*" Appointment : tutor_pk
+Student "1" -- "0..*" Appointment : student_pk
+
+@enduml
