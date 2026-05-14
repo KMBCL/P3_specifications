@@ -93,6 +93,16 @@
         Lorsque je clique sur "messages épinglés"
         Alors je vois que le message que je viens d'épingler est dans la liste
 
+```
+
+## Fonctionnalité: Désépingler un message
+
+```gherkin
+
+    En tant qu'utilisateur
+    Je veux désépingler un message que je ne trouve plus utile
+    Afin d'avoir une liste pertinente et à jour de messages importants
+
     Scénario: Désépingler un message
         Etant donné que j'ai au moins un message épinglé
         Et que j'ai cliqué sur "messages épinglés"
@@ -136,3 +146,8 @@
         Et un message m'averit que je n'ai aucun message reçu épinglé
 
 ```
+
+# Hors pérmiètre initial
+
+## Gestion des contacts
+Afin de faciliter la communication entre plusieurs élèves et tuteurs, former des groupes d'entre aide, etc. Une gestion des contacts et de groupes peut être envisagée.

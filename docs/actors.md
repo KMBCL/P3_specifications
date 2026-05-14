@@ -29,7 +29,7 @@ Utilisateur authentifié au sens large, élève ou tuteur.
 - Peut envoyer / recevoir des messages
 - Peut planifier des tâches personnelles
 
-# Hors périmètre
+# Hors périmètre initial
 
 ## Administrateur :
 Cet utilisateur est identifié comme pontentiel besoin, mais ne fait pas partie des demandes initiales. Peut être ajouté dans de futures mises à jour avec ses fonctionnalités propres.

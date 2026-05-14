@@ -1,5 +1,6 @@
 # Spécifications techniques
 
+## Effectifs
 Pour rappel l'équipe de développement:
 
 - 2 développeurs Frontend
