@@ -67,6 +67,9 @@
                             <li class="nav-item">
                                 <a href="../../class_diagrams/" class="nav-link">Diagrammes de classes</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="../../mvp/" class="nav-link">MVP</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
@@ -125,7 +128,20 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-desepingler-un-message" class="nav-link">Fonctionnalité: Désépingler un message</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-recherche-de-messages-recus-epingles" class="nav-link">Fonctionnalité: Recherche de messages reçus épinglés</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#hors-permietre-initial" class="nav-link">Hors pérmiètre initial</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#gestion-des-contacts" class="nav-link">Gestion des contacts</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -219,6 +235,13 @@
         Lorsque je clique sur &quot;messages épinglés&quot;
         Alors je vois que le message que je viens d'épingler est dans la liste
 
+</code></pre>
+<h2 id="fonctionnalite-desepingler-un-message">Fonctionnalité: Désépingler un message</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur
+    Je veux désépingler un message que je ne trouve plus utile
+    Afin d'avoir une liste pertinente et à jour de messages importants
+
     Scénario: Désépingler un message
         Etant donné que j'ai au moins un message épinglé
         Et que j'ai cliqué sur &quot;messages épinglés&quot;
@@ -258,7 +281,10 @@
         Alors aucun message reçu ne s'affichée
         Et un message m'averit que je n'ai aucun message reçu épinglé
 
-</code></pre></div>
+</code></pre>
+<h1 id="hors-permietre-initial">Hors pérmiètre initial</h1>
+<h2 id="gestion-des-contacts">Gestion des contacts</h2>
+<p>Afin de faciliter la communication entre plusieurs élèves et tuteurs, former des groupes d'entre aide, etc. Une gestion des contacts et de groupes peut être envisagée.</p></div>
             </div>
         </div>
 

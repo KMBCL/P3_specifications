@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Acteurs - Specifications</title>
+        <title>MVP - Specifications</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                                 <a href=".." class="nav-link">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Acteurs</a>
+                                <a href="../actors/" class="nav-link">Acteurs</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spécifications fonctionnelles</a>
@@ -68,7 +68,7 @@
                                 <a href="../class_diagrams/" class="nav-link">Diagrammes de classes</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../mvp/" class="nav-link">MVP</a>
+                                <a href="./" class="nav-link active" aria-current="page">MVP</a>
                             </li>
                         </ul>
 
@@ -79,12 +79,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
+                                <a rel="prev" href="../class_diagrams/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../features/authentication/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -106,33 +106,23 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#acteurs-identifies" class="nav-link">Acteurs identifiés :</a>
+            <li class="nav-item" data-bs-level="1"><a href="#minimal-viable-product-mvp" class="nav-link">Minimal Viable Product (MVP)</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#visiteur" class="nav-link">Visiteur :</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#tuteur" class="nav-link">Tuteur :</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#eleve" class="nav-link">Elève :</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#utilisateur" class="nav-link">Utilisateur :</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#hors-perimetre-initial" class="nav-link">Hors périmètre initial</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#administrateur" class="nav-link">Administrateur :</a>
+            <li class="nav-item" data-bs-level="1"><a href="#phase-1" class="nav-link">Phase 1:</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#phase-2" class="nav-link">Phase 2:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#phase-3" class="nav-link">Phase 3:</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
         </ul>
@@ -140,40 +130,27 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="acteurs-identifies">Acteurs identifiés :</h1>
-<p><img alt="Acteurs" src="../diagrams/actors/actors.svg" /></p>
-<h2 id="visiteur">Visiteur :</h2>
-<p>Utilisateur anonyme non authentifié et / ou n'ayant pas de compte.</p>
-<p>N'a accès à <strong>aucune</strong> page sécurisée.</p>
-<p>Peut s'inscrire ou se connecter.</p>
-<h2 id="tuteur">Tuteur :</h2>
-<p>Utilisateur inscrit et authentifié pour fournir un soutien scolaire aux élèves.</p>
+<h1 id="minimal-viable-product-mvp">Minimal Viable Product (MVP)</h1>
+<p>Pour ce projet, le MVP est estimé avec les fonctionnalités suivantes:</p>
+<h1 id="phase-1">Phase 1:</h1>
 <ul>
-<li>Suivre un ou plusieurs élèves.</li>
-<li>Planifier les rendez-vous avec les élèves</li>
-<li>Assigner une ou plusieurs tâches à l'élève entre chaque rendez-vous</li>
+<li>S'inscrire en tant qu'élève / tuteur</li>
+<li>Se connecter</li>
+<li>Possibilité d'assigner tuteur / élève</li>
+<li>Communiquer</li>
 </ul>
-<h2 id="eleve">Elève :</h2>
-<p>Utilisateur inscrit et authentifié pour obtenir un soutien scolaire.</p>
+<p>Pourquoi?: le coeur du projet est le soutien scolaire de l'élève avec l'aide du tuteur. La priorité doit être la mise en relation entre les deux parties. La communication permet, d'échanger, prendre contact et mettre en place une ébauche de soutien scolaire.</p>
+<h1 id="phase-2">Phase 2:</h1>
 <ul>
-<li>Est assigné à un tuteur</li>
-<li>Doit assister aux rendez-vous planifiés</li>
-<li>Doit réaliser les tâches assignées</li>
+<li>Planifier des rendez-vous</li>
+<li>Affichage calendrier</li>
 </ul>
-<h2 id="utilisateur">Utilisateur :</h2>
-<p>Utilisateur authentifié au sens large, élève ou tuteur.</p>
+<p>Pourquoi?: la prise de rendez-vous permet de structurer le rythme du soutien scolaire, et permet aux utilisateurs de s'organiser autour des rendez-vous et de ne pas en oublier grâce au calendrier.</p>
+<h1 id="phase-3">Phase 3:</h1>
 <ul>
-<li>Peut envoyer / recevoir des messages</li>
-<li>Peut planifier des tâches personnelles</li>
+<li>Gestion des tâches assignées / personnelles</li>
 </ul>
-<h1 id="hors-perimetre-initial">Hors périmètre initial</h1>
-<h2 id="administrateur">Administrateur :</h2>
-<p>Cet utilisateur est identifié comme pontentiel besoin, mais ne fait pas partie des demandes initiales. Peut être ajouté dans de futures mises à jour avec ses fonctionnalités propres.</p>
-<p>Utilisateur système ayant des droits étendus.</p>
-<ul>
-<li>Gestion des demanques / problématiques utilisateurs</li>
-<li>Validation des rôles tuteurs / élèves lors de l'inscription</li>
-</ul></div>
+<p>Pourquoi: permet de formaliser le travail entre chaque rendez-vous. Les utilisateurs peuvent alors décomposer de grandes tâches en sous-tâches personnelles.</p></div>
             </div>
         </div>
 
