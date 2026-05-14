@@ -1,0 +1,19 @@
+@startuml message
+title Message Class Diagram
+
+left to right direction
+
+class Message {
+    pk : uuid
+    from_user_pk : uuid
+    to_user_pk : uuid
+    sent_at:datetime
+    read_at:datetime
+    content : str
+    pinned : bool
+}
+
+User "1" -- "0..*" Message : from_user_pk
+User "1" -- "0..*" Message : to_user_pk
+
+@enduml

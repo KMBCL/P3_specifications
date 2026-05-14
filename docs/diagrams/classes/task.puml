@@ -1,0 +1,24 @@
+@startuml task
+title Class Diagram
+
+left to right direction
+
+class Task {
+    pk : uuid
+    user_pk : uuid
+    assigned_by : uuid
+    appointment_pk : uuid | None
+    created_at : timestamp
+    title : str
+    completed : bool
+}
+
+
+
+Student "1" -- "0..*" Task : user_pk
+Tutor "1" -- "0..*" Task : user_pk
+Tutor "1" -- "0..*" Task : assigned_by_pk
+
+Appointment "1" -- "0..*" Task : appointment_pk
+
+@enduml

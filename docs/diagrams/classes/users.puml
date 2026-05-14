@@ -1,0 +1,23 @@
+@startuml user
+title User Diagram
+
+left to right direction
+
+class User {
+    pk : uuid
+    role : enum
+    username : str
+    first_name : str
+    last_name : str
+    password_hash : str
+    email : str
+}
+
+class Student {}
+
+class Tutor {}
+
+User <|-- Student
+User <|-- Tutor
+
+@enduml

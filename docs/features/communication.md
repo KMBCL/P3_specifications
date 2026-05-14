@@ -26,7 +26,7 @@
 
         Alors le message est envoyé au destinataire
         Et le message est marqué non lu pour le destinataire
-        Et une notification non lue est envoyée au destinataire
+        Et un email de notification est envoyé au destinataire
 
     Scénario: Refus d'envoi d'un message à un autre utilisateur inexistant
         Etant donné que je suis connecté
