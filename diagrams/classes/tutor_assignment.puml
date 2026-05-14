@@ -1,0 +1,15 @@
+@startuml tutor_assignment
+title TutorAssignment Class Diagram
+
+left to right direction
+
+class TutorAssignment{
+    pk : uuid
+    tutor_pk : uuid
+    student : uuid
+    start_ad : datetime
+    end_at : datetime
+}
+
+Tutor "1" -- "0..*" TutorAssignment
+Student "1" -- "0..*" TutorAssignment

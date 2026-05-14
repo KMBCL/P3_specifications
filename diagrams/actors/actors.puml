@@ -1,10 +1,13 @@
 @startuml actors
 title Acteurs
 
+
+actor "Visiteur" as visitor
+
 !include /specifications/docs/diagrams/actors/common.puml
 
 actor "Utilisateur" as user
-actor "Visiteur" as visitor
+
 
 student --|> user
 tutor --|> user

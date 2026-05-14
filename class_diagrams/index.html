@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Rendez-vous - Specifications</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Diagrammes de classes - Specifications</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../..">Specifications</a>
+                <a class="navbar-brand" href="..">Specifications</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,37 +35,37 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="../.." class="nav-link">Accueil</a>
+                                <a href=".." class="nav-link">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../actors/" class="nav-link">Acteurs</a>
+                                <a href="../actors/" class="nav-link">Acteurs</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spécifications fonctionnelles</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spécifications fonctionnelles</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../authentication/" class="dropdown-item">Compte Utilisateur</a>
+    <a href="../features/authentication/" class="dropdown-item">Compte Utilisateur</a>
 </li>
                                     
 <li>
-    <a href="../communication/" class="dropdown-item">Communication</a>
+    <a href="../features/communication/" class="dropdown-item">Communication</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Rendez-vous</a>
+    <a href="../features/appointment/" class="dropdown-item">Rendez-vous</a>
 </li>
                                     
 <li>
-    <a href="../tasks/" class="dropdown-item">Tâches</a>
+    <a href="../features/tasks/" class="dropdown-item">Tâches</a>
 </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="../../project_specifications/" class="nav-link">Spécifications techniques</a>
+                                <a href="../project_specifications/" class="nav-link">Spécifications techniques</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../../class_diagrams/" class="nav-link">Diagrammes de classes</a>
+                                <a href="./" class="nav-link active" aria-current="page">Diagrammes de classes</a>
                             </li>
                         </ul>
 
@@ -76,12 +76,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../communication/" class="nav-link">
+                                <a rel="prev" href="../project_specifications/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../tasks/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -103,20 +103,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#domaine-rendez-vous" class="nav-link">Domaine : Rendez-vous</a>
+            <li class="nav-item" data-bs-level="1"><a href="#diagrammes-de-classes" class="nav-link">Diagrammes de classes:</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#gestion-des-rendez-vous" class="nav-link">Gestion des rendez-vous</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-planification-dun-rendez-vous" class="nav-link">Fonctionnalité: Planification d'un rendez-vous</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-consultation-de-mes-rendez-vous-dans-le-calendrier" class="nav-link">Fonctionnalité: Consultation de mes rendez-vous dans le calendrier</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -124,77 +112,12 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="domaine-rendez-vous">Domaine : Rendez-vous</h1>
-<h2 id="gestion-des-rendez-vous">Gestion des rendez-vous</h2>
-<p><img alt="Gestion des rendez-vous" src="../../diagrams/appointment/appointment.svg" /></p>
-<h2 id="fonctionnalite-planification-dun-rendez-vous">Fonctionnalité: Planification d'un rendez-vous</h2>
-<pre><code class="language-gherkin">
-    En tant que tuteur
-    Je veux planifier un rendez-vous avec un élève que j'accompagne
-    Afin de faire le point sur ses devoirs et l'avancement de ses tâches
-
-    Scénario: Planification d'un rendez-vous avec des données valides
-        Etant donné que je suis sur le formulaire de planification de rendez-vous
-        Et que j'ai choisi un destinataire
-        Et que j'ai complété les champs obligatoires
-        Lorsque je valide le formulaire
-        Alors le rendez-vous est créé
-        Et le rendez-vous est visible dans le calendrier
-
-    Scénario: Refus de planification d'un rendez-vous sans destinataire
-        Etant donné que je suis sur le formulaire de planification de rendez-vous
-        Et que j'ai complété les champs obligatoires
-        Mais que je n'ai pas choisi de destinataire
-        Lorsque je valide le formulaire
-        Alors le rendez-vous n'est pas créé
-        Et le champ destinataire est mis en valeur
-        Et je suis invité à choisir un destinataire
-
-    Scénario: Refus de planification d'un rendez-vous avec une date antérieure à la date courante
-        Etant donné que je suis sur le formulaire de planification de rendez-vous
-        Et que j'ai choisi un destinataire
-        Et que j'ai complété les champs obligatoires
-        Mais que la date est antérieure à la date courante
-        Lorsque je valide le formulaire
-        Alors le rendez-vous n'est pas créé
-        Et le champ date est mis en valeur
-        Et je suis invité à spécifier une date postérieure à la date courante
-
-    Scénario: Refus de planification d'un rendez avec un créneau horaire déjà pris
-        Etant donné que je suis sur e formulaire de planification de rendez-vous
-        Et que j'ai choisi un destinataire
-        Et que j'ai complété les champs obligatoires
-        Mais que j'ai déjà un rendez-vous avec un autre élève sur cette plage horaire
-        Lorsque je valide le formulaire
-        Alors le rendez-vous n'est pas créé
-        Et le champ date est mis en valeur
-        Et je suis prévenu que j'ai déjà un rendez-vous prévu sur cette plage horaire
-
-</code></pre>
-<h2 id="fonctionnalite-consultation-de-mes-rendez-vous-dans-le-calendrier">Fonctionnalité: Consultation de mes rendez-vous dans le calendrier</h2>
-<pre><code class="language-gherkin">
-    En tant qu'utilisateur connecté
-    Je veux voir tous mes rendez-vous dans un calendrier
-    Afin de ne pas les oublier, me préparer et m'organiser
-
-    Règles:
-        - Seules les rendez-vous de l'utilisateur connecté sont visibles
-
-    Scénario: Consultation de mes rendez-vous dans le calendrier
-        Etant donné que j'ai 5 rendez-vous planifiés à venir ce mois-ci
-        Et que j'ai 2 rendez-vous passés ce mois-ci
-        Lorsque je consulte le calendrier
-        Alors mes 7 rendez-vous du mois sont affichés dans le calendrier à leur date
-        Et ceux à venir sont mis en valeur
-
-
-    Scénario: Consultation de mes rendez-vous avec absence de rendez-vous planifiés
-        Etant donné que je n'ai aucun rendez-vous planifié ce mois-ci
-        Lorsque je consulte le calendrier
-        Alors aucun rendez-vous n'est affiché
-        Et un message me prévient que je n'ai aucun rendez-vous planifié
-
-</code></pre></div>
+<h1 id="diagrammes-de-classes">Diagrammes de classes:</h1>
+<p><img alt="User class" src="../diagrams/classes/user.svg" /></p>
+<p><img alt="User class" src="../diagrams/classes/tutor_assignment.svg" /></p>
+<p><img alt="User class" src="../diagrams/classes/message.svg" /></p>
+<p><img alt="User class" src="../diagrams/classes/task.svg" /></p>
+<p><img alt="User class" src="../diagrams/classes/appointment.svg" /></p></div>
             </div>
         </div>
 
@@ -202,13 +125,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = "../..",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
