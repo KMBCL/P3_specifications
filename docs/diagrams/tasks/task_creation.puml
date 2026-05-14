@@ -8,9 +8,12 @@ tutor --|> user
 
 usecase "Créer tâche pour élève" as create_task_for_student
 usecase "Créer tâche personnelle" as create_personal_task
-
+usecase "Notifier l'élève" as notify_student
 
 tutor -- create_task_for_student
+create_task_for_student ..> notify_student
+
+
 user -- create_personal_task
 
 

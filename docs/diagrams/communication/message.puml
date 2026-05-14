@@ -7,11 +7,14 @@ title Message
 
 usecase "Envoyer message" as send_message
 usecase "Lire message" as read_message
+usecase "Notifier le destinataire" as notify_recipient
 
 student --|> user
 tutor --|> user
 
 user -- send_message
 user -- read_message
+
+send_message ..> notify_recipient
 
 @enduml
