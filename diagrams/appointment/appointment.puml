@@ -3,13 +3,18 @@ title Rendez-vous
 
 !include /specifications/docs/diagrams/actors/common.puml
 
-usecase "Planifier rendez-vous" as plan_appointment
-usecase "Voir rendez-vous" as see_appointment
+usecase "Planifier un rendez-vous" as plan_appointment
+usecase "Modifier un rendez-vous" as update_appointment
+usecase "Consulter ses rendez-vous" as see_appointments
+usecase "Envoyer une notification par email" as send_email_notification
 
 tutor -- plan_appointment
-tutor -- see_appointment
+plan_appointment ..> send_email_notification
+tutor -- update_appointment
+tutor -- see_appointments
 
-student -- see_appointment
+
+student -- see_appointments
 
 
 @enduml

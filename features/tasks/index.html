@@ -116,19 +116,31 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-creation-dune-tache-personnelle" class="nav-link">Fonctionnalité: Création d'une tâche personnelle</a>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-creer-une-tache-personnelle" class="nav-link">Fonctionnalité: Créer une tâche personnelle</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-creation-dune-tache-assignee-a-un-eleve" class="nav-link">Fonctionnalité: Création d'une tâche assignée à un élève</a>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-creer-une-tache-pour-leleve" class="nav-link">Fonctionnalité: Créer une tâche pour l'élève</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-consultation-de-mes-taches" class="nav-link">Fonctionnalité: Consultation de mes tâches</a>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-consulter-mes-taches" class="nav-link">Fonctionnalité: Consulter mes tâches</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-completion-dune-tache" class="nav-link">Fonctionnalité: Complétion d'une tâche</a>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-modifier-ma-tache" class="nav-link">Fonctionnalité: Modifier ma tâche</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-completer-ma-tache" class="nav-link">Fonctionnalité: Compléter ma tâche</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-consulter-les-taches-assignees" class="nav-link">Fonctionnalité: Consulter les tâches assignées</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-modifier-une-tache-assignee" class="nav-link">Fonctionnalité: Modifier une tâche assignée</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -144,14 +156,14 @@
 <p><img alt="Création des tâches" src="../../diagrams/tasks/task_creation.svg" /></p>
 <h2 id="gestion-des-taches">Gestion des tâches</h2>
 <p><img alt="Gestion des tâches" src="../../diagrams/tasks/task_management.svg" /></p>
-<h2 id="fonctionnalite-creation-dune-tache-personnelle">Fonctionnalité: Création d'une tâche personnelle</h2>
+<h2 id="fonctionnalite-creer-une-tache-personnelle">Fonctionnalité: Créer une tâche personnelle</h2>
 <pre><code class="language-gherkin">
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux créer une tâche personnelle
     Afin de m'organiser
     Ou découper une tâche assignée trop grosse en sous-tâches
 
-    Scénario: Création d'une tâche personnelle avec des données valides
+    Scénario: Créer une tâche personnelle avec des données valides
         Etant donné que je suis sur le formulaire de création de tâches
         Et que j'ai complété les champs obligatoires
 
@@ -160,26 +172,25 @@
         Alors la tâche est créée pour moi
         Et la tâche est visible dans mon calendrier
 
-    Scénario: Refus de création d'une tâche personnelle avec des données invalides
+    Scénario: Refus avec des données obligatoires manquantes
         Etant donné que je suis sur le formulaire de création de tâches
-        Mais que je n'ai pas complété les champs obligatoires
+        Mais que je n'ai pas complété toutes les données obligatoires
 
         Lorsque je valide le formulaire
 
         Alors la tâche n'est pas créée
-        Et les champs obligatoires sont mis en valeur
-        Et je suis invité à compléter 
+        Et les données obligatoires sont mises en valeur
+        Et je suis invité à compléter les données manquantes
 
 </code></pre>
-<h2 id="fonctionnalite-creation-dune-tache-assignee-a-un-eleve">Fonctionnalité: Création d'une tâche assignée à un élève</h2>
+<h2 id="fonctionnalite-creer-une-tache-pour-leleve">Fonctionnalité: Créer une tâche pour l'élève</h2>
 <pre><code class="language-gherkin">
-    En tant que tuteur connecté
+    En tant que tuteur connecté connecté à mon espace personnel
     Je veux créer une nouvelle tâche à réaliser pour un élève que j'accompagne
     Afin qu'il ait des objectifs à acomplir pour le prochain rendez-vous
 
-    Scénario: Création d'une tâche assignée à un élève avec des données valides
+    Scénario: Créer une tâche pour l'élève avec des données valides
         Etant donné que je suis sur le formulaire de création de tâches
-        Et que je suis un tuteur
         Et que j'ai choisi un étudiant
         Et que j'ai complété les champs obligatoires
 
@@ -190,33 +201,32 @@
         Et la tâche est visible dans le calendrier de l'élève
         Et un email de notification est envoyé à l'élève
 
-    Scénario: Refus de création d'une tâche assignée à un élève avec données obligatoires manquantes
+    Scénario: Refus avec des données obligatoires manquantes
         Etant donné que je suis sur le formulaire de création de tâches
         Et que j'ai choisi un étudiant
-        Mais que je n'ai pas complété les données obligatoires
+        Mais que je n'ai pas complété toutes les données obligatoires
 
         Lorsque je valide le formulaire
 
         Alors la tâche n'est pas créée
-        Et les champs obligatoires sont mis en valeur
-        Et je suis invité à compléter 
+        Et les données obligatoires sont mises en valeur
+        Et je suis invité à compléter les données manquantes
 
 </code></pre>
-<h2 id="fonctionnalite-consultation-de-mes-taches">Fonctionnalité: Consultation de mes tâches</h2>
+<h2 id="fonctionnalite-consulter-mes-taches">Fonctionnalité: Consulter mes tâches</h2>
 <pre><code class="language-gherkin">
-    En tant qu'utilisateur
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux voir toutes mes tâches
-    Afin de ne pas oublier d'en compléter
+    Afin de ne pas en oublier et m'organiser pour  les compléter
 
-    Scénario: Consultation de mes tâches
-        Etant donné que je suis connecté à mon espace personnel
-        Et que j'ai 3 tâches assignées par mon tuteur non réalisées
+    Scénario: Consulter de mes tâches
+        Etant donné que j'ai 3 tâches assignées par mon tuteur non réalisées
         Et que j'ai 4 tâches personnelles non réalisées
         Et que j'ai 2 tâches personnelles déjà réalisées
 
         Lorsque je clique sur &quot;consulter mes tâches&quot;
 
-        Alors je suis redirigé vers la page qui liste mes tâches
+        Alors je vois la liste de mes tâches
         Et mes 3 tâches assignées par mon tuteur, non réalisées, sont affichées
         Et sont mises en valeur
         Et mes 4 tâches personnelles, non réalisées, sont affichées
@@ -224,19 +234,34 @@
         Et mes 2 tâches réalisées sont affichées
 
 
-    Scénario: Consultation de mes tâches avec absence de tâches
+    Scénario: Consulter mes tâches, si aucune
         Etant donné que je n'ai aucune tâche
 
         Lorsque je clique sur &quot;consulter les tâches&quot;
 
-        Alors je suis redirigé vers la page qui liste mes tâches
-        Et aucune tâche n'est affichée
+        Alors aucune tâche n'est affichée
         Et un message me prévient que j'ai aucune tâche
 
 </code></pre>
-<h2 id="fonctionnalite-completion-dune-tache">Fonctionnalité: Complétion d'une tâche</h2>
+<h2 id="fonctionnalite-modifier-ma-tache">Fonctionnalité: Modifier ma tâche</h2>
 <pre><code class="language-gherkin">
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux modifier une tâche personnelle
+    Afin d'en corriger le titre
+
+    Scénario: Modifier ma tâche
+        Etant donné que j'ai au moins une tâche personnelle
+        Et que je suis sur le formulaire de modification
+        Et que j'ai modifié le titre
+
+        Lorsque je valide le formulaire
+
+        Alors le titre de la tâche est modifiée
+
+</code></pre>
+<h2 id="fonctionnalite-completer-ma-tache">Fonctionnalité: Compléter ma tâche</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux marquer &quot;complétée&quot; une tâche
     Afin de m'organiser
     Et ne voir que les tâches restants à faire
@@ -249,6 +274,47 @@
         Alors la tâche est marquée comme complétée
         Et la tâche n'est plus visible dans le calendrier
 
+</code></pre>
+<h2 id="fonctionnalite-consulter-les-taches-assignees">Fonctionnalité: Consulter les tâches assignées</h2>
+<pre><code class="language-gherkin">
+    En tant que tuteur connecté à mon espace personnel
+    Je veux voir toutes les tâches assignées aux élèves
+    Afin de suivre leur progression
+
+    Scénario: Consulter les tâches assignées
+        Etant donné que j'ai 3 tâches assignées à des élèves
+        Et que deux sont complétées par les élèves
+
+        Lorsque je clique sur &quot;Consulter les tâches assignées&quot;
+
+        Alors je vois la liste des 3 tâches assignées
+        Et la tâche non complétée est mise en valeur
+
+
+    Scénario: Consulter les tâches assignées, si aucune
+        Etant donné que je n'ai aucune tâche assignée à un élève
+
+        Lorsque je clique sur &quot;Consulter les tâches assignées&quot;
+
+        Alors aucune tâche assignée n'est affichée
+        Et un message me prévient que j'ai assigné aucune tâche
+
+</code></pre>
+<h2 id="fonctionnalite-modifier-une-tache-assignee">Fonctionnalité: Modifier une tâche assignée</h2>
+<pre><code class="language-gherkin">
+    En tant que tuteur connecté à mon espace personnel
+    Je veux modifier une tâche assignée à un élève
+    Afin d'en corriger le titre
+
+    Scénario: Modifier une tâche assignée
+        Etant donné que j'ai au moins une tâche assignée à un élève
+        Et que je suis sur le formulaire de modification
+        Et que j'ai modifié le titre
+
+        Lorsque je valide le formulaire
+
+        Alors le titre de la tâche est modifiée
+        Et un email de notification est envoyé à l'élève
 </code></pre></div>
             </div>
         </div>
