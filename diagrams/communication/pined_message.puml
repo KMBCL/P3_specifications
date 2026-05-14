@@ -6,12 +6,14 @@ title Messages épinglés
 !include /specifications/docs/diagrams/actors/common.puml
 
 usecase "Epingler message" as pin_message
+usecase "Désépingler message" as upnin_message
 usecase "Chercher messages épinglés" as research_pined_message
 
 student --|> user
 tutor --|> user
 
 user -- pin_message
+user -- upnin_message
 user -- research_pined_message
 
 @enduml
