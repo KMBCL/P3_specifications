@@ -116,11 +116,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-envoi-dun-message-a-un-autre-utilisateur" class="nav-link">Fonctionnalité: Envoi d'un message à un autre utilisateur</a>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-envoyer-un-message" class="nav-link">Fonctionnalité: Envoyer un message</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-lecture-dun-message-recu" class="nav-link">Fonctionnalité: Lecture d'un message reçu</a>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-consulter-mes-messages" class="nav-link">Fonctionnalité: Consulter mes messages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-lire-un-message" class="nav-link">Fonctionnalité: Lire un message</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -132,14 +136,14 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-recherche-de-messages-recus-epingles" class="nav-link">Fonctionnalité: Recherche de messages reçus épinglés</a>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctionnalite-consulter-mes-messages-epingles" class="nav-link">Fonctionnalité: Consulter mes messages épinglés</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#hors-permietre-initial" class="nav-link">Hors pérmiètre initial</a>
+            <li class="nav-item" data-bs-level="1"><a href="#hors-perimetre-initial" class="nav-link">Hors périmètre initial</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#gestion-des-contacts" class="nav-link">Gestion des contacts</a>
               <ul class="nav flex-column">
@@ -156,16 +160,15 @@
 <h2 id="envoi-lecture-de-messages">Envoi / Lecture de messages</h2>
 <p><img alt="Envoi / Lecture" src="../../diagrams/communication/message.svg" /></p>
 <h2 id="epingler-et-rechercher-des-messages">Epingler et rechercher des messages</h2>
-<p><img alt="Epingler et rechercher" src="../../diagrams/communication/pined_message.svg" /></p>
-<h2 id="fonctionnalite-envoi-dun-message-a-un-autre-utilisateur">Fonctionnalité: Envoi d'un message à un autre utilisateur</h2>
+<p><img alt="Epingler et rechercher" src="../diagrams/communication/pined_message.svg" /></p>
+<h2 id="fonctionnalite-envoyer-un-message">Fonctionnalité: Envoyer un message</h2>
 <pre><code class="language-gherkin">
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux envoyer un message à un autre utilisateur
-    Afin de communiquer avec un autre utilisateur
+    Afin de communiquer avec cet autre utilisateur
 
-    Scénario: Envoi d'un message à un autre utilisateur
-        Etant donné que je suis connecté
-        Et que j'ai cliqué sur nouveau message
+    Scénario: Envoyer un message à un autre utilisateur
+        Etant donné que j'ai cliqué sur &quot;Nouveau message&quot;
         Et que j'ai écrit un message
         Et que j'ai renseigné un destinataire existant
 
@@ -175,70 +178,84 @@
         Et le message est marqué non lu pour le destinataire
         Et un email de notification est envoyé au destinataire
 
-    Scénario: Refus d'envoi d'un message à un autre utilisateur inexistant
-        Etant donné que je suis connecté
-        Et que j'ai cliqué sur nouveau message
+    Scénario: Refus lorsque le destinataire n'existe pas
+        Etant donné que j'ai cliqué sur &quot;Nouveau message&quot;
         Et que j'ai écrit un message
         Et que j'ai renseigné un destinataire inexistant
 
         Lorsque je clique sur envoyer
 
         Alors le message n'est pas envoyé au destinataire
-        Et un message m'avertit que le destinataire n'existe pas
+        Et un message m'informe que le destinataire n'existe pas
 
-    Scénario: Refus d'envoi d'un message vide à un autre utilisateur
-        Etant donné que je suis connecté
-        Et que j'ai cliqué sur nouveau message
-        Et que j'ai renseigné un destinataire inexistant
+    Scénario: Refus lorsque le message est vide
+        Etant donné que j'ai cliqué sur &quot;Nouveau message&quot;
+        Et que j'ai renseigné un destinataire existant
         Mais que je n'ai pas écrit de message
 
         Lorsque je clique sur envoyer
 
         Alors le message n'est pas envoyé au destinataire
-        Et un message m'avertit que le message est vide
+        Et un message m'informe que le message est vide
 
 </code></pre>
-<h2 id="fonctionnalite-lecture-dun-message-recu">Fonctionnalité: Lecture d'un message reçu</h2>
+<h2 id="fonctionnalite-consulter-mes-messages">Fonctionnalité: Consulter mes messages</h2>
 <pre><code class="language-gherkin">
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux accéder à mes messages
-    Afin d'en lire le contenu
+    Afin de consulter les messages reçus
+
+    Scénario: Consulter mes messages
+        Etant donné que j'ai reçu au moins un message
+
+        Lorsque je clique sur &quot;consulter mes messages&quot;
+
+        Alors je vois la liste des messages reçus
+        Et les messages non lus sont mis en valeur
+
+    Scénario: Consulter mes messages, si aucun reçu
+        Etant donné que je n'ai reçu aucun message
+
+        Lorsque je clique sur &quot;consulter mes messages&quot;
+
+        Alors je suis informé que je n'ai aucun message reçu
+
+</code></pre>
+<h2 id="fonctionnalite-lire-un-message">Fonctionnalité: Lire un message</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux lire un message
+    Afin de prendre connaissance du contenu
 
     Scénario: Lecture d'un message reçu
-        Etant donné que je suis connecté
-        Et que j'ai reçu au moins un message
+        Etant donné que j'ai reçu au moins un message
         Et que j'ai cliqué sur consulter mes messages
 
         Lorsque je clique sur un message reçu
 
-        Alors je peux lire le contenu du message
-        Et je peux voir l'expéditeur
-        Et je peux voir l'horodatage de réception
-        Et le message est marqué lu
+        Alors je peux prendre connaissance du contenu du message
+        Et le message est marqué &quot;lu&quot;
 
 </code></pre>
 <h2 id="fonctionnalite-epingler-un-message">Fonctionnalité: Epingler un message</h2>
 <pre><code class="language-gherkin">
-    En tant qu'utilisateur connecté
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux épingler un message
-    Afin de le retrouver plus facilement plus tard.
+    Afin de le retrouver plus facilement plus tard
 
     Scénario: Epingler un message
         Etant donné que j'ai au moins un message
         Et que je consulte ce message
 
-        Lorsque je clique sur &quot;épingler message&quot;
+        Lorsque je clique sur &quot;Epingler le message&quot;
 
         Alors le message est marqué comme épinglé
-        Et visuellement je vois qu'il est épinglé
-
-        Lorsque je clique sur &quot;messages épinglés&quot;
-        Alors je vois que le message que je viens d'épingler est dans la liste
+        Et le message apparaît épinglé
 
 </code></pre>
 <h2 id="fonctionnalite-desepingler-un-message">Fonctionnalité: Désépingler un message</h2>
 <pre><code class="language-gherkin">
-    En tant qu'utilisateur
+    En tant qu'utilisateur connecté à mon espace personnel
     Je veux désépingler un message que je ne trouve plus utile
     Afin d'avoir une liste pertinente et à jour de messages importants
 
@@ -246,43 +263,37 @@
         Etant donné que j'ai au moins un message épinglé
         Et que j'ai cliqué sur &quot;messages épinglés&quot;
         Et que je vois un message épinglé
-        Et que je consulte de message
+        Et que je consulte ce message
 
         Lorsque je clique sur &quot;Désépingler message&quot;
 
         Alors le message n'est plus épinglé
-        Et visuellement je vois qu'il n'est plus épinglé
-
-        Lorsque que je clique sur &quot;Messages épinglés&quot;
-
-        Alors je vois que le message n'est plus dans la liste
+        Et le message n'apparaît plus épinglé
 
 </code></pre>
-<h2 id="fonctionnalite-recherche-de-messages-recus-epingles">Fonctionnalité: Recherche de messages reçus épinglés</h2>
+<h2 id="fonctionnalite-consulter-mes-messages-epingles">Fonctionnalité: Consulter mes messages épinglés</h2>
 <pre><code class="language-gherkin">
-    En tant qu'utilisateur
-    Je veux retrouver facilement mes messages reçus épinglés
-    Afin de relire des informations jugées importantes
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux consulter mes messages épinglés
+    Afin de retrouver facilement un message
 
-    Scénario: Recherche des messages épinglés existants
+    Scénario: Consulter mes messages épinglés
+        Etant donné que j'ai au moins un message épinglé
+
+        Lorsque je clique sur &quot;Messages épinglés&quot;
+
+        Alors je vois uniquement les messages épinglés
+
+    Scénario: Consulter sans messages épinglés
         Etant donné que je consulte mes messages reçus
-        Et que j'ai 3 messages reçus épinglés
+        Et que je n'ai épinglé aucun message
 
-        Lorsque je clique sur &quot;chercher dans épinglés&quot;
+        Lorsque je clique sur &quot;Messages épinglés&quot;
 
-        Alors mes 3 messages reçus épinglés sont affichées
-
-    Scénario: Recherche de messages épinglés inexistants
-        Etant donné que je consulte mes messages reçus
-        Et que je n'ai épinglé aucun message reçu précédemment
-
-        Lorsque que je clique sur &quot;chercher dans épinglés&quot;
-
-        Alors aucun message reçu ne s'affichée
-        Et un message m'averit que je n'ai aucun message reçu épinglé
+        Alors je suis informé que je n'ai aucun message épinglé
 
 </code></pre>
-<h1 id="hors-permietre-initial">Hors pérmiètre initial</h1>
+<h1 id="hors-perimetre-initial">Hors périmètre initial</h1>
 <h2 id="gestion-des-contacts">Gestion des contacts</h2>
 <p>Afin de faciliter la communication entre plusieurs élèves et tuteurs, former des groupes d'entre aide, etc. Une gestion des contacts et de groupes peut être envisagée.</p></div>
             </div>

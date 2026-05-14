@@ -1,0 +1,19 @@
+
+
+@startuml pinned_message
+title Messages épinglés
+
+!include /specifications/docs/diagrams/actors/common.puml
+
+usecase "Epingler un message" as pin_message
+usecase "Désépingler un message" as upnin_message
+usecase "Consulter mes messages épinglés" as research_pinned_message
+
+student --|> user
+tutor --|> user
+
+user -- pin_message
+user -- upnin_message
+user -- research_pinned_message
+
+@enduml

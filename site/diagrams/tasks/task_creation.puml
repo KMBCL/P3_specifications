@@ -6,8 +6,8 @@ title Création de tâches
 student --|> user
 tutor --|> user
 
-usecase "Créer tâche pour élève" as create_task_for_student
-usecase "Créer tâche personnelle" as create_personal_task
+usecase "Créer une tâche pour l'élève" as create_task_for_student
+usecase "Créer une tâche personnelle" as create_personal_task
 usecase "Envoyer notification par email" as send_email_notification
 
 tutor -- create_task_for_student
