@@ -21,7 +21,9 @@
         Et que j'ai cliqué sur nouveau message
         Et que j'ai écrit un message
         Et que j'ai renseigné un destinataire existant
+
         Lorsque je clique sur envoyer
+
         Alors le message est envoyé au destinataire
         Et le message est marqué non lu pour le destinataire
         Et une notification non lue est envoyée au destinataire
@@ -31,7 +33,9 @@
         Et que j'ai cliqué sur nouveau message
         Et que j'ai écrit un message
         Et que j'ai renseigné un destinataire inexistant
+
         Lorsque je clique sur envoyer
+
         Alors le message n'est pas envoyé au destinataire
         Et un message m'avertit que le destinataire n'existe pas
 
@@ -40,7 +44,9 @@
         Et que j'ai cliqué sur nouveau message
         Et que j'ai renseigné un destinataire inexistant
         Mais que je n'ai pas écrit de message
+
         Lorsque je clique sur envoyer
+
         Alors le message n'est pas envoyé au destinataire
         Et un message m'avertit que le message est vide
 
@@ -57,7 +63,9 @@
         Etant donné que je suis connecté
         Et que j'ai reçu au moins un message
         Et que j'ai cliqué sur consulter mes messages
+
         Lorsque je clique sur un message reçu
+
         Alors je peux lire le contenu du message
         Et je peux voir l'expéditeur
         Et je peux voir l'horodatage de réception
@@ -113,13 +121,17 @@
     Scénario: Recherche des messages épinglés existants
         Etant donné que je consulte mes messages reçus
         Et que j'ai 3 messages reçus épinglés
+
         Lorsque je clique sur "chercher dans épinglés"
+
         Alors mes 3 messages reçus épinglés sont affichées
 
     Scénario: Recherche de messages épinglés inexistants
         Etant donné que je consulte mes messages reçus
         Et que je n'ai épinglé aucun message reçu précédemment
+
         Lorsque que je clique sur "chercher dans épinglés"
+        
         Alors aucun message reçu ne s'affichée
         Et un message m'averit que je n'ai aucun message reçu épinglé
 

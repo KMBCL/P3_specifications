@@ -20,26 +20,24 @@
 
         Etant donné que je suis sur le formulaire d'inscription
         Et que j'ai renseigné tous les champs obligatoires avec des données valides
-        Et que les données sont valides
-
+     
         Lorsque je valide le formulaire
         
         Alors l'inscription est validée
         Et mon compte est créé
         Et je suis invité à me connecter
 
-    Scénario: Inscription avec des données obligatoires manquantes
+    Scénario: Refus avec donées obligatoires manquantes
         Etant donné que je suis sur le formulaire d'inscription
-        Et que j'ai partiellement renseigné les champs obligatoires avec des données valides
-        
-        Lorsque je valide le formulaire
-        Et que des données obligatoires sont manquantes
+        Mais que j'ai partiellement renseigné les champs obligatoires avec des données valides
+     
+        Lorsque je valide le formulaire      
         
         Alors l'inscription est refusée
         Et les données manquantes sont mises en valeur
         Et je suis averti que ces données sont obligatoires
 
-    Scénario: Inscription avec des données au mauvais format
+    Scénario: Refus avec des données au mauvais format
         Etant donné que je suis sur le formulaire d'inscription
         
         Lorsque je saisis des données dans un format invalide
@@ -47,11 +45,12 @@
         Alors le formulaire met en valeur le champ
         Et le format attendu m'est spécifié
 
-    Scénario: Inscription avec une adresse email déjà existante
+    Scénario: Refus avec une adresse email déjà existante
         Etant donné que je suis sur le formulaire d'inscription
+        Et que j'ai renseigné tous les champs obligatoires avec des données valides
+        Mais qu'un compte avec la même adresse email existe déjà
         
         Lorsque je valide le formulaire complété
-        Et qu'un compte avec la même adresse email existe déjà
         
         Alors l'inscription est refusée
         Et je suis informé que l'adresse email est déjà utilisée
@@ -68,28 +67,30 @@
 
     Scénario: Connexion avec identifiants valides
         Etant donné que je suis sur la page de connexion
+        Et que j'ai complété le formulaire de connexion
+        Et que mon identifiant et mot de passe sont valides
 
         Lorsque je valide le formulaire de connexion
-        Et que mon identifiant et mot de passe sont valides
 
         Alors la connexion est autorisée
         Et j'accède à mon espace personnel
 
-    Scénario: Connexion avec des identifiants invalides
+    Scénario: Refus avec des identifiants invalides
         Etant donné que je suis sur la page de connexion
+        Et que j'ai complété le formulaire de connexion
+        Mais que mon identifiant ou mot de passe est invalide
 
         Lorsque je valide le formulaire de connexion
-        Et que mon identifiant ou mot de passe est invalide
-
+        
         Alors la connexion est refusée
         Et je suis informé que l'identifiant et mot de passe ne sont pas valides
         Et je suis invité à réessayer
 
-    Scénario: Connexion avec des identifiants incomplets
+    Scénario: Refus avec des identifiants incomplets
         Etant donné que je suis sur la page de connexion
+        Mais que j'ai partiellement complété le formulaire de connexion
 
         Lorsque je valide le formulaire de connexion
-        Et que mon identifiant ou mot de passe est manquant
         
         Alors la connexion est refusée
         Et je suis informé que le champ manquant est obligatoire
@@ -195,12 +196,10 @@
     Scénario: Modification des données personnelles avec données valides
         Etant donné que je suis connecté
         Et que je suis sur le formulaire de mes données personnelles
-        Et que j'ai saisi des données à modifier
+        Et que j'ai saisi des données à modifier avec des données sont valides
         
-
         Lorsque je valide le formulaire
-        Et que les données sont valides
-
+        
         Alors les données sont modifiées
         Et j'ai un message de confirmation
         Et je suis redirigé vers mes données personnelles
@@ -209,10 +208,10 @@
         Etant donné que  je suis connecté
         Et que je suis sur le formulaire de mes données personnelles
         Et que j'ai saisi une nouvelle adresse email
+        Mais que le format de l'adresse est invalide
         
         Lorsque je valide le formulaire
-        Mais que le format de l'adresse est invalide
-
+        
         Alors les données ne sont pas modifiées
         Et je suis averti que le format de l'adresse n'est pas valide
 ```
