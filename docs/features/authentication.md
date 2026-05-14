@@ -35,7 +35,7 @@
         
         Alors l'inscription est refusée
         Et les données manquantes sont mises en valeur
-        Et je suis informé que ces données sont obligatoires
+        Et je suis invité à compléter les données manquantes
 
     Scénario: Refus avec des données au mauvais format
         Etant donné que je suis sur le formulaire d'inscription
@@ -124,8 +124,7 @@
     Afin de le renouveler par sécurité
 
     Scénario: Modification de mot de passe
-        Etant donné que je suis connecté à mon espace personnel
-        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi le nouveau mot de passe
         Et que j'ai confirmé le nouveau mot de passe
         Et que j'ai saisi mon mot de passe actuel
@@ -138,8 +137,7 @@
         Et je suis invité à me reconnecter
 
     Scénario: Refus lorsque le mot de passe actuel est incorrect
-        Etant donné que je suis connecté à mon espace personnel
-        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi le nouveau mot de passe 
         Et que j'ai confirmé le nouveau mot de passe 
         Mais que j'ai saisi un mot de passe actuel incorrect
@@ -150,8 +148,7 @@
         Et je suis informé que le mot de passe actuel est incorrect
 
     Scénario: Refus lorsque le mot de passe actuel est manquant
-        Etant donné que je suis connecté à mon espace personnel
-        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi le nouveau mot de passe 
         Et que j'ai confirmé le nouveau mot de passe
         Mais que je n'ai pas saisi le mot de passe actuel dans le champ requis
@@ -162,8 +159,7 @@
         Et je suis informé que ce champ est obligatoire
 
     Scénario: Refus lorsque le nouveau mot de passe ne correspond pas avec la confirmation
-        Etant donné que je suis connecté à mon espace personnel
-        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi mon mot de passe actuel
         Et que j'ai saisi le nouveau mot de passe "test_mdp"
         Mais que j'ai confirmé le nouveau mot de passe "test_mdpppp"
@@ -174,8 +170,7 @@
         Et je suis informé que le nouveau mot de passe ne correspond pas avec la confirmation
 
     Scénario: Refus lorsque la confirmation de mot de passe est manquante
-        Etant donné que je suis connecté à mon espace personnel
-        Et que j'ai ouvert le formulaire de modification de mot de passe
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi mon mot de passe actuel
         Et que j'ai saisi le nouveau mot de passe
         Mais que je n'ai pas confirmé le nouveau mot de passe
@@ -195,8 +190,7 @@
     Afin de refléter les changements de mes coordonnées
 
     Scénario: Mettre à jour mes données personnelles avec des données valides
-        Etant donné que je suis connecté
-        Et que je suis sur le formulaire de mes données personnelles
+        Etant donné que je suis sur le formulaire de mes données personnelles
         Et que j'ai saisi des données à modifier avec des données sont valides
         
         Lorsque je valide le formulaire
@@ -206,8 +200,7 @@
         Et je suis redirigé vers mes données personnelles
 
     Scénario: Refus lorsque l'adresse email est invalide
-        Etant donné que  je suis connecté
-        Et que je suis sur le formulaire de mes données personnelles
+        Etant donné que je suis sur le formulaire de mes données personnelles
         Et que j'ai saisi une nouvelle adresse email
         Mais que le format de l'adresse est invalide
         
@@ -226,8 +219,7 @@
     Afin de pouvoir en définir un nouveau, pour me connecter à mon espace personnel
 
     Scénario: Réinitialiser mon mot de passe avec une adresse valide
-        Etant donné que je suis déconnecté
-        Et que j'ai oublié mon mot de passe
+        Etant donné que j'ai oublié mon mot de passe
         Et que je rempli le formulaire de réinitialisation
         Et que j'ai saisi mon adresse email, valide
 
@@ -237,8 +229,7 @@
         Et je suis invité à me reconnecter avec
 
     Scénario: Refus de réinitialiser mon mot de passe une avec adresse invalide
-        Etant donné que je suis déconnecté de mon espace personnel
-        Et que j'ai oublié mon mot de passe
+        Etant donné que j'ai oublié mon mot de passe
         Et que j'ai rempli le formulaire de réinitialisation
         Mais que j'ai saisi une adresse email invalide
 

@@ -6,15 +6,15 @@ title Rendez-vous
 usecase "Planifier un rendez-vous" as plan_appointment
 usecase "Modifier un rendez-vous" as update_appointment
 usecase "Consulter ses rendez-vous" as see_appointments
-usecase "Consulter le détail d'un rendez-vous" as see_appointment
+usecase "Envoyer une notification par email" as send_email_notification
 
 tutor -- plan_appointment
+plan_appointment ..> send_email_notification
 tutor -- update_appointment
 tutor -- see_appointments
-tutor -- see_appointment
 
 
 student -- see_appointments
-student -- see_appointment
+
 
 @enduml
