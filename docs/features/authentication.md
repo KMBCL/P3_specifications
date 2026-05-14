@@ -57,7 +57,7 @@
         Et je suis invité à me connecter au lieu de créer un nouveau compte
 ```
 
-## Fonctionnalité: Connexion à mon espace client
+## Fonctionnalité: Connexion à mon espace personnel
 
 ```gherkin
 
@@ -96,7 +96,7 @@
         Et je suis informé que le champ manquant est obligatoire
 ```
 
-## Fonctionnalité: Déconnexion d'un espace client
+## Fonctionnalité: Déconnexion de mon espace personnel
 
 ```gherkin
 
@@ -215,3 +215,5 @@
         Alors les données ne sont pas modifiées
         Et je suis averti que le format de l'adresse n'est pas valide
 ```
+
+## Fonctionnalité: Réinitialiser mon mot de passe

@@ -10,9 +10,11 @@ tutor --|> user
 usecase "S'inscrire" as register
 usecase "Se connecter" as login
 usecase "Se déconnecter" as logout
+usecase "Réinitialiser mot de passe" as reset_password
 
 visitor -- register
 user -- login
 user -- logout
+user -- reset_password
 
 @endumld
