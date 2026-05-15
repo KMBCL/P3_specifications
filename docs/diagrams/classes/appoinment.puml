@@ -5,14 +5,18 @@ left to right direction
 
 class Appointment {
     pk : uuid
-    tutor_pk : uuid
-    student_pk : uuid
     title : str
     start_at : datetime
     end_at : datetime
 }
 
-Tutor "1" -- "0..*" Appointment : tutor_pk
-Student "1" -- "0..*" Appointment : student_pk
+class UserAppointment {
+    pk : uuid
+    appointment_pk : uuid
+    user_pk : uuid
+}
 
-@enduml
+User "1" -- "0..*" UserAppointment : user_pk
+Appointment "1" -- "0..*"  UserAppointment: appointment_pk
+
+@endumld

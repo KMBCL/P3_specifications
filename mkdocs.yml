@@ -1,29 +1,5 @@
 site_name: Specifications
 
-# theme:
-#         name: material
-#         language: fr
-#         palette:
-#                 - scheme: default
-#                   primary: indigo
-#                   accent: blue
-#                   toggle:
-#                           icon: material/weather-night
-#                           name: Passer en mode sombre
-#                 - scheme: slate
-#                   primary: indigo
-#                   accent: blue
-#                   toggle:
-#                           icon: material/weather-sunny
-#                           name: Passer en mode clair
-#         features:
-#                 - navigation.tabs
-#                 - navigation.sections
-#                 - navigation.expand
-#                 - navigation.top
-#                 - toc.integrate
-#                 - content.code.copy
-
 nav:
         - Accueil: index.md
         - Acteurs: actors.md
@@ -33,5 +9,6 @@ nav:
                   - Rendez-vous: features/appointment.md
                   - Tâches: features/tasks.md
         - Spécifications techniques: project_specifications.md
+        - Frameworks et outils: frameworks.md
         - Diagrammes de classes: class_diagrams.md
         - MVP: mvp.md

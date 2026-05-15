@@ -1,14 +1,44 @@
 # Spécifications techniques
 
-## Effectifs
-Pour rappel l'équipe de développement:
+## **Contexte**
+HomeSkolar est une association de soutien scolaire d'élèves en difficulté avec des tuteurs bénévoles.
+Le projet prend la forme d'une application web accessible depuis internet.
 
+## Contraintes techniques
+
+- Le cout de développement, de maintenance et des licences logicielles doit être en corrélation avec les moyens financiers de l'association.
+- Le projet livré sera accessible depuis internet
+- les frameworks, dépendances et librairies utilisés doivent être documentés et maintenus pour faciliter le développement par une petite équipe
 - 2 développeurs Frontend
 - 2 développeurs Backend
 
-Formés aux technologies actuelles.
+## Contraintes liées aux données
 
-Le projet va être découpé en plusieurs couches:
+- Le projet manipule des données fortement liées entre-elles: relation tuteur-élève, rendez-vous entre deux utilisateurs, etc.
+- La solution de persistane doit permettre la relation entre entités et garantir l'intégrité des données
+
+## Contraintes de sécurité générales
+
+- les frameworks, dépendances et librairies utilisés doivent être maintenus à jour afin de limiter d'éventuelles failles de sécurité
+- le projet est accessible sur internet, par n'importe qui: les fonctionnalités et les données sont protégées par l'authentification.
+
+### Règles de sécurité liées aux comptes utilisateurs
+
+- le mot de passe n'est jamais stocké en clair
+- la vérification d'un mot de passe saisi se fait à partir de la valeur sécurisée stockée
+- les messages de refus d'authentification affichés par l'UI restent génériques afin de ne pas donner d'indices:
+    - sur le mot de passe
+    - sur l'adresse email    
+
+## Principes d'architecture
+
+Le projet est décomposé en plusieurs couches, ayant chacune un rôle:
+
+- Interface utilisateur (UI)
+- API
+- Services métier
+- Accès aux données
+- Base de données
 
 ## **Frontend**
 
@@ -19,35 +49,17 @@ Le projet va être découpé en plusieurs couches:
 - Soumet les requêtes HTTP à l'API
 - Affiche les réponses de l'API
 
-### Solutions existantes:
-- React :
-    - Bibliothèque UI.
-    - Impose de choisir d'autres composants et bibliothèques
-    - Conventions et structure de développement à la discrétion de l'équipe
-    - Ecosystème large
-- Vue :
-    - Conventions et structure définies par le framework
-    - Ecosystème plus réduit que React
-    - Adapté aux petites et moyennes équipes
-- Angular :
-    - Framework complet, avec cadre et structure strict
-    - Adapté a des projets d'entreprises
-    - Adapté aux moyennes équipes
-- ...
-
-
-
 ## **Backend**
 
 ### API:
-- Point d'entrée et de sortie du backend
-- Reçoit les requêtes http de l'UI
+- Expose les points d'entrée et de sortie du backend
+- Reçoit les requêtes HTTP de l'UI
 - Vérifie l'authentification de l'utilisateur
-- Traduit les requêtes HTTP en données métiers pour les services
 - Transforme et valide la structure des données
+- Traduit les requêtes HTTP en données métiers pour les services
 - Dialogue avec les services métiers
 - Traduit les réponses des services en réponses HTTP
-- Renvoie les réponses http à l'UI
+- Renvoie les réponses HTTP à l'UI
 
 ### Services Métier:
 - Reçoit les données de l'API
@@ -56,60 +68,16 @@ Le projet va être découpé en plusieurs couches:
 - Dialogue avec les services d'accès aux données
 - Renvoie les réponses métier
 
-### Service d'accès aux données: 
+### Accès aux données: 
 - Reçoit les demandes métiers
 - Dialogue avec la base de données
-- Reçoit les données brutes
-- Transforme les données brutes en données métier
+- Reçoit les données depuis la base de données
 - Renvoie les données aux services métiers
-
-### Solutions existantes :
-- FastAPI :
-    - Orienté API
-    - Nécessite d'autres outils et bibliothèques, authentification, ORM, etc. 
-    - Rapide
-    - Conventions et structure de développement à la discrétion de l'équipe 
-- Flask :
-    - Framework minimaliste
-    - Nécessite d'autres outils et bibliothèques, authentification, ORM, etc.
-    - Conventions et structure de développement à la discrétion de l'équipe 
-- Django :
-    - Framework complet avec authentification, ORM, etc.
-    - Interface admin
-    - Conventions et structure imposées
-    - Peut être configuré en API
-
-
 
 ## **Base de données**
 - Reçoit les demandes des services d'accès aux données
 - Persiste les données
-- Fournit les données
-- Renvoie les données brutes
-
-### Solutions existantes:
-- Oracle :
-- SQLServeur :
-- PostgreSQL :
-- MySQL :
-- MarioDB :
-- ...
-
-## Solutions retenues
-
-### Frontend : Vue:
-- Le projet est bien délimité, bien qu'évolutif, il n'a pas vocation à devenir un projet d'entreprise multisites. 
-
-L'équipe de développement étant de 2 personnes, pour limiter la dispersion dans les outils et bibliotèques, un ecosystème moins vaste facilite la structure du projet. 
-
-De plus le framework Vue encourage une logique de décomposition script/template/CSS, qui permet naturellement de bien séparer les responsabilités.
-
-### Backend : Django en API:
-- Le projet peut démarrer rapidement et avec fiabilité avec la structure et les composants django. 
-
-Les points d'entrées sont exposés par l'API et le système d'authentification et l'ORM intégré permettent de se focaliser sur les besoins métier, plutôt que l'architecture globale.
-
-L'interface administrateur intégrée permet également rapidement à un utilisateur admin du projet de modifier des données afin de répondre aux besoins utilisateurs.
+- Renvoie les données
 
 ## Architecture générale
 
@@ -118,3 +86,6 @@ L'interface administrateur intégrée permet également rapidement à un utilisa
 ## Séquence générique de traitement
 
 ![Séquence générique](diagrams/workflow.svg)
+
+
+
