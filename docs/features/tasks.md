@@ -18,6 +18,7 @@
     Ou découper une tâche assignée trop grosse en sous-tâches
 
     Scénario: Créer une tâche personnelle avec des données valides
+
         Etant donné que je suis sur le formulaire de création de tâches
         Et que j'ai complété les champs obligatoires
 
@@ -27,6 +28,7 @@
         Et la tâche est visible dans mon calendrier
 
     Scénario: Refus avec des données obligatoires manquantes
+
         Etant donné que je suis sur le formulaire de création de tâches
         Mais que je n'ai pas complété toutes les données obligatoires
 
@@ -47,6 +49,7 @@
     Afin qu'il ait des objectifs à acomplir pour le prochain rendez-vous
 
     Scénario: Créer une tâche pour l'élève avec des données valides
+
         Etant donné que je suis sur le formulaire de création de tâches
         Et que j'ai choisi un étudiant
         Et que j'ai complété les champs obligatoires
@@ -59,6 +62,7 @@
         Et un email de notification est envoyé à l'élève
 
     Scénario: Refus avec des données obligatoires manquantes
+
         Etant donné que je suis sur le formulaire de création de tâches
         Et que j'ai choisi un étudiant
         Mais que je n'ai pas complété toutes les données obligatoires
@@ -80,6 +84,7 @@
     Afin de ne pas en oublier et m'organiser pour  les compléter
 
     Scénario: Consulter de mes tâches
+
         Etant donné que j'ai 3 tâches assignées par mon tuteur non réalisées
         Et que j'ai 4 tâches personnelles non réalisées
         Et que j'ai 2 tâches personnelles déjà réalisées
@@ -95,6 +100,7 @@
         
 
     Scénario: Consulter mes tâches, si aucune
+
         Etant donné que je n'ai aucune tâche
 
         Lorsque je clique sur "consulter les tâches"
@@ -113,6 +119,7 @@
     Afin d'en corriger le titre
 
     Scénario: Modifier ma tâche
+
         Etant donné que j'ai au moins une tâche personnelle
         Et que je suis sur le formulaire de modification
         Et que j'ai modifié le titre
@@ -133,6 +140,7 @@
     Et ne voir que les tâches restants à faire
 
     Scénario: Complétion d'une tâche
+
         Etant donné que je suis sur la tâche sélectionnée
         
         Lorsque que je clique sur "complétée"
@@ -151,6 +159,7 @@
     Afin de suivre leur progression
 
     Scénario: Consulter les tâches assignées
+
         Etant donné que j'ai 3 tâches assignées à des élèves
         Et que deux sont complétées par les élèves
 
@@ -161,6 +170,7 @@
         
 
     Scénario: Consulter les tâches assignées, si aucune
+
         Etant donné que je n'ai aucune tâche assignée à un élève
 
         Lorsque je clique sur "Consulter les tâches assignées"
@@ -179,6 +189,7 @@
     Afin d'en corriger le titre
 
     Scénario: Modifier une tâche assignée
+
         Etant donné que j'ai au moins une tâche assignée à un élève
         Et que je suis sur le formulaire de modification
         Et que j'ai modifié le titre
@@ -187,4 +198,5 @@
 
         Alors le titre de la tâche est modifiée
         Et un email de notification est envoyé à l'élève
+        
 ```

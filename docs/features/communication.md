@@ -6,7 +6,7 @@
 
 ## Epingler et rechercher des messages
 
-![Epingler et rechercher](../diagrams/communication/pined_message.svg)
+![Epingler et rechercher](../diagrams/communication/pinned_message.svg)
 
 ## Fonctionnalité: Envoyer un message
 
@@ -17,6 +17,7 @@
     Afin de communiquer avec cet autre utilisateur
 
     Scénario: Envoyer un message à un autre utilisateur
+
         Etant donné que j'ai cliqué sur "Nouveau message"
         Et que j'ai écrit un message
         Et que j'ai renseigné un destinataire existant
@@ -28,6 +29,7 @@
         Et un email de notification est envoyé au destinataire
 
     Scénario: Refus lorsque le destinataire n'existe pas
+
         Etant donné que j'ai cliqué sur "Nouveau message"
         Et que j'ai écrit un message
         Et que j'ai renseigné un destinataire inexistant
@@ -38,6 +40,7 @@
         Et un message m'informe que le destinataire n'existe pas
 
     Scénario: Refus lorsque le message est vide
+
         Etant donné que j'ai cliqué sur "Nouveau message"
         Et que j'ai renseigné un destinataire existant
         Mais que je n'ai pas écrit de message
@@ -57,6 +60,7 @@
     Afin de consulter les messages reçus
 
     Scénario: Consulter mes messages
+
         Etant donné que j'ai reçu au moins un message
 
         Lorsque je clique sur "consulter mes messages"
@@ -65,6 +69,7 @@
         Et les messages non lus sont mis en valeur
 
     Scénario: Consulter mes messages, si aucun reçu
+
         Etant donné que je n'ai reçu aucun message
 
         Lorsque je clique sur "consulter mes messages"
@@ -81,6 +86,7 @@
     Afin de prendre connaissance du contenu
 
     Scénario: Lecture d'un message reçu
+
         Etant donné que j'ai reçu au moins un message
         Et que j'ai cliqué sur consulter mes messages
 
@@ -100,6 +106,7 @@
     Afin de le retrouver plus facilement plus tard
 
     Scénario: Epingler un message
+
         Etant donné que j'ai au moins un message
         Et que je consulte ce message
 
@@ -119,6 +126,7 @@
     Afin d'avoir une liste pertinente et à jour de messages importants
 
     Scénario: Désépingler un message
+
         Etant donné que j'ai au moins un message épinglé
         Et que j'ai cliqué sur "messages épinglés"
         Et que je vois un message épinglé
@@ -140,6 +148,7 @@
     Afin de retrouver facilement un message
 
     Scénario: Consulter mes messages épinglés
+
         Etant donné que j'ai au moins un message épinglé
 
         Lorsque je clique sur "Messages épinglés"
@@ -147,6 +156,7 @@
         Alors je vois uniquement les messages épinglés
 
     Scénario: Consulter sans messages épinglés
+    
         Etant donné que je consulte mes messages reçus
         Et que je n'ai épinglé aucun message
 
