@@ -1,7 +1,5 @@
 # Spécifications techniques
 
-## **Contexte**
-HomeSkolar est une association de soutien scolaire d'élèves en difficulté avec des tuteurs bénévoles.
 Le projet prend la forme d'une application web accessible depuis internet.
 
 ## Contraintes techniques

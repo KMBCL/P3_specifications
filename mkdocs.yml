@@ -11,4 +11,4 @@ nav:
         - Spécifications techniques: project_specifications.md
         - Frameworks et outils: frameworks.md
         - Diagrammes de classes: class_diagrams.md
-        - MVP: mvp.md
+        # - MVP: mvp.md
