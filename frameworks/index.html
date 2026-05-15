@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Spécifications techniques - Specifications</title>
+        <title>Frameworks et outils - Specifications</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -62,10 +62,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Spécifications techniques</a>
+                                <a href="../project_specifications/" class="nav-link">Spécifications techniques</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../frameworks/" class="nav-link">Frameworks et outils</a>
+                                <a href="./" class="nav-link active" aria-current="page">Frameworks et outils</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../class_diagrams/" class="nav-link">Diagrammes de classes</a>
@@ -82,12 +82,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../features/tasks/" class="nav-link">
+                                <a rel="prev" href="../project_specifications/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../frameworks/" class="nav-link">
+                                <a rel="next" href="../class_diagrams/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -109,45 +109,30 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#specifications-techniques" class="nav-link">Spécifications techniques</a>
+            <li class="nav-item" data-bs-level="1"><a href="#framework-et-outils" class="nav-link">Framework et outils</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#contexte" class="nav-link">Contexte</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#contraintes-techniques" class="nav-link">Contraintes techniques</a>
+            <li class="nav-item" data-bs-level="2"><a href="#frontend-solutions-existantes" class="nav-link">Frontend Solutions existantes:</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#contraintes-liees-aux-donnees" class="nav-link">Contraintes liées aux données</a>
+            <li class="nav-item" data-bs-level="2"><a href="#backend-solutions-existantes" class="nav-link">Backend Solutions existantes :</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#contraintes-de-securite-generales" class="nav-link">Contraintes de sécurité générales</a>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#solutions-retenues" class="nav-link">Solutions retenues</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#frontend-vue" class="nav-link">Frontend : Vue:</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#principes-darchitecture" class="nav-link">Principes d'architecture</a>
+            <li class="nav-item" data-bs-level="2"><a href="#backend-django-en-api" class="nav-link">Backend : Django en API:</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#frontend" class="nav-link">Frontend</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#backend" class="nav-link">Backend</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#base-de-donnees" class="nav-link">Base de données</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#architecture-generale" class="nav-link">Architecture générale</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#sequence-generique-de-traitement" class="nav-link">Séquence générique de traitement</a>
+            <li class="nav-item" data-bs-level="2"><a href="#base-de-donnees-postgresql" class="nav-link">Base de données: PostgreSQL:</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -158,93 +143,81 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="specifications-techniques">Spécifications techniques</h1>
-<h2 id="contexte"><strong>Contexte</strong></h2>
-<p>HomeSkolar est une association de soutien scolaire d'élèves en difficulté avec des tuteurs bénévoles.
-Le projet prend la forme d'une application web accessible depuis internet.</p>
-<h2 id="contraintes-techniques">Contraintes techniques</h2>
+<h1 id="framework-et-outils">Framework et outils</h1>
+<h2 id="frontend-solutions-existantes"><strong>Frontend</strong> Solutions existantes:</h2>
 <ul>
-<li>Le cout de développement, de maintenance et des licences logicielles doit être en corrélation avec les moyens financiers de l'association.</li>
-<li>Le projet livré sera accessible depuis internet</li>
-<li>les frameworks, dépendances et librairies utilisés doivent être documentés et maintenus pour faciliter le développement par une petite équipe</li>
-<li>2 développeurs Frontend</li>
-<li>2 développeurs Backend</li>
+<li>React :<ul>
+<li>Bibliothèque UI.</li>
+<li>Impose de choisir d'autres composants et bibliothèques</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe</li>
+<li>Ecosystème large</li>
 </ul>
-<h2 id="contraintes-liees-aux-donnees">Contraintes liées aux données</h2>
-<ul>
-<li>Le projet manipule des données fortement liées entre-elles: relation tuteur-élève, rendez-vous entre deux utilisateurs, etc.</li>
-<li>La solution de persistane doit permettre la relation entre entités et garantir l'intégrité des données</li>
+</li>
+<li>Vue :<ul>
+<li>Conventions et structure définies par le framework</li>
+<li>Ecosystème plus réduit que React</li>
+<li>Adapté aux petites et moyennes équipes</li>
 </ul>
-<h2 id="contraintes-de-securite-generales">Contraintes de sécurité générales</h2>
-<ul>
-<li>les frameworks, dépendances et librairies utilisés doivent être maintenus à jour afin de limiter d'éventuelles failles de sécurité</li>
-<li>le projet est accessible sur internet, par n'importe qui: les fonctionnalités et les données sont protégées par l'authentification.</li>
+</li>
+<li>Angular :<ul>
+<li>Framework complet, avec cadre et structure strict</li>
+<li>Adapté a des projets d'entreprises</li>
+<li>Adapté aux moyennes équipes</li>
 </ul>
-<h3 id="regles-de-securite-liees-aux-comptes-utilisateurs">Règles de sécurité liées aux comptes utilisateurs</h3>
+</li>
+<li>...</li>
+</ul>
+<h2 id="backend-solutions-existantes"><strong>Backend</strong> Solutions existantes :</h2>
 <ul>
-<li>le mot de passe n'est jamais stocké en clair</li>
-<li>la vérification d'un mot de passe saisi se fait à partir de la valeur sécurisée stockée</li>
-<li>les messages de refus d'authentification affichés par l'UI restent génériques afin de ne pas donner d'indices:<ul>
-<li>sur le mot de passe</li>
-<li>sur l'adresse email    </li>
+<li>FastAPI :<ul>
+<li>Orienté API</li>
+<li>Nécessite d'autres outils et bibliothèques, authentification, ORM, etc. </li>
+<li>Rapide</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe </li>
+</ul>
+</li>
+<li>Flask :<ul>
+<li>Framework minimaliste</li>
+<li>Nécessite d'autres outils et bibliothèques, authentification, ORM, etc.</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe </li>
+</ul>
+</li>
+<li>Django :<ul>
+<li>Framework complet avec authentification, ORM, etc.</li>
+<li>Interface admin</li>
+<li>Conventions et structure imposées</li>
+<li>Peut être configuré en API</li>
 </ul>
 </li>
 </ul>
-<h2 id="principes-darchitecture">Principes d'architecture</h2>
-<p>Le projet est décomposé en plusieurs couches, ayant chacune un rôle:</p>
+<h3 id="solutions-existantes">Solutions existantes:</h3>
 <ul>
-<li>Interface utilisateur (UI)</li>
-<li>API</li>
-<li>Services métier</li>
-<li>Accès aux données</li>
-<li>Base de données</li>
+<li>Oracle : sous licence. Très perfomant, mais très cher, complexe et adaptée aux grandes entreprises.</li>
+<li>SQLServeur : sous licence. Perfomant, mais très cher, complexe et adaptée aux grandes entreprises. Plus adapté également un environnement Microsoft.</li>
+<li>PostgreSQL : libre. Performant, scalable.</li>
+<li>MySQL : licence libre possible pour la version communautaire. </li>
+<li>MarioDB :</li>
+<li>...</li>
 </ul>
-<h2 id="frontend"><strong>Frontend</strong></h2>
-<h3 id="ui">UI:</h3>
+<h1 id="solutions-retenues">Solutions retenues</h1>
+<h2 id="frontend-vue">Frontend : <strong>Vue</strong>:</h2>
 <ul>
-<li>Affiche l'interface utilisateur</li>
-<li>Permet de consulter, saisir et modifier les données autorisées</li>
-<li>Valide les données au niveau UI pour améliorer l'expérience utilisateur</li>
-<li>Soumet les requêtes HTTP à l'API</li>
-<li>Affiche les réponses de l'API</li>
+<li>Le projet est bien délimité, bien qu'évolutif, il n'a pas vocation à devenir un projet d'entreprise multisites. </li>
 </ul>
-<h2 id="backend"><strong>Backend</strong></h2>
-<h3 id="api">API:</h3>
+<p>L'équipe de développement frontend étant de 2 personnes, pour limiter la dispersion dans les outils et bibliotèques, un ecosystème moins vaste facilite la structure du projet. </p>
+<p>De plus le framework <strong>Vue</strong> encourage une logique de décomposition script/template/CSS, qui permet naturellement de bien séparer les responsabilités.</p>
+<h2 id="backend-django-en-api">Backend : <strong>Django en API</strong>:</h2>
 <ul>
-<li>Expose les points d'entrée et de sortie du backend</li>
-<li>Reçoit les requêtes HTTP de l'UI</li>
-<li>Vérifie l'authentification de l'utilisateur</li>
-<li>Transforme et valide la structure des données</li>
-<li>Traduit les requêtes HTTP en données métiers pour les services</li>
-<li>Dialogue avec les services métiers</li>
-<li>Traduit les réponses des services en réponses HTTP</li>
-<li>Renvoie les réponses HTTP à l'UI</li>
+<li>Le projet peut démarrer rapidement et avec fiabilité avec la structure et les composants <strong>Django</strong>. </li>
 </ul>
-<h3 id="services-metier">Services Métier:</h3>
+<p>Les points d'entrées sont exposés par l'API et le système d'authentification et l'ORM intégré permettent de se focaliser sur les besoins métier, plutôt que l'architecture globale.</p>
+<p>L'interface administrateur intégrée permet également rapidement à un utilisateur admin du projet de modifier des données afin de répondre aux besoins utilisateurs.</p>
+<h2 id="base-de-donnees-postgresql">Base de données: PostgreSQL:</h2>
 <ul>
-<li>Reçoit les données de l'API</li>
-<li>Validation des données selon logique métier</li>
-<li>Applique la logique métier</li>
-<li>Dialogue avec les services d'accès aux données</li>
-<li>Renvoie les réponses métier</li>
+<li>Le projet utilisant <strong>Django</strong>, PostgreSQL est nativement supporté est compatible avec les instructions de <strong>Django</strong>.</li>
 </ul>
-<h3 id="acces-aux-donnees">Accès aux données:</h3>
-<ul>
-<li>Reçoit les demandes métiers</li>
-<li>Dialogue avec la base de données</li>
-<li>Reçoit les données depuis la base de données</li>
-<li>Renvoie les données aux services métiers</li>
-</ul>
-<h2 id="base-de-donnees"><strong>Base de données</strong></h2>
-<ul>
-<li>Reçoit les demandes des services d'accès aux données</li>
-<li>Persiste les données</li>
-<li>Renvoie les données</li>
-</ul>
-<h2 id="architecture-generale">Architecture générale</h2>
-<p><img alt="Architecture générale" src="../diagrams/architecture.svg" /></p>
-<h2 id="sequence-generique-de-traitement">Séquence générique de traitement</h2>
-<p><img alt="Séquence générique" src="../diagrams/workflow.svg" /></p></div>
+<p>De plus le développement est libre, communautaire et actif, avec une très bonne documentation et de nombreux outils de suivi et diagnostique.
+PostgreSQL gère très bien l'intégrité référentielle.</p></div>
             </div>
         </div>
 
