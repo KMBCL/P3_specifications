@@ -141,6 +141,7 @@
     Afin de faire le point sur ses devoirs et l'avancement de ses tâches
 
     Scénario: Planifier un rendez-vous avec des données valides
+
         Etant donné que je suis sur le formulaire de planification de rendez-vous
         Et que j'ai choisi un élève existant
         Et que j'ai complété les champs obligatoires
@@ -152,6 +153,7 @@
         Et une notification est envoyée par email à l'élève
 
     Scénario: Refus sans destinataire
+
         Etant donné que je suis sur le formulaire de planification de rendez-vous
         Et que j'ai complété les champs obligatoires
         Mais que je n'ai pas choisi d'élève
@@ -163,6 +165,7 @@
         Et je suis invité à choisir un élève
 
     Scénario: Refus lorsque la date est antérieure à la date courante
+
         Etant donné que je suis sur le formulaire de planification de rendez-vous
         Et que j'ai choisi un élève
         Et que j'ai complété les champs obligatoires
@@ -175,7 +178,8 @@
         Et je suis invité à spécifier une date postérieure à la date courante
 
     Scénario: Refus lorsque le créneau horaire est déjà pris
-        Etant donné que je suis sur e formulaire de planification de rendez-vous
+
+        Etant donné que je suis sur le formulaire de planification de rendez-vous
         Et que j'ai choisi un élève
         Et que j'ai complété les champs obligatoires
         Mais que j'ai déjà un rendez-vous avec un autre élève sur cette plage horaire
@@ -194,6 +198,7 @@
     Afin de le reporter ou de l'avancer
 
     Scénario: Modifier la date d'un rendez-vous
+
         Etant donné que j'ai déjà un rendez-vous convenu avec un élève
         Et que j'ai avancé / reculé la date
 
@@ -203,6 +208,7 @@
         Et une notification est envoyée par email à l'élève
 
     Scénario: Refus lorsque la date modifiée est antérieure à la date courante
+
         Etant donné que j'ai déjà un rendez-vous convenu avec un élève
         Et que j'ai avancé / reculé la date
         Mais que la date est antérieure à la date courante
@@ -221,6 +227,7 @@
     Afin de ne pas les oublier, me préparer et m'organiser
 
     Scénario: Consultation de mes rendez-vous dans le calendrier
+
         Etant donné que j'ai 5 rendez-vous planifiés à venir ce mois-ci
         Et que j'ai 2 rendez-vous passés ce mois-ci
 
@@ -231,6 +238,7 @@
 
 
     Scénario: Consultation de mes rendez-vous avec absence de rendez-vous planifiés
+
         Etant donné que je n'ai aucun rendez-vous planifié ce mois-ci
 
         Lorsque je consulte le calendrier
