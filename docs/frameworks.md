@@ -33,7 +33,7 @@
     - Peut être configuré en API
 
 
-### Solutions existantes:
+### Base de données:
 - Oracle : sous licence. Très perfomant, mais très cher, complexe et adaptée aux grandes entreprises.
 - SQLServeur : sous licence. Perfomant, mais très cher, complexe et adaptée aux grandes entreprises. Plus adapté également un environnement Microsoft.
 - PostgreSQL : libre. Performant, scalable.
