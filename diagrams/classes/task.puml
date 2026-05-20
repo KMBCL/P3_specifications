@@ -6,7 +6,7 @@ left to right direction
 class Task {
     pk : uuid
     user_pk : uuid
-    assigned_by : uuid
+    assigned_by_pk : uuid
     appointment_pk : uuid | None
     created_at : timestamp
     title : str

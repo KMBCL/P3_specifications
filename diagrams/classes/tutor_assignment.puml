@@ -7,7 +7,7 @@ class TutorAssignment{
     pk : uuid
     tutor_pk : uuid
     student : uuid
-    start_ad : datetime
+    start_at : datetime
     end_at : datetime
 }
 

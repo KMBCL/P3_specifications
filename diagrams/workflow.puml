@@ -47,13 +47,13 @@ end
 
 group Accès aux données
     BusinessService -> DataRepository : transmet la demande \n écriture/lecture
-    DataRepository -> DB : requete écriture/lecture
+    DataRepository -> DB : requête écriture / lecture
     DB --> DataRepository : réponse
     DataRepository --> BusinessService : réponse
     BusinessService --> API : réponse
 end
 
-group Resitution des données
+group Restitution des données
     API --> UI : réponse HTTP
     UI --> User : données affichées
 end

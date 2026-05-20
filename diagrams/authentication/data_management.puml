@@ -3,13 +3,13 @@ title Gestion données personnelles
 
 !include /specifications/docs/diagrams/actors/common.puml
 
-student --|> user
-tutor --|> user
+student --|> Utilisateur
+tutor --|> Utilisateur
 
-usecase "Modifier mot de passe" as password_managing
+usecase "Modifier mon mot de passe" as password_managing
 usecase "Modifier données personnelles" as personal_data_managing
 
-user -- password_managing
-user -- personal_data_managing
+Utilisateur -- password_managing
+Utilisateur -- personal_data_managing
 
 @endumld

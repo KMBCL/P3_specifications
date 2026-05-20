@@ -3,8 +3,8 @@ title Gestion des Tâches
 
 !include /specifications/docs/diagrams/actors/common.puml
 
-student --|> user
-tutor --|> user
+student --|> Utilisateur
+tutor --|> Utilisateur
 
 usecase "Consulter mes tâches" as see_owned_tasks
 usecase "Consulter les tâches assignées" as see_student_assigned_tasks
@@ -12,9 +12,9 @@ usecase "Modifier une tâche assignée" as update_student_assigned_task
 usecase "Modifier ma tâche" as update_task
 usecase "Compléter ma tâche" as complete_task
 
-user -- see_owned_tasks
-user -- complete_task
-user -- update_task
+Utilisateur -- see_owned_tasks
+Utilisateur -- complete_task
+Utilisateur -- update_task
 
 tutor -- see_student_assigned_tasks
 tutor -- update_student_assigned_task
