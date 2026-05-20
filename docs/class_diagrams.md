@@ -1,5 +1,11 @@
 # Diagrammes de classes:
 
+## Synthèse des entités et liaisons
+
+![Synthèse](diagrams/classes/overall.svg)
+
+Représente l'ensemble des entités et des liaisons entre elles. Les cardinalités sont explicitées dans les diagrammes spécialisés par entités.
+
 ## Utilisateur
 ![Utilisateur](diagrams/classes/user.svg)
 
@@ -18,7 +24,7 @@ Représente l’entité **Message** et ses relations avec l’**Utilisateur** en
 ## Tâche
 ![Tâche](diagrams/classes/task.svg)
 
-Représente la relation entre l'entité **Utilisateur** et **Tâche**, qu'elle soit **personnelle** ou **assignée** par un tuteur.
+Représente la relation entre l'entité **Utilisateur** et **Tâche**, qu'elle soit **personnelle** ou **assignée** par un tuteur. Une tâche personnelle est assignée par l'utilisateur créant la tâche.
 
 ## Rendez-vous
 ![Rendez-vous](diagrams/classes/appointment.svg)

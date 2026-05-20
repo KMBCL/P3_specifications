@@ -4,8 +4,8 @@ title Authentification
 actor "Visiteur" as visitor
 !include /specifications/docs/diagrams/actors/common.puml
 
-student --|> user
-tutor --|> user
+student --|> Utilisateur
+tutor --|> Utilisateur
 
 usecase "M'inscrire" as register
 usecase "Me connecter \n à mon espace personnel " as login
@@ -13,8 +13,8 @@ usecase "Me déconnecter \n de mon espace personnel" as logout
 usecase "Réinitialiser \n mon mot de passe" as reset_password
 
 visitor -- register
-user -- login
-user -- logout
-user -- reset_password
+Utilisateur -- login
+Utilisateur -- logout
+Utilisateur -- reset_password
 
 @endumld

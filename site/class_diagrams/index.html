@@ -17,6 +17,9 @@
         <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../css/print-site.css" rel="stylesheet">
+        <link href="../css/print-site-mkdocs.css" rel="stylesheet">
+        <link href="../print.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
@@ -111,6 +114,10 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#diagrammes-de-classes" class="nav-link">Diagrammes de classes:</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#synthese-des-entites-et-liaisons" class="nav-link">Synthèse des entités et liaisons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#utilisateur" class="nav-link">Utilisateur</a>
               <ul class="nav flex-column">
               </ul>
@@ -139,6 +146,9 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="diagrammes-de-classes">Diagrammes de classes:</h1>
+<h2 id="synthese-des-entites-et-liaisons">Synthèse des entités et liaisons</h2>
+<p><img alt="Synthèse" src="../diagrams/classes/overall.svg" /></p>
+<p>Représente l'ensemble des entités et des liaisons entre elles. Les cardinalités sont explicitées dans les diagrammes spécialisés par entités.</p>
 <h2 id="utilisateur">Utilisateur</h2>
 <p><img alt="Utilisateur" src="../diagrams/classes/user.svg" /></p>
 <p>Représente l'entité <strong>Utilisateur</strong> et ses spécialisations <strong>Tuteur</strong> et <strong>Elève</strong></p>
@@ -150,7 +160,7 @@
 <p>Représente l’entité <strong>Message</strong> et ses relations avec l’<strong>Utilisateur</strong> en tant qu’expéditeur et destinataire.</p>
 <h2 id="tache">Tâche</h2>
 <p><img alt="Tâche" src="../diagrams/classes/task.svg" /></p>
-<p>Représente la relation entre l'entité <strong>Utilisateur</strong> et <strong>Tâche</strong>, qu'elle soit <strong>personnelle</strong> ou <strong>assignée</strong> par un tuteur.</p>
+<p>Représente la relation entre l'entité <strong>Utilisateur</strong> et <strong>Tâche</strong>, qu'elle soit <strong>personnelle</strong> ou <strong>assignée</strong> par un tuteur. Une tâche personnelle est assignée par l'utilisateur créant la tâche.</p>
 <h2 id="rendez-vous">Rendez-vous</h2>
 <p><img alt="Rendez-vous" src="../diagrams/classes/appointment.svg" /></p>
 <p>Représente la relation entre l'entité <strong>Rendez-vous</strong> et <strong>Utilisateur</strong>. Dans le périmètre initial, le rendez-vous est entre deux parties, l'élève et son tuteur.</p></div>
@@ -167,6 +177,7 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js"></script>
+        <script src="../js/print-site.js"></script>
         <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

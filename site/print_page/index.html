@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Print Site - Specifications</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../css/print-site.css" rel="stylesheet">
+        <link href="../css/print-site-mkdocs.css" rel="stylesheet">
+        <link href="../print.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Specifications</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../actors/" class="nav-link">Acteurs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spécifications fonctionnelles</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../features/authentication/" class="dropdown-item">Compte Utilisateur</a>
+</li>
+                                    
+<li>
+    <a href="../features/communication/" class="dropdown-item">Communication</a>
+</li>
+                                    
+<li>
+    <a href="../features/appointment/" class="dropdown-item">Rendez-vous</a>
+</li>
+                                    
+<li>
+    <a href="../features/tasks/" class="dropdown-item">Tâches</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../project_specifications/" class="nav-link">Spécifications techniques</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../frameworks/" class="nav-link">Frameworks et outils</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../class_diagrams/" class="nav-link">Diagrammes de classes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../mvp/" class="nav-link">MVP</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="0"><a href="#index" class="nav-link">1 Accueil</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="0"><a href="#actors" class="nav-link">2 Acteurs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="0"><a href="#section-3" class="nav-link">3 Spécifications fonctionnelles</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="1"><a href="#features-authentication" class="nav-link">3.1 Compte Utilisateur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="1"><a href="#features-communication" class="nav-link">3.2 Communication</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="1"><a href="#features-appointment" class="nav-link">3.3 Rendez-vous</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="1"><a href="#features-tasks" class="nav-link">3.4 Tâches</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="0"><a href="#project_specifications" class="nav-link">4 Spécifications techniques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="0"><a href="#frameworks" class="nav-link">5 Frameworks et outils</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="0"><a href="#class_diagrams" class="nav-link">6 Diagrammes de classes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="0"><a href="#mvp" class="nav-link">7 MVP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-cahier-des-charges">Cahier des charges</h1>
+<h2 id="index-contexte">Contexte</h2>
+<p>HomeSkolar est une association de soutien scolaire d'élèves en difficulté avec des tuteurs bénévoles.
+L'association souhaite un nouveau site web offrant diverses fonctionnalités aux utilisateurs -élèves ou tuteur- afin d'assurer efficacement le soutien scolaire.</p>
+<h2 id="index-objectif">Objectif</h2>
+<p>Ce cahier des charges s'évertue à identifier clairement les acteurs, besoins, descriptions fonctionnelles et techniques du projet afin de répondre au mieux aux attentes du client.</p>
+<h2 id="index-parties-prenantes">Parties prenantes</h2>
+<ul>
+<li>HomeSkolar: client demandeur.</li>
+<li>CodeIguanas: développeur de la solution.</li>
+</ul>
+<h2 id="index-effectifs-sur-le-projet">Effectifs sur le projet</h2>
+<ul>
+<li>2 développeurs spécialisés frontend</li>
+<li>2 développeurs spécialisés backend</li>
+</ul>
+<p>Tous sont dûment formés aux technologies actuelles sur le marché.</p></section><section class="print-page" id="actors" heading-number="2"><h1 id="actors-acteurs-identifies">Acteurs identifiés :</h1>
+<p><img alt="Acteurs" src="../diagrams/actors/actors.svg" /></p>
+<h2 id="actors-visiteur">Visiteur :</h2>
+<p>Utilisateur anonyme non authentifié et / ou n'ayant pas de compte.</p>
+<p>N'a accès à <strong>aucune</strong> page sécurisée.</p>
+<p>Peut s'inscrire ou se connecter.</p>
+<h2 id="actors-tuteur">Tuteur :</h2>
+<p>Utilisateur inscrit et authentifié pour fournir un soutien scolaire aux élèves.</p>
+<ul>
+<li>Suit un ou plusieurs élèves</li>
+<li>Planifie les rendez-vous avec les élèves</li>
+<li>Assigne une ou plusieurs tâches à l'élève entre chaque rendez-vous</li>
+</ul>
+<h2 id="actors-eleve">Elève :</h2>
+<p>Utilisateur inscrit et authentifié pour obtenir un soutien scolaire.</p>
+<ul>
+<li>Est assigné à un tuteur</li>
+<li>Assiste aux rendez-vous planifiés</li>
+<li>Réalise les tâches assignées par le tuteur</li>
+</ul>
+<h2 id="actors-utilisateur">Utilisateur :</h2>
+<p>Utilisateur authentifié au sens large, élève ou tuteur.</p>
+<ul>
+<li>Envoi / reçoit des messages</li>
+<li>Gère ses tâches personnelles</li>
+</ul>
+<h2 id="actors-hors-perimetre-initial">Hors périmètre initial</h2>
+<h3 id="actors-administrateur">Administrateur :</h3>
+<p>Cet utilisateur est identifié comme potentiel besoin, mais ne fait pas partie des demandes initiales. Il peut être ajouté dans de futures mises à jour avec ses fonctionnalités propres.</p>
+<p>Utilisateur système ayant des droits étendus.</p>
+<ul>
+<li>Gère des demandes / problématiques utilisateurs</li>
+<li>Valide les rôles de tuteurs / élèves lors de l'inscription</li>
+</ul></section>
+                    <section class='print-page md-section' id='section-3' heading-number='3'>
+                        <h1>Spécifications fonctionnelles<a class='headerlink' href='#section-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="features-authentication" heading-number="3.1"><h1 id="features-authentication-domaine-compte-utilisateur">Domaine : Compte utilisateur</h1>
+<h2 id="features-authentication-gestion-de-lauthentification">Gestion de l'authentification</h2>
+<p><img alt="Authentification" src="../diagrams/authentication/authentication.svg" /></p>
+<h2 id="features-authentication-gestion-des-donnees-personnelles">Gestion des données personnelles</h2>
+<p><img alt="Gestion des données personnelles" src="../diagrams/authentication/data_management.svg" /></p>
+<h2 id="features-authentication-fonctionnalite-minscrire">Fonctionnalité: M'inscrire</h2>
+<pre><code class="language-gherkin">
+    En tant que visiteur
+    Je veux créer un nouveau compte
+    Afin d'accéder aux fonctionnalités du site
+
+    Scénario: Inscription avec des données valides
+
+        Etant donné que je suis sur le formulaire d'inscription
+        Et que je ne possède pas déjà un compte
+        Et que j'ai renseigné tous les champs obligatoires avec des données valides
+
+        Lorsque je valide le formulaire
+
+        Alors l'inscription est validée
+        Et mon compte est créé
+        Et je suis invité à me connecter
+
+    Scénario: Refus avec des données obligatoires manquantes
+
+        Etant donné que je suis sur le formulaire d'inscription
+        Mais que j'ai partiellement renseigné les champs obligatoires avec des données valides
+
+        Lorsque je valide le formulaire      
+
+        Alors l'inscription est refusée
+        Et les données manquantes sont mises en valeur
+        Et je suis invité à compléter les données manquantes
+
+    Scénario: Refus avec des données au mauvais format
+
+        Etant donné que je suis sur le formulaire d'inscription
+
+        Lorsque je saisis des données dans un format invalide
+
+        Alors le formulaire met la donnée en valeur
+        Et le format attendu m'est spécifié
+
+    Scénario: Refus avec une adresse email déjà existante
+
+        Etant donné que je suis sur le formulaire d'inscription
+        Et que j'ai renseigné tous les champs obligatoires avec des données valides
+        Mais qu'un compte avec la même adresse email existe déjà
+
+        Lorsque je valide le formulaire complété
+
+        Alors l'inscription est refusée
+        Et je suis informé que l'adresse email est déjà utilisée
+        Et je suis invité à me connecter au lieu de créer un nouveau compte
+</code></pre>
+<h2 id="features-authentication-fonctionnalite-me-connecter-a-mon-espace-personnel">Fonctionnalité: Me connecter à mon espace personnel</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur déconnecté
+    Je veux me connecter à mon espace personnel
+    Afin d'accéder à mon espace personnel
+    Et aux fonctionnalités du site
+
+    Scénario: Connexion avec des identifiants valides
+
+        Etant donné que je suis sur la page de connexion
+        Et que j'ai complété le formulaire de connexion
+        Et que mon adresse email et mot de passe sont valides
+
+        Lorsque je valide le formulaire de connexion
+
+        Alors la connexion est autorisée
+        Et j'accède à mon espace personnel
+
+    Scénario: Refus avec identifiants invalides
+
+        Etant donné que je suis sur la page de connexion
+        Et que j'ai complété le formulaire de connexion
+        Mais que mon adresse email et / ou mot de passe sont invalides
+
+        Lorsque je valide le formulaire de connexion
+
+        Alors la connexion est refusée
+        Et je suis informé que mes identifiants sont invalides
+        Et je suis invité à réessayer
+
+    Scénario: Refus avec des identifiants incomplets
+
+        Etant donné que je suis sur la page de connexion
+        Mais que j'ai partiellement complété le formulaire de connexion
+
+        Lorsque je valide le formulaire de connexion
+
+        Alors la connexion est refusée
+        Et je suis informé que le champ manquant est obligatoire
+</code></pre>
+<h2 id="features-authentication-fonctionnalite-me-deconnecter-de-mon-espace-personnel">Fonctionnalité: Me déconnecter de mon espace personnel</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux me déconnecter
+    Afin de mettre fin à ma session
+
+    Scénario: Déconnexion
+
+        Etant donné que je suis connecté à mon espace personnel
+
+        Lorsque je clique sur &quot;Se déconnecter&quot;
+
+        Alors je suis déconnecté
+        Et un message confirme la déconnexion
+        Et je n'ai plus accès à mon espace personnel
+</code></pre>
+<h2 id="features-authentication-fonctionnalite-mettre-a-jour-mon-mot-de-passe">Fonctionnalité: Mettre à jour mon mot de passe</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux mettre à jour mon mot de passe
+    Afin de le renouveler par sécurité
+
+    Scénario: Modification de mot de passe
+
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi le nouveau mot de passe
+        Et que j'ai confirmé le nouveau mot de passe
+        Et que j'ai saisi mon mot de passe actuel
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe est mis à jour
+        Et un message m'informe que le mot de passe est mis à jour
+        Et je suis déconnecté
+        Et je suis invité à me reconnecter
+
+    Scénario: Refus lorsque le mot de passe actuel est incorrect
+
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi le nouveau mot de passe 
+        Et que j'ai confirmé le nouveau mot de passe 
+        Mais que j'ai saisi un mot de passe actuel incorrect
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe n'est pas mis à jour
+        Et je suis informé que le mot de passe actuel est incorrect
+
+    Scénario: Refus lorsque le mot de passe actuel est manquant
+
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi le nouveau mot de passe 
+        Et que j'ai confirmé le nouveau mot de passe
+        Mais que je n'ai pas saisi le mot de passe actuel dans le champ requis
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe n'est pas mis à jour
+        Et je suis informé que ce champ est obligatoire
+
+    Scénario: Refus lorsque le nouveau mot de passe ne correspond pas à la confirmation
+
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi mon mot de passe actuel
+        Et que j'ai saisi le nouveau mot de passe &quot;test_mdp&quot;
+        Mais que j'ai confirmé le nouveau mot de passe &quot;test_mdpppp&quot;
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe n'est pas mis à jour
+        Et je suis informé que le nouveau mot de passe ne correspond pas à la confirmation
+
+    Scénario: Refus lorsque la confirmation de mot de passe est manquante
+
+        Etant donné que j'ai ouvert le formulaire de modification de mot de passe
+        Et que j'ai saisi mon mot de passe actuel
+        Et que j'ai saisi le nouveau mot de passe
+        Mais que je n'ai pas confirmé le nouveau mot de passe
+
+        Lorsque je valide le formulaire
+
+        Alors le mot de passe n'est pas mis à jour
+        Et je suis informé qu'il faut confirmer le nouveau mot de passe
+</code></pre>
+<h2 id="features-authentication-fonctionnalite-mettre-a-jour-mes-donnees-personnelles">Fonctionnalité: Mettre à jour mes données personnelles</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux modifier mes données personnelles
+    Afin de refléter les changements de mes coordonnées
+
+    Scénario: Mettre à jour mes données personnelles avec des données valides
+
+        Etant donné que je suis sur le formulaire de mes données personnelles
+        Et que j'ai saisi des données valides à modifier
+
+        Lorsque je valide le formulaire
+
+        Alors les données sont modifiées
+        Et j'ai un message de confirmation
+        Et je suis redirigé vers mes données personnelles
+
+    Scénario: Refus lorsque l'adresse email est invalide
+
+        Etant donné que je suis sur le formulaire de mes données personnelles
+        Et que j'ai saisi une nouvelle adresse email
+        Mais que le format de l'adresse est invalide
+
+        Lorsque je valide le formulaire
+
+        Alors les données ne sont pas modifiées
+        Et je suis informé que le format de l'adresse n'est pas valide
+</code></pre>
+<h2 id="features-authentication-fonctionnalite-reinitialiser-mon-mot-de-passe">Fonctionnalité: Réinitialiser mon mot de passe</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur déconnecté de mon espace personnel
+    Je veux réinitialiser le mot de passe que j'ai oublié
+    Afin de pouvoir en définir un nouveau, pour me connecter à mon espace personnel
+
+    Scénario: Réinitialiser mon mot de passe avec une adresse valide
+
+        Etant donné que j'ai oublié mon mot de passe
+        Et que je remplis le formulaire de réinitialisation
+        Et que j'ai saisi mon adresse email valide
+
+        Lorsque je valide le formulaire
+
+        Alors je reçois un email avec un nouveau mot de passe
+        Et je suis invité à me reconnecter avec
+
+    Scénario: Refus de réinitialiser mon mot de passe avec une adresse invalide
+
+        Etant donné que j'ai oublié mon mot de passe
+        Et que j'ai rempli le formulaire de réinitialisation
+        Mais que j'ai saisi une adresse email invalide
+
+        Lorsque je valide le formulaire
+
+        Alors le formulaire met en valeur l'adresse email invalide
+        Et le format attendu m'est spécifié
+
+</code></pre></section><section class="print-page" id="features-communication" heading-number="3.2"><h1 id="features-communication-domaine-communication">Domaine : Communication</h1>
+<h2 id="features-communication-envoi-lecture-de-messages">Envoi / Lecture de messages</h2>
+<p><img alt="Envoi / Lecture" src="../diagrams/communication/message.svg" /></p>
+<h2 id="features-communication-epingler-et-rechercher-des-messages">Epingler et rechercher des messages</h2>
+<p><img alt="Epingler et rechercher" src="../diagrams/communication/pinned_message.svg" /></p>
+<h2 id="features-communication-fonctionnalite-envoyer-un-message">Fonctionnalité: Envoyer un message</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux envoyer un message à un autre utilisateur
+    Afin de communiquer avec cet autre utilisateur
+
+    Scénario: Envoyer un message à un autre utilisateur
+
+        Etant donné que j'ai cliqué sur &quot;Nouveau message&quot;
+        Et que j'ai écrit un message
+        Et que j'ai renseigné un destinataire existant
+
+        Lorsque je clique sur envoyer
+
+        Alors le message est envoyé au destinataire
+        Et le message est marqué non lu pour le destinataire
+        Et un email de notification est envoyé au destinataire
+
+    Scénario: Refus lorsque le destinataire n'existe pas
+
+        Etant donné que j'ai cliqué sur &quot;Nouveau message&quot;
+        Et que j'ai écrit un message
+        Et que j'ai renseigné un destinataire inexistant
+
+        Lorsque je clique sur envoyer
+
+        Alors le message n'est pas envoyé au destinataire
+        Et un message m'informe que le destinataire n'existe pas
+
+    Scénario: Refus lorsque le message est vide
+
+        Etant donné que j'ai cliqué sur &quot;Nouveau message&quot;
+        Et que j'ai renseigné un destinataire existant
+        Mais que je n'ai pas écrit de message
+
+        Lorsque je clique sur envoyer
+
+        Alors le message n'est pas envoyé au destinataire
+        Et un message m'informe que le message est vide
+
+</code></pre>
+<h2 id="features-communication-fonctionnalite-consulter-mes-messages">Fonctionnalité: Consulter mes messages</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux accéder à mes messages
+    Afin de consulter les messages reçus
+
+    Scénario: Consulter mes messages
+
+        Etant donné que j'ai reçu au moins un message
+
+        Lorsque je clique sur &quot;consulter mes messages&quot;
+
+        Alors je vois la liste des messages reçus
+        Et les messages non lus sont mis en valeur
+
+    Scénario: Consulter mes messages, si aucun reçu
+
+        Etant donné que je n'ai reçu aucun message
+
+        Lorsque je clique sur &quot;consulter mes messages&quot;
+
+        Alors je suis informé que je n'ai aucun message reçu
+
+</code></pre>
+<h2 id="features-communication-fonctionnalite-lire-un-message">Fonctionnalité: Lire un message</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux lire un message
+    Afin de prendre connaissance du contenu
+
+    Scénario: Lecture d'un message reçu
+
+        Etant donné que j'ai reçu au moins un message
+        Et que j'ai cliqué sur consulter mes messages
+
+        Lorsque je clique sur un message reçu
+
+        Alors je peux prendre connaissance du contenu du message
+        Et le message est marqué &quot;lu&quot;
+
+</code></pre>
+<h2 id="features-communication-fonctionnalite-epingler-un-message">Fonctionnalité: Epingler un message</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux épingler un message
+    Afin de le retrouver plus facilement plus tard
+
+    Scénario: Epingler un message
+
+        Etant donné que j'ai au moins un message
+        Et que je consulte ce message
+
+        Lorsque je clique sur &quot;Epingler le message&quot;
+
+        Alors le message est marqué comme épinglé
+        Et le message apparaît épinglé
+
+</code></pre>
+<h2 id="features-communication-fonctionnalite-desepingler-un-message">Fonctionnalité: Désépingler un message</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux désépingler un message que je ne trouve plus utile
+    Afin d'avoir une liste pertinente et à jour de messages importants
+
+    Scénario: Désépingler un message
+
+        Etant donné que j'ai au moins un message épinglé
+        Et que j'ai cliqué sur &quot;messages épinglés&quot;
+        Et que je vois un message épinglé
+        Et que je consulte ce message
+
+        Lorsque je clique sur &quot;Désépingler un message&quot;
+
+        Alors le message n'est plus épinglé
+        Et le message n'apparaît plus épinglé
+
+</code></pre>
+<h2 id="features-communication-fonctionnalite-consulter-mes-messages-epingles">Fonctionnalité: Consulter mes messages épinglés</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux consulter mes messages épinglés
+    Afin de retrouver facilement un message
+
+    Scénario: Consulter mes messages épinglés
+
+        Etant donné que j'ai au moins un message épinglé
+
+        Lorsque je clique sur &quot;Messages épinglés&quot;
+
+        Alors je vois uniquement les messages épinglés
+
+    Scénario: Consulter sans messages épinglés
+
+        Etant donné que je consulte mes messages reçus
+        Et que je n'ai épinglé aucun message
+
+        Lorsque je clique sur &quot;Messages épinglés&quot;
+
+        Alors je suis informé que je n'ai aucun message épinglé
+
+</code></pre>
+<h2 id="features-communication-hors-perimetre-initial">Hors périmètre initial</h2>
+<h3 id="features-communication-gestion-des-contacts">Gestion des contacts</h3>
+<p>Afin de faciliter la communication entre plusieurs élèves et tuteurs, former des groupes d'entreaide, etc. Une gestion des contacts et des groupes peut être envisagée.</p></section><section class="print-page" id="features-appointment" heading-number="3.3"><h1 id="features-appointment-domaine-rendez-vous">Domaine : Rendez-vous</h1>
+<h2 id="features-appointment-gestion-des-rendez-vous">Gestion des rendez-vous</h2>
+<p><img alt="Gestion des rendez-vous" src="../diagrams/appointment/appointment.svg" /></p>
+<h2 id="features-appointment-fonctionnalite-planifier-un-rendez-vous">Fonctionnalité: Planifier un rendez-vous</h2>
+<pre><code class="language-gherkin">
+    En tant que tuteur connecté à mon espace personnel
+    Je veux planifier un rendez-vous avec un élève que j'accompagne
+    Afin de faire le point sur ses devoirs et l'avancement de ses tâches
+
+    Scénario: Planifier un rendez-vous avec des données valides
+
+        Etant donné que je suis sur le formulaire de planification de rendez-vous
+        Et que j'ai choisi un élève existant
+        Et que j'ai complété les champs obligatoires
+
+        Lorsque je valide le formulaire
+
+        Alors le rendez-vous est créé
+        Et le rendez-vous est visible dans le calendrier
+        Et une notification est envoyée par email à l'élève
+
+    Scénario: Refus sans destinataire
+
+        Etant donné que je suis sur le formulaire de planification de rendez-vous
+        Et que j'ai complété les champs obligatoires
+        Mais que je n'ai pas choisi d'élève
+
+        Lorsque je valide le formulaire
+
+        Alors le rendez-vous n'est pas créé
+        Et le champ élève est mis en valeur
+        Et je suis invité à choisir un élève
+
+    Scénario: Refus lorsque la date est antérieure à la date courante
+
+        Etant donné que je suis sur le formulaire de planification de rendez-vous
+        Et que j'ai choisi un élève
+        Et que j'ai complété les champs obligatoires
+        Mais que la date est antérieure à la date courante
+
+        Lorsque je valide le formulaire
+
+        Alors le rendez-vous n'est pas créé
+        Et la date est mise en valeur
+        Et je suis invité à spécifier une date postérieure à la date courante
+
+    Scénario: Refus lorsque le créneau horaire est déjà pris
+
+        Etant donné que je suis sur le formulaire de planification de rendez-vous
+        Et que j'ai choisi un élève
+        Et que j'ai complété les champs obligatoires
+        Mais que j'ai déjà un rendez-vous avec un autre élève sur cette plage horaire
+
+        Lorsque je valide le formulaire
+
+        Alors le rendez-vous n'est pas créé
+        Et la date / heure est mise en valeur
+        Et je suis informé que j'ai déjà un rendez-vous prévu sur cette plage horaire
+
+</code></pre>
+<h2 id="features-appointment-fonctionnalite-modifier-un-rendez-vous">Fonctionnalité: Modifier un rendez-vous</h2>
+<pre><code class="language-gherkin">
+    En tant que tuteur connecté à mon espace personnel
+    Je veux modifier un rendez-vous avec un élève
+    Afin de le reporter ou de l'avancer
+
+    Scénario: Modifier la date d'un rendez-vous
+
+        Etant donné que j'ai déjà un rendez-vous convenu avec un élève
+        Et que j'ai avancé / reculé la date
+
+        Lorsque je valide le formulaire
+
+        Alors la date est modifiée
+        Et une notification est envoyée par email à l'élève
+
+    Scénario: Refus lorsque la date modifiée est antérieure à la date courante
+
+        Etant donné que j'ai déjà un rendez-vous convenu avec un élève
+        Et que j'ai avancé / reculé la date
+        Mais que la date est antérieure à la date courante
+
+        Lorsque je valide le formulaire
+
+        Alors le rendez-vous n'est pas modifié
+        Et la date est mise en valeur
+        Et je suis invité à spécifier une date postérieure à la date courante
+
+</code></pre>
+<h2 id="features-appointment-fonctionnalite-consulter-mes-rendez-vous">Fonctionnalité: Consulter mes rendez-vous</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux voir tous mes rendez-vous dans un calendrier
+    Afin de ne pas les oublier, me préparer et m'organiser
+
+    Scénario: Consultation de mes rendez-vous dans le calendrier
+
+        Etant donné que j'ai 5 rendez-vous planifiés à venir ce mois-ci
+        Et que j'ai 2 rendez-vous passés ce mois-ci
+
+        Lorsque je consulte le calendrier
+
+        Alors mes 7 rendez-vous du mois sont affichés dans le calendrier à leur date
+        Et ceux à venir sont mis en valeur
+
+
+    Scénario: Consultation de mes rendez-vous avec absence de rendez-vous planifiés
+
+        Etant donné que je n'ai aucun rendez-vous planifié ce mois-ci
+
+        Lorsque je consulte le calendrier
+
+        Alors aucun rendez-vous n'est affiché
+        Et un message me prévient que je n'ai aucun rendez-vous planifié
+
+</code></pre></section><section class="print-page" id="features-tasks" heading-number="3.4"><h1 id="features-tasks-domaine-taches">Domaine : Tâches</h1>
+<h2 id="features-tasks-creation-des-taches">Création des tâches</h2>
+<p><img alt="Création des tâches" src="../diagrams/tasks/task_creation.svg" /></p>
+<h2 id="features-tasks-gestion-des-taches">Gestion des tâches</h2>
+<p><img alt="Gestion des tâches" src="../diagrams/tasks/task_management.svg" /></p>
+<h2 id="features-tasks-fonctionnalite-creer-une-tache-personnelle">Fonctionnalité: Créer une tâche personnelle</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux créer une tâche personnelle
+    Afin de m'organiser
+    Ou découper une tâche assignée trop grosse en sous-tâches
+
+    Scénario: Créer une tâche personnelle avec des données valides
+
+        Etant donné que je suis sur le formulaire de création de tâches
+        Et que j'ai complété les champs obligatoires
+
+        Lorsque je valide le formulaire
+
+        Alors la tâche est créée pour moi
+        Et la tâche est visible dans mon calendrier
+
+    Scénario: Refus avec des données obligatoires manquantes
+
+        Etant donné que je suis sur le formulaire de création de tâches
+        Mais que je n'ai pas complété toutes les données obligatoires
+
+        Lorsque je valide le formulaire
+
+        Alors la tâche n'est pas créée
+        Et les données obligatoires sont mises en valeur
+        Et je suis invité à compléter les données manquantes
+
+</code></pre>
+<h2 id="features-tasks-fonctionnalite-creer-une-tache-pour-leleve">Fonctionnalité: Créer une tâche pour l'élève</h2>
+<pre><code class="language-gherkin">
+    En tant que tuteur connecté à mon espace personnel
+    Je veux créer une nouvelle tâche à réaliser pour un élève que j'accompagne
+    Afin qu'il ait des objectifs à accomplir pour le prochain rendez-vous
+
+    Scénario: Créer une tâche pour l'élève avec des données valides
+
+        Etant donné que je suis sur le formulaire de création de tâches
+        Et que j'ai choisi un étudiant
+        Et que j'ai complété les champs obligatoires
+
+        Lorsque je valide le formulaire
+
+        Alors la tâche est créée pour l'élève
+        Et la tâche est visible dans mon calendrier
+        Et la tâche est visible dans le calendrier de l'élève
+        Et un email de notification est envoyé à l'élève
+
+    Scénario: Refus avec des données obligatoires manquantes
+
+        Etant donné que je suis sur le formulaire de création de tâches
+        Et que j'ai choisi un étudiant
+        Mais que je n'ai pas complété toutes les données obligatoires
+
+        Lorsque je valide le formulaire
+
+        Alors la tâche n'est pas créée
+        Et les données obligatoires sont mises en valeur
+        Et je suis invité à compléter les données manquantes
+
+</code></pre>
+<h2 id="features-tasks-fonctionnalite-consulter-mes-taches">Fonctionnalité: Consulter mes tâches</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux voir toutes mes tâches
+    Afin de ne pas en oublier et m'organiser pour  les compléter
+
+    Scénario: Consulter de mes tâches
+
+        Etant donné que j'ai 3 tâches assignées par mon tuteur non réalisées
+        Et que j'ai 4 tâches personnelles non réalisées
+        Et que j'ai 2 tâches personnelles déjà réalisées
+
+        Lorsque je clique sur &quot;consulter mes tâches&quot;
+
+        Alors je vois la liste de mes tâches
+        Et mes 3 tâches assignées par mon tuteur, non réalisées, sont affichées
+        Et sont mises en valeur
+        Et mes 4 tâches personnelles, non réalisées, sont affichées
+        Et sont mises en valeur différemment
+        Et mes 2 tâches réalisées sont affichées
+
+
+    Scénario: Consulter mes tâches, si aucune
+
+        Etant donné que je n'ai aucune tâche
+
+        Lorsque je clique sur &quot;consulter les tâches&quot;
+
+        Alors aucune tâche n'est affichée
+        Et un message me prévient que je n'ai aucune tâche
+
+</code></pre>
+<h2 id="features-tasks-fonctionnalite-modifier-ma-tache">Fonctionnalité: Modifier ma tâche</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux modifier une tâche personnelle
+    Afin d'en corriger le titre
+
+    Scénario: Modifier ma tâche
+
+        Etant donné que j'ai au moins une tâche personnelle
+        Et que je suis sur le formulaire de modification
+        Et que j'ai modifié le titre
+
+        Lorsque je valide le formulaire
+
+        Alors le titre de la tâche est modifié
+
+</code></pre>
+<h2 id="features-tasks-fonctionnalite-completer-ma-tache">Fonctionnalité: Compléter ma tâche</h2>
+<pre><code class="language-gherkin">
+    En tant qu'utilisateur connecté à mon espace personnel
+    Je veux marquer &quot;complétée&quot; une tâche
+    Afin de m'organiser
+    Et ne voir que les tâches restantes à faire
+
+    Scénario: Complétion d'une tâche
+
+        Etant donné que je suis sur la tâche sélectionnée
+
+        Lorsque je clique sur &quot;complétée&quot;
+
+        Alors la tâche est marquée comme complétée
+        Et la tâche n'est plus visible dans le calendrier
+
+</code></pre>
+<h2 id="features-tasks-fonctionnalite-consulter-les-taches-assignees">Fonctionnalité: Consulter les tâches assignées</h2>
+<pre><code class="language-gherkin">
+    En tant que tuteur connecté à mon espace personnel
+    Je veux voir toutes les tâches assignées aux élèves
+    Afin de suivre leur progression
+
+    Scénario: Consulter les tâches assignées
+
+        Etant donné que j'ai 3 tâches assignées à des élèves
+        Et que deux sont complétées par les élèves
+
+        Lorsque je clique sur &quot;Consulter les tâches assignées&quot;
+
+        Alors je vois la liste des 3 tâches assignées
+        Et la tâche non complétée est mise en valeur
+
+
+    Scénario: Consulter les tâches assignées, si aucune
+
+        Etant donné que je n'ai aucune tâche assignée à un élève
+
+        Lorsque je clique sur &quot;Consulter les tâches assignées&quot;
+
+        Alors aucune tâche assignée n'est affichée
+        Et un message me prévient que je n'ai assigné aucune tâche
+
+</code></pre>
+<h2 id="features-tasks-fonctionnalite-modifier-une-tache-assignee">Fonctionnalité: Modifier une tâche assignée</h2>
+<pre><code class="language-gherkin">
+    En tant que tuteur connecté à mon espace personnel
+    Je veux modifier une tâche assignée à un élève
+    Afin d'en corriger le titre
+
+    Scénario: Modifier une tâche assignée
+
+        Etant donné que j'ai au moins une tâche assignée à un élève
+        Et que je suis sur le formulaire de modification
+        Et que j'ai modifié le titre
+
+        Lorsque je valide le formulaire
+
+        Alors le titre de la tâche est modifié
+        Et un email de notification est envoyé à l'élève
+
+</code></pre></section></section><section class="print-page" id="project_specifications" heading-number="4"><h1 id="project_specifications-choix-darchitecturre">Choix d'architecturre</h1>
+<p>Le projet prend la forme d'une application web accessible depuis internet.</p>
+<p>L'application est découpée en plusieurs couches, ayant chacune leur responsabilité.</p>
+<h2 id="project_specifications-contraintes-techniques">Contraintes techniques</h2>
+<ul>
+<li>Le coût de développement, de maintenance et des licences logicielles doit être en corrélation avec les moyens financiers de l'association.</li>
+<li>Le projet livré sera accessible depuis internet</li>
+<li>Les frameworks, dépendances et librairies utilisés doivent être documentés et maintenus pour faciliter le développement par une petite équipe</li>
+<li>2 développeurs Frontend</li>
+<li>2 développeurs Backend</li>
+</ul>
+<h2 id="project_specifications-contraintes-liees-aux-donnees">Contraintes liées aux données</h2>
+<ul>
+<li>Le projet manipule des données fortement liées entre elles: relation tuteur-élève, rendez-vous entre deux utilisateurs, etc.</li>
+<li>La solution de persistance doit permettre la relation entre entités et garantir l'intégrité des données</li>
+</ul>
+<h2 id="project_specifications-contraintes-de-securite-generales">Contraintes de sécurité générales</h2>
+<ul>
+<li>Les frameworks, dépendances et librairies utilisés doivent être maintenus à jour afin de limiter d'éventuelles failles de sécurité</li>
+<li>Le projet est accessible sur internet, par n'importe qui: les fonctionnalités et les données sont protégées par l'authentification.</li>
+</ul>
+<h3 id="project_specifications-regles-de-securite-liees-aux-comptes-utilisateurs">Règles de sécurité liées aux comptes utilisateurs</h3>
+<ul>
+<li>le mot de passe n'est jamais stocké en clair</li>
+<li>la vérification d'un mot de passe saisi se fait à partir de la valeur sécurisée stockée</li>
+<li>les messages de refus d'authentification affichés par l'UI restent génériques afin de ne pas donner d'indices:<ul>
+<li>sur le mot de passe</li>
+<li>sur l'adresse email    </li>
+</ul>
+</li>
+</ul>
+<h2 id="project_specifications-architecture-et-sequence">Architecture et séquence</h2>
+<p><img alt="Séquence générique" src="../diagrams/workflow.svg" /></p></section><section class="print-page" id="frameworks" heading-number="5"><h1 id="frameworks-frameworks-et-outils">Frameworks et outils</h1>
+<h2 id="frameworks-frontend-solutions-existantes"><strong>Frontend</strong> Solutions existantes:</h2>
+<ul>
+<li>React :<ul>
+<li>Bibliothèque UI.</li>
+<li>Impose de choisir d'autres composants et bibliothèques</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe</li>
+<li>Ecosystème large</li>
+</ul>
+</li>
+<li>Vue :<ul>
+<li>Conventions et structure définies par le framework</li>
+<li>Ecosystème plus réduit que React</li>
+<li>Adapté aux petites et moyennes équipes</li>
+</ul>
+</li>
+<li>Angular :<ul>
+<li>Framework complet, avec cadre et structure strict</li>
+<li>Adapté à des projets d’entreprise</li>
+<li>Adapté aux moyennes équipes</li>
+</ul>
+</li>
+<li>...</li>
+</ul>
+<h2 id="frameworks-backend-solutions-existantes"><strong>Backend</strong> Solutions existantes :</h2>
+<ul>
+<li>FastAPI :<ul>
+<li>Orienté API</li>
+<li>Nécessite d'autres outils et bibliothèques, authentification, ORM, etc. </li>
+<li>Rapide</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe </li>
+</ul>
+</li>
+<li>Flask :<ul>
+<li>Framework minimaliste</li>
+<li>Nécessite d'autres outils et bibliothèques, authentification, ORM, etc.</li>
+<li>Conventions et structure de développement à la discrétion de l'équipe </li>
+</ul>
+</li>
+<li>Django :<ul>
+<li>Framework complet avec authentification, ORM, etc.</li>
+<li>Interface admin</li>
+<li>Conventions et structure imposées</li>
+<li>Peut être configuré en API</li>
+</ul>
+</li>
+</ul>
+<h3 id="frameworks-base-de-donnees">Base de données:</h3>
+<ul>
+<li>Oracle : sous licence. Très perfomant, mais très cher, complexe et adapté aux grandes entreprises.</li>
+<li>SQL Server : sous licence. Performant, mais très cher, complexe et adapté aux grandes entreprises. Également plus adapté à un environnement Microsoft.</li>
+<li>PostgreSQL : libre. Performant, scalable.</li>
+<li>MySQL : licence libre possible pour la version communautaire. </li>
+<li>MariaDB :</li>
+<li>...</li>
+</ul>
+<h1 id="frameworks-solutions-retenues">Solutions retenues</h1>
+<h2 id="frameworks-frontend-vue">Frontend : <strong>Vue</strong>:</h2>
+<ul>
+<li>Le projet est bien délimité, bien qu'évolutif, il n'a pas vocation à devenir un projet d'entreprise multi-sites. </li>
+</ul>
+<p>L'équipe de développement frontend étant de 2 personnes, pour limiter la dispersion dans les outils et bibliothèques, un écosystème moins vaste facilite la structure du projet. </p>
+<p>De plus le framework <strong>Vue</strong> encourage une logique de décomposition script/template/CSS, qui permet naturellement de bien séparer les responsabilités.</p>
+<h2 id="frameworks-backend-django-en-api">Backend : <strong>Django en API</strong>:</h2>
+<ul>
+<li>Le projet peut démarrer rapidement et avec fiabilité avec la structure et les composants <strong>Django</strong>. </li>
+</ul>
+<p>Les points d’entrée sont exposés par l'API et le système d'authentification et l'ORM intégré permettent de se focaliser sur les besoins métier, plutôt que l'architecture globale.</p>
+<p>L'interface administrateur intégrée permet également rapidement à un utilisateur admin du projet de modifier des données afin de répondre aux besoins utilisateurs.</p>
+<h2 id="frameworks-base-de-donnees-postgresql">Base de données: PostgreSQL:</h2>
+<ul>
+<li>Le projet utilisant <strong>Django</strong>, PostgreSQL est nativement supporté et compatible avec les instructions de <strong>Django</strong>.</li>
+</ul>
+<p>De plus le développement est libre, communautaire et actif, avec une très bonne documentation et de nombreux outils de suivi et diagnostic.
+PostgreSQL gère très bien l'intégrité référentielle.</p></section><section class="print-page" id="class_diagrams" heading-number="6"><h1 id="class_diagrams-diagrammes-de-classes">Diagrammes de classes:</h1>
+<h2 id="class_diagrams-synthese-des-entites-et-liaisons">Synthèse des entités et liaisons</h2>
+<p><img alt="Synthèse" src="../diagrams/classes/overall.svg" /></p>
+<p>Représente l'ensemble des entités et des liaisons entre elles. Les cardinalités sont explicitées dans les diagrammes spécialisés par entités.</p>
+<h2 id="class_diagrams-utilisateur">Utilisateur</h2>
+<p><img alt="Utilisateur" src="../diagrams/classes/user.svg" /></p>
+<p>Représente l'entité <strong>Utilisateur</strong> et ses spécialisations <strong>Tuteur</strong> et <strong>Elève</strong></p>
+<h2 id="class_diagrams-tutorat">Tutorat</h2>
+<p><img alt="Tutorat" src="../diagrams/classes/tutor_assignment.svg" /></p>
+<p>Représente la relation de <strong>tutorat</strong> entre un <strong>Elève</strong> et son <strong>Tuteur</strong>. Bien qu'un élève ait normalement un seul tuteur, cette relation intermédiaire permet de retracer l'historique des tuteurs assignés à l'élève.</p>
+<h2 id="class_diagrams-message">Message</h2>
+<p><img alt="Message" src="../diagrams/classes/message.svg" /></p>
+<p>Représente l’entité <strong>Message</strong> et ses relations avec l’<strong>Utilisateur</strong> en tant qu’expéditeur et destinataire.</p>
+<h2 id="class_diagrams-tache">Tâche</h2>
+<p><img alt="Tâche" src="../diagrams/classes/task.svg" /></p>
+<p>Représente la relation entre l'entité <strong>Utilisateur</strong> et <strong>Tâche</strong>, qu'elle soit <strong>personnelle</strong> ou <strong>assignée</strong> par un tuteur. Une tâche personnelle est assignée par l'utilisateur créant la tâche.</p>
+<h2 id="class_diagrams-rendez-vous">Rendez-vous</h2>
+<p><img alt="Rendez-vous" src="../diagrams/classes/appointment.svg" /></p>
+<p>Représente la relation entre l'entité <strong>Rendez-vous</strong> et <strong>Utilisateur</strong>. Dans le périmètre initial, le rendez-vous est entre deux parties, l'élève et son tuteur.</p></section><section class="print-page" id="mvp" heading-number="7"><h1 id="mvp-mvp-minimal-viable-product">MVP (Minimal Viable Product)</h1>
+<p>Conformément aux définitions des sprints, le MVP sera atteint au sprint #3.
+Les fonctionnalités permettront de manière rudimentaire de mettre en place un soutien scolaire entre tuteurs et élèves, avec quelques outils comme la planification et la communication entre utilisateurs.</p></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #actors > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #actors h2:before { content: '2.' counter(counter-actors-2) ' ' }
+                .print-site-enumerate-headings #actors h2 {  counter-reset: counter-actors-3 ;  counter-increment: counter-actors-2 }
+            
+                .print-site-enumerate-headings #actors h3:before { content: '2.' counter(counter-actors-2) '.' counter(counter-actors-3) ' ' }
+                .print-site-enumerate-headings #actors h3 {  counter-increment: counter-actors-3 }
+            
+.print-site-enumerate-headings #section-3 > h1:before { content: '3 ' }
+.print-site-enumerate-headings #features-authentication > h1:before { content: '3.1 ' }
+
+                .print-site-enumerate-headings #features-authentication h2:before { content: '3.1.' counter(counter-features-authentication-2) ' ' }
+                .print-site-enumerate-headings #features-authentication h2 {  counter-increment: counter-features-authentication-2 }
+            
+.print-site-enumerate-headings #features-communication > h1:before { content: '3.2 ' }
+
+                .print-site-enumerate-headings #features-communication h2:before { content: '3.2.' counter(counter-features-communication-2) ' ' }
+                .print-site-enumerate-headings #features-communication h2 {  counter-increment: counter-features-communication-2 }
+            
+.print-site-enumerate-headings #features-appointment > h1:before { content: '3.3 ' }
+
+                .print-site-enumerate-headings #features-appointment h2:before { content: '3.3.' counter(counter-features-appointment-2) ' ' }
+                .print-site-enumerate-headings #features-appointment h2 {  counter-increment: counter-features-appointment-2 }
+            
+.print-site-enumerate-headings #features-tasks > h1:before { content: '3.4 ' }
+
+                .print-site-enumerate-headings #features-tasks h2:before { content: '3.4.' counter(counter-features-tasks-2) ' ' }
+                .print-site-enumerate-headings #features-tasks h2 {  counter-increment: counter-features-tasks-2 }
+            
+.print-site-enumerate-headings #project_specifications > h1:before { content: '4 ' }
+
+                .print-site-enumerate-headings #project_specifications h2:before { content: '4.' counter(counter-project_specifications-2) ' ' }
+                .print-site-enumerate-headings #project_specifications h2 {  counter-reset: counter-project_specifications-3 ;  counter-increment: counter-project_specifications-2 }
+            
+                .print-site-enumerate-headings #project_specifications h3:before { content: '4.' counter(counter-project_specifications-2) '.' counter(counter-project_specifications-3) ' ' }
+                .print-site-enumerate-headings #project_specifications h3 {  counter-increment: counter-project_specifications-3 }
+            
+.print-site-enumerate-headings #frameworks > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #frameworks h2:before { content: '5.' counter(counter-frameworks-2) ' ' }
+                .print-site-enumerate-headings #frameworks h2 {  counter-reset: counter-frameworks-3 ;  counter-increment: counter-frameworks-2 }
+            
+                .print-site-enumerate-headings #frameworks h3:before { content: '5.' counter(counter-frameworks-2) '.' counter(counter-frameworks-3) ' ' }
+                .print-site-enumerate-headings #frameworks h3 {  counter-increment: counter-frameworks-3 }
+            
+.print-site-enumerate-headings #class_diagrams > h1:before { content: '6 ' }
+
+                .print-site-enumerate-headings #class_diagrams h2:before { content: '6.' counter(counter-class_diagrams-2) ' ' }
+                .print-site-enumerate-headings #class_diagrams h2 {  counter-reset: counter-class_diagrams-3 ;  counter-increment: counter-class_diagrams-2 }
+            
+                .print-site-enumerate-headings #class_diagrams h3:before { content: '6.' counter(counter-class_diagrams-2) '.' counter(counter-class_diagrams-3) ' ' }
+                .print-site-enumerate-headings #class_diagrams h3 {  counter-increment: counter-class_diagrams-3 }
+            
+.print-site-enumerate-headings #mvp > h1:before { content: '7 ' }
+
+                .print-site-enumerate-headings #mvp h2:before { content: '7.' counter(counter-mvp-2) ' ' }
+                .print-site-enumerate-headings #mvp h2 {  counter-reset: counter-mvp-3 ;  counter-increment: counter-mvp-2 }
+            
+                .print-site-enumerate-headings #mvp h3:before { content: '7.' counter(counter-mvp-2) '.' counter(counter-mvp-3) ' ' }
+                .print-site-enumerate-headings #mvp h3 {  counter-increment: counter-mvp-3 }
+            </style></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "/",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../js/print-site.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

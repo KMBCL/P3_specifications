@@ -17,6 +17,9 @@
         <link href="../../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/print-site.css" rel="stylesheet">
+        <link href="../../css/print-site-mkdocs.css" rel="stylesheet">
+        <link href="../../print.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
@@ -255,7 +258,7 @@
 
         Etant donné que je suis connecté à mon espace personnel
 
-        Lorsque je clique sur &quot;déconnecter&quot;
+        Lorsque je clique sur &quot;Se déconnecter&quot;
 
         Alors je suis déconnecté
         Et un message confirme la déconnexion
@@ -305,7 +308,7 @@
         Alors le mot de passe n'est pas mis à jour
         Et je suis informé que ce champ est obligatoire
 
-    Scénario: Refus lorsque le nouveau mot de passe ne correspond pas avec la confirmation
+    Scénario: Refus lorsque le nouveau mot de passe ne correspond pas à la confirmation
 
         Etant donné que j'ai ouvert le formulaire de modification de mot de passe
         Et que j'ai saisi mon mot de passe actuel
@@ -315,7 +318,7 @@
         Lorsque je valide le formulaire
 
         Alors le mot de passe n'est pas mis à jour
-        Et je suis informé que le nouveau mot de passe ne correspond pas avec la confirmation
+        Et je suis informé que le nouveau mot de passe ne correspond pas à la confirmation
 
     Scénario: Refus lorsque la confirmation de mot de passe est manquante
 
@@ -338,7 +341,7 @@
     Scénario: Mettre à jour mes données personnelles avec des données valides
 
         Etant donné que je suis sur le formulaire de mes données personnelles
-        Et que j'ai saisi des données à modifier avec des données sont valides
+        Et que j'ai saisi des données valides à modifier
 
         Lorsque je valide le formulaire
 
@@ -366,15 +369,15 @@
     Scénario: Réinitialiser mon mot de passe avec une adresse valide
 
         Etant donné que j'ai oublié mon mot de passe
-        Et que je rempli le formulaire de réinitialisation
-        Et que j'ai saisi mon adresse email, valide
+        Et que je remplis le formulaire de réinitialisation
+        Et que j'ai saisi mon adresse email valide
 
-        Lorsque je suis valide le formulaire
+        Lorsque je valide le formulaire
 
         Alors je reçois un email avec un nouveau mot de passe
         Et je suis invité à me reconnecter avec
 
-    Scénario: Refus de réinitialiser mon mot de passe une avec adresse invalide
+    Scénario: Refus de réinitialiser mon mot de passe avec une adresse invalide
 
         Etant donné que j'ai oublié mon mot de passe
         Et que j'ai rempli le formulaire de réinitialisation
@@ -399,6 +402,7 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js"></script>
+        <script src="../../js/print-site.js"></script>
         <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

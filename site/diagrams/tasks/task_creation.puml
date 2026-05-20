@@ -3,18 +3,18 @@ title Création de tâches
 
 !include /specifications/docs/diagrams/actors/common.puml
 
-student --|> user
-tutor --|> user
+student --|> Utilisateur
+tutor --|> Utilisateur
 
 usecase "Créer une tâche pour l'élève" as create_task_for_student
 usecase "Créer une tâche personnelle" as create_personal_task
-usecase "Envoyer notification par email" as send_email_notification
+usecase "Envoyer une notification par email" as send_email_notification
 
 tutor -- create_task_for_student
 create_task_for_student ..> send_email_notification
 
 
-user -- create_personal_task
+Utilisateur -- create_personal_task
 
 
 @enduml

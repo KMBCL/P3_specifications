@@ -9,7 +9,7 @@ Ce cahier des charges s'évertue à identifier clairement les acteurs, besoins, 
 
 ## Parties prenantes
 
-- Homeskolar: client demandeur.
+- HomeSkolar: client demandeur.
 - CodeIguanas: développeur de la solution.
 
 ## Effectifs sur le projet

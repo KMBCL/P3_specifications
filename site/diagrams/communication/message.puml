@@ -8,15 +8,15 @@ title Message
 usecase "Envoyer un message" as send_message
 usecase "Consulter mes messages" as see_messages
 usecase "Lire un message" as read_message
-usecase "Marquer lu" as set_read_message
+usecase "Marquer comme lu" as set_read_message
 usecase "Envoyer une notification par email" as send_email_notification
 
-student --|> user
-tutor --|> user
+student --|> Utilisateur
+tutor --|> Utilisateur
 
-user -- send_message
-user -- read_message
-user -- see_messages
+Utilisateur -- send_message
+Utilisateur -- read_message
+Utilisateur -- see_messages
 
 send_message ..> send_email_notification
 read_message ..> set_read_message

@@ -12,3 +12,10 @@ nav:
         - Frameworks et outils: frameworks.md
         - Diagrammes de classes: class_diagrams.md
         - MVP: mvp.md
+
+plugins:
+        - search
+        - print-site
+
+extra_css:
+        - print.css

@@ -1,0 +1,25 @@
+@media print {
+
+    pre,
+    code,
+    .highlight,
+    .highlight pre,
+    .highlight code,
+    .codehilite,
+    .codehilite pre,
+    .codehilite code {
+        white-space: pre-wrap !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+    }
+
+    pre,
+    .highlight pre,
+    .codehilite pre {
+        font-size: 9pt;
+        line-height: 1.35;
+    }
+}

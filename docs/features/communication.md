@@ -132,7 +132,7 @@
         Et que je vois un message épinglé
         Et que je consulte ce message
 
-        Lorsque je clique sur "Désépingler message"
+        Lorsque je clique sur "Désépingler un message"
 
         Alors le message n'est plus épinglé
         Et le message n'apparaît plus épinglé
@@ -166,7 +166,7 @@
 
 ```
 
-# Hors périmètre initial
+## Hors périmètre initial
 
-## Gestion des contacts
-Afin de faciliter la communication entre plusieurs élèves et tuteurs, former des groupes d'entre aide, etc. Une gestion des contacts et de groupes peut être envisagée.
+### Gestion des contacts
+Afin de faciliter la communication entre plusieurs élèves et tuteurs, former des groupes d'entreaide, etc. Une gestion des contacts et des groupes peut être envisagée.

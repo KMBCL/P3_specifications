@@ -1,4 +1,4 @@
-# Framework et outils
+# Frameworks et outils
 
 ## **Frontend** Solutions existantes:
 - React :
@@ -12,7 +12,7 @@
     - Adapté aux petites et moyennes équipes
 - Angular :
     - Framework complet, avec cadre et structure strict
-    - Adapté a des projets d'entreprises
+    - Adapté à des projets d’entreprise
     - Adapté aux moyennes équipes
 - ...
 
@@ -34,32 +34,32 @@
 
 
 ### Base de données:
-- Oracle : sous licence. Très perfomant, mais très cher, complexe et adaptée aux grandes entreprises.
-- SQLServeur : sous licence. Perfomant, mais très cher, complexe et adaptée aux grandes entreprises. Plus adapté également un environnement Microsoft.
+- Oracle : sous licence. Très perfomant, mais très cher, complexe et adapté aux grandes entreprises.
+- SQL Server : sous licence. Performant, mais très cher, complexe et adapté aux grandes entreprises. Également plus adapté à un environnement Microsoft.
 - PostgreSQL : libre. Performant, scalable.
 - MySQL : licence libre possible pour la version communautaire. 
-- MarioDB :
+- MariaDB :
 - ...
 
 # Solutions retenues
 
 ## Frontend : **Vue**:
-- Le projet est bien délimité, bien qu'évolutif, il n'a pas vocation à devenir un projet d'entreprise multisites. 
+- Le projet est bien délimité, bien qu'évolutif, il n'a pas vocation à devenir un projet d'entreprise multi-sites. 
 
-L'équipe de développement frontend étant de 2 personnes, pour limiter la dispersion dans les outils et bibliotèques, un ecosystème moins vaste facilite la structure du projet. 
+L'équipe de développement frontend étant de 2 personnes, pour limiter la dispersion dans les outils et bibliothèques, un écosystème moins vaste facilite la structure du projet. 
 
 De plus le framework **Vue** encourage une logique de décomposition script/template/CSS, qui permet naturellement de bien séparer les responsabilités.
 
 ## Backend : **Django en API**:
 - Le projet peut démarrer rapidement et avec fiabilité avec la structure et les composants **Django**. 
 
-Les points d'entrées sont exposés par l'API et le système d'authentification et l'ORM intégré permettent de se focaliser sur les besoins métier, plutôt que l'architecture globale.
+Les points d’entrée sont exposés par l'API et le système d'authentification et l'ORM intégré permettent de se focaliser sur les besoins métier, plutôt que l'architecture globale.
 
 L'interface administrateur intégrée permet également rapidement à un utilisateur admin du projet de modifier des données afin de répondre aux besoins utilisateurs.
 
 ## Base de données: PostgreSQL:
-- Le projet utilisant **Django**, PostgreSQL est nativement supporté est compatible avec les instructions de **Django**.
+- Le projet utilisant **Django**, PostgreSQL est nativement supporté et compatible avec les instructions de **Django**.
 
-De plus le développement est libre, communautaire et actif, avec une très bonne documentation et de nombreux outils de suivi et diagnostique.
+De plus le développement est libre, communautaire et actif, avec une très bonne documentation et de nombreux outils de suivi et diagnostic.
 PostgreSQL gère très bien l'intégrité référentielle.
 

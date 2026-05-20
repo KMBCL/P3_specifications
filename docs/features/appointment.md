@@ -96,7 +96,7 @@
 
 ```
 
-## Fonctionnalité: Consulter ses rendez-vous
+## Fonctionnalité: Consulter mes rendez-vous
 
 ```gherkin
 

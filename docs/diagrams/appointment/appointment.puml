@@ -5,7 +5,7 @@ title Rendez-vous
 
 usecase "Planifier un rendez-vous" as plan_appointment
 usecase "Modifier un rendez-vous" as update_appointment
-usecase "Consulter ses rendez-vous" as see_appointments
+usecase "Consulter mes rendez-vous" as see_appointments
 usecase "Envoyer une notification par email" as send_email_notification
 
 tutor -- plan_appointment

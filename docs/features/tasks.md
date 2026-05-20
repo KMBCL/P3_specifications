@@ -1,4 +1,4 @@
-# Domaine : tâches
+# Domaine : Tâches
 
 ## Création des tâches
 
@@ -44,9 +44,9 @@
 
 ```gherkin
 
-    En tant que tuteur connecté connecté à mon espace personnel
+    En tant que tuteur connecté à mon espace personnel
     Je veux créer une nouvelle tâche à réaliser pour un élève que j'accompagne
-    Afin qu'il ait des objectifs à acomplir pour le prochain rendez-vous
+    Afin qu'il ait des objectifs à accomplir pour le prochain rendez-vous
 
     Scénario: Créer une tâche pour l'élève avec des données valides
 
@@ -95,7 +95,7 @@
         Et mes 3 tâches assignées par mon tuteur, non réalisées, sont affichées
         Et sont mises en valeur
         Et mes 4 tâches personnelles, non réalisées, sont affichées
-        Et sont mises en valeur différement
+        Et sont mises en valeur différemment
         Et mes 2 tâches réalisées sont affichées
         
 
@@ -106,7 +106,7 @@
         Lorsque je clique sur "consulter les tâches"
 
         Alors aucune tâche n'est affichée
-        Et un message me prévient que j'ai aucune tâche
+        Et un message me prévient que je n'ai aucune tâche
 
 ```
 
@@ -126,7 +126,7 @@
 
         Lorsque je valide le formulaire
 
-        Alors le titre de la tâche est modifiée
+        Alors le titre de la tâche est modifié
 
 ```
 
@@ -137,13 +137,13 @@
     En tant qu'utilisateur connecté à mon espace personnel
     Je veux marquer "complétée" une tâche
     Afin de m'organiser
-    Et ne voir que les tâches restants à faire
+    Et ne voir que les tâches restantes à faire
 
     Scénario: Complétion d'une tâche
 
         Etant donné que je suis sur la tâche sélectionnée
         
-        Lorsque que je clique sur "complétée"
+        Lorsque je clique sur "complétée"
 
         Alors la tâche est marquée comme complétée
         Et la tâche n'est plus visible dans le calendrier
@@ -176,7 +176,7 @@
         Lorsque je clique sur "Consulter les tâches assignées"
 
         Alors aucune tâche assignée n'est affichée
-        Et un message me prévient que j'ai assigné aucune tâche
+        Et un message me prévient que je n'ai assigné aucune tâche
 
 ```
 
@@ -196,7 +196,7 @@
 
         Lorsque je valide le formulaire
 
-        Alors le titre de la tâche est modifiée
+        Alors le titre de la tâche est modifié
         Et un email de notification est envoyé à l'élève
         
 ```

@@ -6,10 +6,10 @@ actor "Visiteur" as visitor
 
 !include /specifications/docs/diagrams/actors/common.puml
 
-actor "Utilisateur" as user
+actor "Utilisateur" as Utilisateur
 
 
-student --|> user
-tutor --|> user
+student --|> Utilisateur
+tutor --|> Utilisateur
 
 @enduml

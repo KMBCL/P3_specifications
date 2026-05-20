@@ -9,11 +9,11 @@ usecase "Epingler un message" as pin_message
 usecase "Désépingler un message" as upnin_message
 usecase "Consulter mes messages épinglés" as research_pinned_message
 
-student --|> user
-tutor --|> user
+student --|> Utilisateur
+tutor --|> Utilisateur
 
-user -- pin_message
-user -- upnin_message
-user -- research_pinned_message
+Utilisateur -- pin_message
+Utilisateur -- upnin_message
+Utilisateur -- research_pinned_message
 
 @enduml

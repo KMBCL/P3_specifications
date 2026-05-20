@@ -17,6 +17,9 @@
         <link href="../../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/print-site.css" rel="stylesheet">
+        <link href="../../css/print-site-mkdocs.css" rel="stylesheet">
+        <link href="../../print.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
@@ -109,7 +112,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#domaine-taches" class="nav-link">Domaine : tâches</a>
+            <li class="nav-item" data-bs-level="1"><a href="#domaine-taches" class="nav-link">Domaine : Tâches</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#creation-des-taches" class="nav-link">Création des tâches</a>
               <ul class="nav flex-column">
@@ -154,7 +157,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="domaine-taches">Domaine : tâches</h1>
+<h1 id="domaine-taches">Domaine : Tâches</h1>
 <h2 id="creation-des-taches">Création des tâches</h2>
 <p><img alt="Création des tâches" src="../../diagrams/tasks/task_creation.svg" /></p>
 <h2 id="gestion-des-taches">Gestion des tâches</h2>
@@ -190,9 +193,9 @@
 </code></pre>
 <h2 id="fonctionnalite-creer-une-tache-pour-leleve">Fonctionnalité: Créer une tâche pour l'élève</h2>
 <pre><code class="language-gherkin">
-    En tant que tuteur connecté connecté à mon espace personnel
+    En tant que tuteur connecté à mon espace personnel
     Je veux créer une nouvelle tâche à réaliser pour un élève que j'accompagne
-    Afin qu'il ait des objectifs à acomplir pour le prochain rendez-vous
+    Afin qu'il ait des objectifs à accomplir pour le prochain rendez-vous
 
     Scénario: Créer une tâche pour l'élève avec des données valides
 
@@ -238,7 +241,7 @@
         Et mes 3 tâches assignées par mon tuteur, non réalisées, sont affichées
         Et sont mises en valeur
         Et mes 4 tâches personnelles, non réalisées, sont affichées
-        Et sont mises en valeur différement
+        Et sont mises en valeur différemment
         Et mes 2 tâches réalisées sont affichées
 
 
@@ -249,7 +252,7 @@
         Lorsque je clique sur &quot;consulter les tâches&quot;
 
         Alors aucune tâche n'est affichée
-        Et un message me prévient que j'ai aucune tâche
+        Et un message me prévient que je n'ai aucune tâche
 
 </code></pre>
 <h2 id="fonctionnalite-modifier-ma-tache">Fonctionnalité: Modifier ma tâche</h2>
@@ -266,7 +269,7 @@
 
         Lorsque je valide le formulaire
 
-        Alors le titre de la tâche est modifiée
+        Alors le titre de la tâche est modifié
 
 </code></pre>
 <h2 id="fonctionnalite-completer-ma-tache">Fonctionnalité: Compléter ma tâche</h2>
@@ -274,13 +277,13 @@
     En tant qu'utilisateur connecté à mon espace personnel
     Je veux marquer &quot;complétée&quot; une tâche
     Afin de m'organiser
-    Et ne voir que les tâches restants à faire
+    Et ne voir que les tâches restantes à faire
 
     Scénario: Complétion d'une tâche
 
         Etant donné que je suis sur la tâche sélectionnée
 
-        Lorsque que je clique sur &quot;complétée&quot;
+        Lorsque je clique sur &quot;complétée&quot;
 
         Alors la tâche est marquée comme complétée
         Et la tâche n'est plus visible dans le calendrier
@@ -310,7 +313,7 @@
         Lorsque je clique sur &quot;Consulter les tâches assignées&quot;
 
         Alors aucune tâche assignée n'est affichée
-        Et un message me prévient que j'ai assigné aucune tâche
+        Et un message me prévient que je n'ai assigné aucune tâche
 
 </code></pre>
 <h2 id="fonctionnalite-modifier-une-tache-assignee">Fonctionnalité: Modifier une tâche assignée</h2>
@@ -327,7 +330,7 @@
 
         Lorsque je valide le formulaire
 
-        Alors le titre de la tâche est modifiée
+        Alors le titre de la tâche est modifié
         Et un email de notification est envoyé à l'élève
 
 </code></pre></div>
@@ -344,6 +347,7 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js"></script>
+        <script src="../../js/print-site.js"></script>
         <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
