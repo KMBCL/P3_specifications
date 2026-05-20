@@ -16,6 +16,7 @@ class Task {
 
 
 Student "1" -- "0..*" Task : user_pk
+Student "1" -- "0..*" Task : assigned_by_pk
 Tutor "1" -- "0..*" Task : user_pk
 Tutor "1" -- "0..*" Task : assigned_by_pk
 

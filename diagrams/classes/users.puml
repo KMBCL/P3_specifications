@@ -1,4 +1,4 @@
-@startuml Utilisateur
+@startuml user
 title User Diagram
 
 left to right direction

@@ -6,7 +6,7 @@ left to right direction
 class TutorAssignment{
     pk : uuid
     tutor_pk : uuid
-    student : uuid
+    student_pk : uuid
     start_at : datetime
     end_at : datetime
 }

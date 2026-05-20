@@ -19,6 +19,7 @@
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <link href="../css/print-site.css" rel="stylesheet">
         <link href="../css/print-site-mkdocs.css" rel="stylesheet">
+        <link href="../print.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     
@@ -212,8 +213,8 @@ L'association souhaite un nouveau site web offrant diverses fonctionnalités aux
 <li>Envoi / reçoit des messages</li>
 <li>Gère ses tâches personnelles</li>
 </ul>
-<h1 id="actors-hors-perimetre-initial">Hors périmètre initial</h1>
-<h2 id="actors-administrateur">Administrateur :</h2>
+<h2 id="actors-hors-perimetre-initial">Hors périmètre initial</h2>
+<h3 id="actors-administrateur">Administrateur :</h3>
 <p>Cet utilisateur est identifié comme potentiel besoin, mais ne fait pas partie des demandes initiales. Il peut être ajouté dans de futures mises à jour avec ses fonctionnalités propres.</p>
 <p>Utilisateur système ayant des droits étendus.</p>
 <ul>
@@ -605,8 +606,8 @@ L'association souhaite un nouveau site web offrant diverses fonctionnalités aux
         Alors je suis informé que je n'ai aucun message épinglé
 
 </code></pre>
-<h1 id="features-communication-hors-perimetre-initial">Hors périmètre initial</h1>
-<h2 id="features-communication-gestion-des-contacts">Gestion des contacts</h2>
+<h2 id="features-communication-hors-perimetre-initial">Hors périmètre initial</h2>
+<h3 id="features-communication-gestion-des-contacts">Gestion des contacts</h3>
 <p>Afin de faciliter la communication entre plusieurs élèves et tuteurs, former des groupes d'entreaide, etc. Une gestion des contacts et des groupes peut être envisagée.</p></section><section class="print-page" id="features-appointment" heading-number="3.3"><h1 id="features-appointment-domaine-rendez-vous">Domaine : Rendez-vous</h1>
 <h2 id="features-appointment-gestion-des-rendez-vous">Gestion des rendez-vous</h2>
 <p><img alt="Gestion des rendez-vous" src="../diagrams/appointment/appointment.svg" /></p>
@@ -696,7 +697,7 @@ L'association souhaite un nouveau site web offrant diverses fonctionnalités aux
         Et je suis invité à spécifier une date postérieure à la date courante
 
 </code></pre>
-<h2 id="features-appointment-fonctionnalite-consulter-ses-rendez-vous">Fonctionnalité: Consulter ses rendez-vous</h2>
+<h2 id="features-appointment-fonctionnalite-consulter-mes-rendez-vous">Fonctionnalité: Consulter mes rendez-vous</h2>
 <pre><code class="language-gherkin">
     En tant qu'utilisateur connecté à mon espace personnel
     Je veux voir tous mes rendez-vous dans un calendrier
@@ -898,8 +899,9 @@ L'association souhaite un nouveau site web offrant diverses fonctionnalités aux
         Alors le titre de la tâche est modifié
         Et un email de notification est envoyé à l'élève
 
-</code></pre></section></section><section class="print-page" id="project_specifications" heading-number="4"><h1 id="project_specifications-specifications-techniques">Spécifications techniques</h1>
+</code></pre></section></section><section class="print-page" id="project_specifications" heading-number="4"><h1 id="project_specifications-choix-darchitecturre">Choix d'architecturre</h1>
 <p>Le projet prend la forme d'une application web accessible depuis internet.</p>
+<p>L'application est découpée en plusieurs couches, ayant chacune leur responsabilité.</p>
 <h2 id="project_specifications-contraintes-techniques">Contraintes techniques</h2>
 <ul>
 <li>Le coût de développement, de maintenance et des licences logicielles doit être en corrélation avec les moyens financiers de l'association.</li>
@@ -928,7 +930,7 @@ L'association souhaite un nouveau site web offrant diverses fonctionnalités aux
 </ul>
 </li>
 </ul>
-<h2 id="project_specifications-sequence-de-traitement">Séquence de traitement</h2>
+<h2 id="project_specifications-architecture-et-sequence">Architecture et séquence</h2>
 <p><img alt="Séquence générique" src="../diagrams/workflow.svg" /></p></section><section class="print-page" id="frameworks" heading-number="5"><h1 id="frameworks-frameworks-et-outils">Frameworks et outils</h1>
 <h2 id="frameworks-frontend-solutions-existantes"><strong>Frontend</strong> Solutions existantes:</h2>
 <ul>
@@ -1004,8 +1006,11 @@ L'association souhaite un nouveau site web offrant diverses fonctionnalités aux
 </ul>
 <p>De plus le développement est libre, communautaire et actif, avec une très bonne documentation et de nombreux outils de suivi et diagnostic.
 PostgreSQL gère très bien l'intégrité référentielle.</p></section><section class="print-page" id="class_diagrams" heading-number="6"><h1 id="class_diagrams-diagrammes-de-classes">Diagrammes de classes:</h1>
+<h2 id="class_diagrams-synthese-des-entites-et-liaisons">Synthèse des entités et liaisons</h2>
+<p><img alt="Synthèse" src="../diagrams/classes/overall.svg" /></p>
+<p>Représente l'ensemble des entités et des liaisons entre elles. Les cardinalités sont explicitées dans les diagrammes spécialisés par entités.</p>
 <h2 id="class_diagrams-utilisateur">Utilisateur</h2>
-<p><img alt="Utilisateur" src="../class_diagrams/diagrams/classes/Utilisateur.svg" /></p>
+<p><img alt="Utilisateur" src="../diagrams/classes/user.svg" /></p>
 <p>Représente l'entité <strong>Utilisateur</strong> et ses spécialisations <strong>Tuteur</strong> et <strong>Elève</strong></p>
 <h2 id="class_diagrams-tutorat">Tutorat</h2>
 <p><img alt="Tutorat" src="../diagrams/classes/tutor_assignment.svg" /></p>
@@ -1015,7 +1020,7 @@ PostgreSQL gère très bien l'intégrité référentielle.</p></section><section
 <p>Représente l’entité <strong>Message</strong> et ses relations avec l’<strong>Utilisateur</strong> en tant qu’expéditeur et destinataire.</p>
 <h2 id="class_diagrams-tache">Tâche</h2>
 <p><img alt="Tâche" src="../diagrams/classes/task.svg" /></p>
-<p>Représente la relation entre l'entité <strong>Utilisateur</strong> et <strong>Tâche</strong>, qu'elle soit <strong>personnelle</strong> ou <strong>assignée</strong> par un tuteur.</p>
+<p>Représente la relation entre l'entité <strong>Utilisateur</strong> et <strong>Tâche</strong>, qu'elle soit <strong>personnelle</strong> ou <strong>assignée</strong> par un tuteur. Une tâche personnelle est assignée par l'utilisateur créant la tâche.</p>
 <h2 id="class_diagrams-rendez-vous">Rendez-vous</h2>
 <p><img alt="Rendez-vous" src="../diagrams/classes/appointment.svg" /></p>
 <p>Représente la relation entre l'entité <strong>Rendez-vous</strong> et <strong>Utilisateur</strong>. Dans le périmètre initial, le rendez-vous est entre deux parties, l'élève et son tuteur.</p></section><section class="print-page" id="mvp" heading-number="7"><h1 id="mvp-mvp-minimal-viable-product-et-phases-de-developpement">MVP (Minimal Viable Product) et Phases de développement</h1>

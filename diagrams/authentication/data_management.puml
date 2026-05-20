@@ -7,7 +7,7 @@ student --|> Utilisateur
 tutor --|> Utilisateur
 
 usecase "Modifier mon mot de passe" as password_managing
-usecase "Modifier données personnelles" as personal_data_managing
+usecase "Modifier mes données personnelles" as personal_data_managing
 
 Utilisateur -- password_managing
 Utilisateur -- personal_data_managing
